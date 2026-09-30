@@ -106,3 +106,37 @@ export interface ProcessingChoice {
 export function tagKey(tag: Pick<Tag, 'category' | 'value'>): string {
   return `${tag.category}:${tag.value}`
 }
+
+/**
+ * Captura que el homelab dejó en la carpeta sincronizada por Syncthing.
+ *
+ * Nada se importa solo: estos elementos esperan una decisión manual. El estado
+ * vive en el nombre del archivo y es lo único que impide que el homelab vuelva
+ * a capturar la misma referencia.
+ */
+export interface InboxItem {
+  filename: string
+  /** Hash del origen que puso el homelab, no del contenido. */
+  hash: string
+  capturedAt: string | null
+  bytes: number
+  width: number
+  height: number
+  /** Sigue llegando por Syncthing: todavía no se puede tocar. */
+  settling: boolean
+  /** Esta imagen ya está en la bóveda (mismo sha256). */
+  alreadyInVault: boolean
+  previewUrl: string
+}
+
+export interface RejectReason {
+  id: string
+  label: string
+}
+
+export interface InboxStatus {
+  path: string
+  exists: boolean
+  rejectReasons: RejectReason[]
+  items: InboxItem[]
+}

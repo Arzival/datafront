@@ -1,4 +1,11 @@
-import type { ProcessingChoice, Provider, Reference, Tag } from '../types/vault.ts'
+import type {
+  InboxItem,
+  InboxStatus,
+  ProcessingChoice,
+  Provider,
+  Reference,
+  Tag,
+} from '../types/vault.ts'
 import { VaultApiError, type UploadInput, type VaultApi } from './VaultApi.ts'
 
 /**
@@ -295,6 +302,47 @@ const mockProviders: Provider[] = [
   },
 ]
 
+/**
+ * Bandeja simulada. Cubre los tres casos que la UI tiene que saber manejar:
+ * una captura normal, una que sigue sincronizándose y otra que ya está en la
+ * bóveda porque la subiste a mano antes.
+ */
+let inboxItems: InboxItem[] = [
+  {
+    filename: '20260930-101500__e5f7a1c3__pendiente.png',
+    hash: 'e5f7a1c3',
+    capturedAt: daysAgo(0.1),
+    bytes: 684_221,
+    width: 1440,
+    height: 900,
+    settling: false,
+    alreadyInVault: false,
+    previewUrl: panel('#0f172a', '#38bdf8', 'dashboard'),
+  },
+  {
+    filename: '20260930-094210__b2c8d4f6__pendiente.png',
+    hash: 'b2c8d4f6',
+    capturedAt: daysAgo(0.15),
+    bytes: 412_880,
+    width: 1280,
+    height: 800,
+    settling: true,
+    alreadyInVault: false,
+    previewUrl: panel('#fefce8', '#ca8a04', 'pricing'),
+  },
+  {
+    filename: '20260929-221040__a3f9c2e1__pendiente.png',
+    hash: 'a3f9c2e1',
+    capturedAt: daysAgo(0.4),
+    bytes: 902_114,
+    width: 1179,
+    height: 2676,
+    settling: false,
+    alreadyInVault: true,
+    previewUrl: panel('#18181b', '#f472b6', 'mobile'),
+  },
+]
+
 let references: Reference[] = seed.map((item) => ({ ...item }))
 let counter = references.length
 
@@ -416,5 +464,69 @@ export const mockVault: VaultApi = {
     await delay(120)
     find(id)
     references = references.filter((item) => item.id !== id)
+  },
+
+  async inbox(): Promise<InboxStatus> {
+    await delay(150)
+
+    return {
+      path: '~/Sync/datafront-inbox',
+      exists: true,
+      rejectReasons: [
+        { id: 'borrosa', label: 'Borrosa o ilegible' },
+        { id: 'irrelevante', label: 'No me sirve como referencia' },
+      ],
+      items: inboxItems.map((item) => ({ ...item })),
+    }
+  },
+
+  async importFromInbox(filename, choice, sourceUrl) {
+    await delay(320)
+
+    const item = inboxItems.find((entry) => entry.filename === filename)
+    if (!item) throw new VaultApiError('Esa captura ya no está en la bandeja', 404)
+    if (item.settling) {
+      throw new VaultApiError('El archivo sigue sincronizándose. Espera unos segundos.', 422)
+    }
+
+    counter += 1
+    const created: Reference = {
+      id: `ref-inbox-${counter}`,
+      title: null,
+      filename,
+      imageUrl: item.previewUrl,
+      thumbUrl: item.previewUrl,
+      filePath: `~/Sync/datafront-inbox/${filename}`,
+      width: item.width,
+      height: item.height,
+      bytes: item.bytes,
+      sourceUrl: sourceUrl ?? null,
+      status: 'pending',
+      error: null,
+      providerId: null,
+      model: choice.model,
+      summary: null,
+      notes: null,
+      tags: [],
+      createdAt: new Date().toISOString(),
+    }
+
+    references = [created, ...references]
+    // Sale de la bandeja: en el backend real pasa a __procesada.
+    inboxItems = inboxItems.filter((entry) => entry.filename !== filename)
+    scheduleClassification(created.id, choice)
+
+    return { ...created }
+  },
+
+  async rejectFromInbox(filename) {
+    await delay(200)
+
+    if (!inboxItems.some((entry) => entry.filename === filename)) {
+      throw new VaultApiError('Esa captura ya no está en la bandeja', 404)
+    }
+
+    // El archivo no se borra: se renombra a __rechazada-<motivo>.
+    inboxItems = inboxItems.filter((entry) => entry.filename !== filename)
   },
 }

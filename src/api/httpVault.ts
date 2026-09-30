@@ -1,5 +1,10 @@
 import { API_BASE_URL } from '../lib/config.ts'
-import type { ProcessingChoice, Provider, Reference } from '../types/vault.ts'
+import type {
+  InboxStatus,
+  ProcessingChoice,
+  Provider,
+  Reference,
+} from '../types/vault.ts'
 import { VaultApiError, type UploadInput, type VaultApi } from './VaultApi.ts'
 
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
@@ -109,5 +114,30 @@ export const httpVault: VaultApi = {
 
   remove(id: string) {
     return request<void>(`/references/${id}`, { method: 'DELETE' })
+  },
+
+  inbox() {
+    return request<InboxStatus>('/inbox')
+  },
+
+  importFromInbox(filename: string, choice: ProcessingChoice, sourceUrl?: string | null) {
+    return request<Reference>('/inbox/import', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        filename,
+        provider_id: choice.providerId,
+        model: choice.model,
+        source_url: sourceUrl ?? null,
+      }),
+    })
+  },
+
+  async rejectFromInbox(filename: string, reason: string) {
+    await request<{ filename: string }>('/inbox/reject', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ filename, reason }),
+    })
   },
 }

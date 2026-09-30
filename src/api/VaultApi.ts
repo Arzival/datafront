@@ -1,4 +1,9 @@
-import type { ProcessingChoice, Provider, Reference } from '../types/vault.ts'
+import type {
+  InboxStatus,
+  ProcessingChoice,
+  Provider,
+  Reference,
+} from '../types/vault.ts'
 
 export interface UploadInput {
   file: File
@@ -19,6 +24,15 @@ export interface VaultApi {
   upload(input: UploadInput): Promise<Reference>
   reclassify(id: string, choice: ProcessingChoice): Promise<Reference>
   remove(id: string): Promise<void>
+
+  /** Bandeja de entrada del homelab. */
+  inbox(): Promise<InboxStatus>
+  importFromInbox(
+    filename: string,
+    choice: ProcessingChoice,
+    sourceUrl?: string | null,
+  ): Promise<Reference>
+  rejectFromInbox(filename: string, reason: string): Promise<void>
 }
 
 export class VaultApiError extends Error {

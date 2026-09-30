@@ -2,17 +2,19 @@ import { useEffect, useMemo, useState } from 'react'
 import { useVaultApi } from './hooks/useVaultApi.ts'
 import { useProviders } from './hooks/useProviders.ts'
 import { useReferences } from './hooks/useReferences.ts'
+import { useInbox } from './hooks/useInbox.ts'
 import { useStoredState } from './hooks/useStoredState.ts'
 import { buildFacets, filterReferences } from './lib/facets.ts'
 import { referencesToMixPrompt } from './lib/prompt.ts'
 import { Icon } from './components/Icon.tsx'
 import { Modal } from './components/Modal.tsx'
 import { FilterPanel } from './components/FilterPanel.tsx'
+import { InboxPanel } from './components/InboxPanel.tsx'
 import { ReferenceDetail } from './components/ReferenceDetail.tsx'
 import { ReferenceGrid } from './components/ReferenceGrid.tsx'
 import { SelectionBar } from './components/SelectionBar.tsx'
 import { UploadPanel } from './components/UploadPanel.tsx'
-import type { ProcessingChoice, Reference } from './types/vault.ts'
+import type { InboxItem, ProcessingChoice, Reference } from './types/vault.ts'
 import './App.css'
 
 const CHOICE_STORAGE_KEY = 'datafront.processing-choice'
@@ -21,6 +23,13 @@ export default function App() {
   const { api, status, recheck } = useVaultApi()
   const { providers, loading: providersLoading } = useProviders(api)
   const { references, loading, error, refresh, upsert, removeLocal } = useReferences(api)
+  const [view, setView] = useState<'all' | 'mix' | 'inbox'>('all')
+  const {
+    inbox,
+    loading: inboxLoading,
+    error: inboxError,
+    refresh: refreshInbox,
+  } = useInbox(api, view === 'inbox')
 
   const [choice, setChoice] = useStoredState<ProcessingChoice | null>(CHOICE_STORAGE_KEY, null)
   const [search, setSearch] = useState('')
@@ -31,7 +40,6 @@ export default function App() {
   const [mixCopied, setMixCopied] = useState(false)
   const [uploadOpen, setUploadOpen] = useState(false)
   const [filtersOpen, setFiltersOpen] = useState(false)
-  const [view, setView] = useState<'all' | 'mix'>('all')
   const [statusFilter, setStatusFilter] = useState('all')
   const [sort, setSort] = useState('newest')
   const [compact, setCompact] = useState(false)
@@ -127,6 +135,23 @@ export default function App() {
   const ready = references.filter((item) => item.status === 'ready').length
   const failed = references.filter((item) => item.status === 'failed').length
   const filtering = search.length > 0 || activeTagKeys.length > 0 || statusFilter !== 'all'
+  /**
+   * Pasa una captura de la bandeja a la bóveda. El backend renombra el
+   * original a __procesada, que es lo que impide que el homelab la recapture.
+   */
+  async function handleInboxImport(item: InboxItem): Promise<void> {
+    if (!choice) return
+    const created = await api.importFromInbox(item.filename, choice)
+    upsert(created)
+    await refreshInbox()
+  }
+
+  /** Descarta sin importar: el archivo no se borra, se marca con el motivo. */
+  async function handleInboxReject(item: InboxItem, reason: string): Promise<void> {
+    await api.rejectFromInbox(item.filename, reason)
+    await refreshInbox()
+  }
+
   function clearFilters() { setSearch(''); setActiveTagKeys([]); setStatusFilter('all') }
 
   return (
@@ -139,6 +164,7 @@ export default function App() {
         <nav className="sidebar__nav" aria-label="Biblioteca">
           <button className={view === 'all' ? 'nav-item nav-item--active' : 'nav-item'} onClick={() => { setView('all'); setFiltersOpen(false) }}><Icon name="grid" />Todas las referencias<span>{references.length}</span></button>
           <button className={view === 'mix' ? 'nav-item nav-item--active' : 'nav-item'} onClick={() => { setView('mix'); setFiltersOpen(false) }}><Icon name="layers" />Mi mix<span>{picked.length}</span></button>
+          <button className={view === 'inbox' ? 'nav-item nav-item--active' : 'nav-item'} onClick={() => { setView('inbox'); setFiltersOpen(false) }}><Icon name="upload" />Bandeja del homelab<span>{inbox.items.length}</span></button>
         </nav>
         <div className="sidebar__divider" />
         <FilterPanel facets={facets} activeTagKeys={activeTagKeys} onToggleTag={toggleTag} onClear={clearFilters} />
@@ -157,6 +183,19 @@ export default function App() {
         </header>
         <main className="app__main">
           {status === 'mock' && <div className="app__banner"><span className="app__mode-dot" /><p><strong>Modo de ejemplo.</strong> Los cambios no se guardan.</p><button onClick={recheck}>Reconectar <Icon name="refresh" size={13} /></button></div>}
+          {view === 'inbox' && (
+            <InboxPanel
+              inbox={inbox}
+              loading={inboxLoading}
+              error={inboxError}
+              choice={choice}
+              canImport={Boolean(choice && providers.find((p) => p.id === choice.providerId)?.available)}
+              onRefresh={() => void refreshInbox()}
+              onImport={handleInboxImport}
+              onReject={handleInboxReject}
+            />
+          )}
+          {view !== 'inbox' && (
           <section className="collection" aria-label="Catálogo de referencias">
             <div className="collection__heading"><h1>{view === 'all' ? 'Referencias' : 'Mi mix'} <span>{visible.length}</span></h1><button className="btn btn--ghost" onClick={() => void refresh()} aria-label="Actualizar biblioteca"><Icon name="refresh" size={16} /></button></div>
             <div className="collection__toolbar">
@@ -171,6 +210,7 @@ export default function App() {
             {!loading && visible.length === 0 && <div className="empty"><Icon name={view === 'mix' ? 'layers' : 'grid'} size={36} /><h3>{filtering ? 'Sin resultados' : view === 'mix' ? 'Sin referencias seleccionadas' : 'Sin referencias'}</h3><button className="btn btn--primary" onClick={() => filtering ? clearFilters() : view === 'mix' ? setView('all') : setUploadOpen(true)}>{filtering ? 'Limpiar filtros' : view === 'mix' ? 'Explorar biblioteca' : 'Subir referencias'}<Icon name="arrow" size={16} /></button></div>}
             {!loading && visible.length > 0 && <ReferenceGrid references={visible} selectedId={selectedId} pickedIds={pickedIds} compact={compact} onSelect={(reference) => setSelectedId(reference.id)} onTogglePick={togglePick} />}
           </section>
+          )}
 
           {copyError && <p className="app__error" role="alert">{copyError}</p>}
           <SelectionBar picked={picked} onRemove={togglePick} onClear={() => setPickedIds([])} onCopyMix={() => void copyMix()} copied={mixCopied} />
