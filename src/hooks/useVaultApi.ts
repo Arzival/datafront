@@ -12,6 +12,12 @@ const canProbe = !FORCE_MOCK && API_BASE_URL !== ''
 interface UseVaultApiResult {
   api: VaultApi
   status: ApiStatus
+  /**
+   * false mientras se sondea el backend. Hasta que sea true no hay que pedir
+   * nada: durante el sondeo `api` apunta al mock, y cargar con él haría
+   * aparecer los datos de ejemplo un instante antes de los reales.
+   */
+  ready: boolean
   /** Vuelve a sondear el backend, por si lo acabas de levantar. */
   recheck: () => void
 }
@@ -42,5 +48,10 @@ export function useVaultApi(): UseVaultApiResult {
     setAttempt((value) => value + 1)
   }, [])
 
-  return { api: status === 'http' ? httpVault : mockVault, status, recheck }
+  return {
+    api: status === 'http' ? httpVault : mockVault,
+    status,
+    ready: status !== 'checking',
+    recheck,
+  }
 }

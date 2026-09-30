@@ -20,16 +20,16 @@ import './App.css'
 const CHOICE_STORAGE_KEY = 'datafront.processing-choice'
 
 export default function App() {
-  const { api, status, recheck } = useVaultApi()
-  const { providers, loading: providersLoading } = useProviders(api)
-  const { references, loading, error, refresh, upsert, removeLocal } = useReferences(api)
+  const { api, status, ready: apiReady, recheck } = useVaultApi()
+  const { providers, loading: providersLoading } = useProviders(api, apiReady)
+  const { references, loading, error, refresh, upsert, removeLocal } = useReferences(api, apiReady)
   const [view, setView] = useState<'all' | 'mix' | 'inbox'>('all')
   const {
     inbox,
     loading: inboxLoading,
     error: inboxError,
     refresh: refreshInbox,
-  } = useInbox(api, view === 'inbox')
+  } = useInbox(api, view === 'inbox', apiReady)
 
   const [choice, setChoice] = useStoredState<ProcessingChoice | null>(CHOICE_STORAGE_KEY, null)
   const [search, setSearch] = useState('')

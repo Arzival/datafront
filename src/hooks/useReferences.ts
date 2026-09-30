@@ -4,6 +4,21 @@ import type { Reference } from '../types/vault.ts'
 
 const POLL_INTERVAL_MS = 2500
 
+/**
+ * Devuelve la lista nueva reutilizando los objetos anteriores que no han
+ * cambiado. Sin esto, cada sondeo entrega objetos nuevos y todas las tarjetas
+ * se vuelven a renderizar aunque su contenido sea idéntico.
+ */
+function mergeById(current: Reference[], incoming: Reference[]): Reference[] {
+  const previous = new Map(current.map((item) => [item.id, item]))
+
+  return incoming.map((item) => {
+    const old = previous.get(item.id)
+
+    return old && JSON.stringify(old) === JSON.stringify(item) ? old : item
+  })
+}
+
 interface UseReferencesResult {
   references: Reference[]
   loading: boolean
@@ -18,7 +33,7 @@ interface UseReferencesResult {
  * Lista de referencias con sondeo automático: mientras alguna esté en cola o
  * clasificándose, refresca cada 2.5s para ver el resultado en cuanto llega.
  */
-export function useReferences(api: VaultApi): UseReferencesResult {
+export function useReferences(api: VaultApi, ready: boolean): UseReferencesResult {
   const [references, setReferences] = useState<Reference[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -32,18 +47,24 @@ export function useReferences(api: VaultApi): UseReferencesResult {
   }, [])
 
   const refresh = useCallback(async () => {
+    if (!ready) return
+
     try {
       const result = await api.listReferences()
       if (!mounted.current) return
-      setReferences(result)
+      // Se conserva el objeto anterior de cada referencia que no cambió, para
+      // que React no vuelva a pintar tarjetas idénticas en cada sondeo.
+      setReferences((current) => mergeById(current, result))
       setError(null)
     } catch (cause: unknown) {
       if (!mounted.current) return
       setError(cause instanceof Error ? cause.message : 'No se pudo cargar la bóveda')
     }
-  }, [api])
+  }, [api, ready])
 
   useEffect(() => {
+    if (!ready) return
+
     // `loading` arranca en true y solo se apaga al resolver: ponerlo a true
     // aquí de forma síncrona provocaría un render extra en cada cambio de api.
     // refresh es async: sus setState ocurren tras el await, no en este render.
@@ -51,7 +72,7 @@ export function useReferences(api: VaultApi): UseReferencesResult {
     void refresh().finally(() => {
       if (mounted.current) setLoading(false)
     })
-  }, [refresh])
+  }, [refresh, ready])
 
   const hasWorkInFlight = references.some(
     (item) => item.status === 'pending' || item.status === 'processing',

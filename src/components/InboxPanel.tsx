@@ -59,6 +59,12 @@ export function InboxPanel({
         <h1>
           Bandeja del homelab <span>{inbox.items.length}</span>
         </h1>
+        {inbox.exists && (
+          <span className="inbox__live" title="Se revisa la carpeta cada 4 segundos">
+            <span className="inbox__live-dot" />
+            en directo
+          </span>
+        )}
         <span className="inbox__spacer" />
         <button
           type="button"

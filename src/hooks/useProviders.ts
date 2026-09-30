@@ -10,10 +10,12 @@ interface UseProvidersResult {
 
 const INITIAL: UseProvidersResult = { providers: [], loading: true, error: null }
 
-export function useProviders(api: VaultApi): UseProvidersResult {
+export function useProviders(api: VaultApi, ready: boolean): UseProvidersResult {
   const [state, setState] = useState<UseProvidersResult>(INITIAL)
 
   useEffect(() => {
+    if (!ready) return
+
     let active = true
 
     api
@@ -34,7 +36,7 @@ export function useProviders(api: VaultApi): UseProvidersResult {
     return () => {
       active = false
     }
-  }, [api])
+  }, [api, ready])
 
   return state
 }
