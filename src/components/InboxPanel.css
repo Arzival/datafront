@@ -199,3 +199,29 @@
     animation: none;
   }
 }
+
+.inbox-card__title {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text, #e7eaf0);
+}
+
+.inbox-card__source {
+  font-size: 12px;
+  color: var(--accent, #7c9cff);
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.inbox-card__source:hover {
+  text-decoration: underline;
+}
+
+/* Con título arriba, el nombre del archivo pasa a ser un dato secundario. */
+.inbox-card__name {
+  font-size: 11px;
+  opacity: 0.75;
+}

@@ -127,6 +127,10 @@ export interface InboxItem {
   /** Esta imagen ya está en la bóveda (mismo sha256). */
   alreadyInVault: boolean
   previewUrl: string
+  /** URL de origen, leída del .txt hermano que escribe el homelab. */
+  sourceUrl: string | null
+  /** Título de la página capturada, del mismo .txt. */
+  sourceTitle: string | null
 }
 
 export interface RejectReason {

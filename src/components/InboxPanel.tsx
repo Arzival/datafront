@@ -124,6 +124,20 @@ export function InboxPanel({
               </div>
 
               <div className="inbox-card__body">
+                {item.sourceTitle && <span className="inbox-card__title">{item.sourceTitle}</span>}
+
+                {item.sourceUrl && (
+                  <a
+                    className="inbox-card__source"
+                    href={item.sourceUrl}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    title={item.sourceUrl}
+                  >
+                    {item.sourceUrl.replace(/^https?:\/\//, '')}
+                  </a>
+                )}
+
                 <span className="inbox-card__name">{item.filename}</span>
 
                 <span className="inbox-card__meta">

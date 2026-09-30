@@ -318,6 +318,8 @@ let inboxItems: InboxItem[] = [
     settling: false,
     alreadyInVault: false,
     previewUrl: panel('#0f172a', '#38bdf8', 'dashboard'),
+    sourceUrl: 'https://proyectorium.app/projects',
+    sourceTitle: 'Proyectorium — Proyectos',
   },
   {
     filename: '20260930-094210__b2c8d4f6__pendiente.png',
@@ -329,6 +331,8 @@ let inboxItems: InboxItem[] = [
     settling: true,
     alreadyInVault: false,
     previewUrl: panel('#fefce8', '#ca8a04', 'pricing'),
+    sourceUrl: 'https://stripe.com/pricing',
+    sourceTitle: 'Pricing — Stripe',
   },
   {
     filename: '20260929-221040__a3f9c2e1__pendiente.png',
@@ -340,6 +344,8 @@ let inboxItems: InboxItem[] = [
     settling: false,
     alreadyInVault: true,
     previewUrl: panel('#18181b', '#f472b6', 'mobile'),
+    sourceUrl: null,
+    sourceTitle: null,
   },
 ]
 
