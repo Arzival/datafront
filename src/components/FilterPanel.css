@@ -1,0 +1,21 @@
+.filters { display: flex; flex-direction: column; gap: 2px; }
+.filters__head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.filters__head button { border: 0; background: none; font-size: 10px; color: var(--accent); cursor: pointer; }
+.facet { padding: 4px 0; }
+.facet summary { display: flex; align-items: center; gap: 6px; list-style: none; padding: 8px 0; font-size: 11px; color: var(--text-dim); cursor: pointer; }
+.facet summary::-webkit-details-marker { display: none; }
+.facet summary > svg { margin-left: auto; color: var(--text-faint); transition: transform .15s; }
+.facet[open] summary > svg { transform: rotate(90deg); }
+.facet__values { display: flex; flex-wrap: wrap; gap: 5px; padding: 4px 0 12px; }
+.facet__values .chip { font-size: 10px; padding: 4px 7px; border-radius: 5px; background: transparent; }
+.facet__values .chip--active { background: var(--accent-soft); border-color: #7c9cff40; color: var(--accent); }
+.facet--screen_type .facet__values { flex-direction: column; gap: 1px; }
+.facet--screen_type .chip { width: 100%; border-color: transparent; border-radius: 5px; padding: 6px 8px; font-size: 11px; }
+.facet--screen_type .chip__count { margin-left: auto; font-size: 10px; }
+.facet--screen_type .chip::before { content: ''; height: 5px; width: 5px; border: 1px solid var(--text-faint); border-radius: 2px; margin-right: 3px; }
+.facet--screen_type .chip--active::before { background: var(--accent); border-color: var(--accent); }
+.facet__active-dot { height: 4px; width: 4px; background: var(--accent); border-radius: 50%; }
+.facet summary { font-family: var(--mono); font-size: 11px; }
+.facet__values .chip, .facet--screen_type .chip { border-radius: 1px; }
+.facet__values .chip--active { border-color: #7c9cff55; color: #b4c7ff; }
+.facet--screen_type .chip::before, .facet__active-dot { border-radius: 0; }
