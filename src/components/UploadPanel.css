@@ -111,3 +111,17 @@
 @media (max-width: 720px) { .upload { padding: 20px 22px 25px; } .upload__item { grid-template-columns: minmax(0, 1fr); } }
 .upload__drop { border-radius: 2px; border-color: #7c9cff70; background: repeating-linear-gradient(-45deg, #7c9cff03, #7c9cff03 3px, transparent 3px, transparent 8px); }
 .upload__drop-icon { border-radius: 1px; border-color: #7c9cff50; background: #7c9cff09; }
+
+.upload__paste {
+  justify-content: center;
+}
+
+.upload__paste kbd {
+  margin-left: 4px;
+  padding: 1px 6px;
+  border: 1px solid var(--border-strong, #354055);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 11px;
+  color: var(--text-faint, #697489);
+}

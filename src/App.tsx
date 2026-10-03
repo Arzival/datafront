@@ -218,7 +218,7 @@ export default function App() {
       </div>
       <Modal open={uploadOpen} onClose={() => setUploadOpen(false)} label="Subir referencias" className="upload-modal">
         <div className="upload-modal__intro"><h2>Subir referencias</h2><button className="btn btn--icon" aria-label="Cerrar subida" onClick={() => setUploadOpen(false)}><Icon name="close" /></button></div>
-        <UploadPanel providers={providers} providersLoading={providersLoading} choice={choice} onChoiceChange={setChoice} onUpload={handleUpload} />
+        <UploadPanel providers={providers} providersLoading={providersLoading} choice={choice} onChoiceChange={setChoice} onUpload={handleUpload} onPasteWhileClosed={() => setUploadOpen(true)} />
       </Modal>
       <Modal open={Boolean(selected)} onClose={() => setSelectedId(null)} label="Detalle de referencia" className="detail-modal">
         {selected && <ReferenceDetail key={selected.id} reference={selected} providers={providers} choice={choice} onChoiceChange={setChoice} onClose={() => setSelectedId(null)} onReclassify={handleReclassify} onDelete={handleDelete} />}
