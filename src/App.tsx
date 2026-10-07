@@ -10,6 +10,7 @@ import { Icon } from './components/Icon.tsx'
 import { Modal } from './components/Modal.tsx'
 import { FilterPanel } from './components/FilterPanel.tsx'
 import { InboxPanel } from './components/InboxPanel.tsx'
+import { ImageViewer } from './components/ImageViewer.tsx'
 import { ReferenceDetail } from './components/ReferenceDetail.tsx'
 import { ReferenceGrid } from './components/ReferenceGrid.tsx'
 import { SelectionBar } from './components/SelectionBar.tsx'
@@ -222,6 +223,7 @@ export default function App() {
       </Modal>
       <Modal open={Boolean(selected)} onClose={() => setSelectedId(null)} label="Detalle de referencia" className="detail-modal">
         {selected && <ReferenceDetail key={selected.id} reference={selected} providers={providers} choice={choice} onChoiceChange={setChoice} onClose={() => setSelectedId(null)} onReclassify={handleReclassify} onDelete={handleDelete} />}
+        {selected && <ImageViewer key={`visor-${selected.id}`} src={selected.imageUrl} alt={selected.title ?? selected.filename} />}
       </Modal>
     </div>
   )

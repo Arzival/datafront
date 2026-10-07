@@ -1,0 +1,120 @@
+/* Ocupa todo el hueco a la izquierda del panel de detalle. Vive dentro del
+   <dialog> (por eso queda por encima del fondo difuminado) pero en posición
+   fija respecto a la ventana. */
+.viewer {
+  position: fixed;
+  inset: 0 min(590px, 100vw) 0 0;
+  display: flex;
+  flex-direction: column;
+  background: #05081299;
+}
+
+.viewer__frame {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  /* Cuadrícula sutil: deja ver los bordes de capturas con fondo oscuro. */
+  background-image:
+    linear-gradient(#ffffff06 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff06 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.viewer__frame--dragging {
+  cursor: grabbing;
+}
+
+.viewer__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: none;
+  transform-origin: 0 0;
+  box-shadow: 0 0 0 1px #ffffff14, 0 24px 80px #000c;
+  will-change: transform;
+}
+
+/* A partir de 300 % se ven los píxeles tal cual, que es justo lo que se busca
+   al ampliar una captura para medir un borde o un espaciado. */
+.viewer__image--pixels {
+  image-rendering: pixelated;
+}
+
+.viewer__toolbar {
+  position: absolute;
+  left: 50%;
+  bottom: 44px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px;
+  border: 1px solid var(--border-strong, #354055);
+  border-radius: 10px;
+  background: #0b1020ee;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px #0009;
+}
+
+.viewer__toolbar button,
+.viewer__toolbar a {
+  display: grid;
+  place-items: center;
+  min-width: 32px;
+  height: 30px;
+  padding: 0 9px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--text-dim, #99a3b5);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.viewer__toolbar button:hover,
+.viewer__toolbar a:hover {
+  background: #ffffff10;
+  color: var(--text, #e7eaf0);
+}
+
+.viewer__toolbar .is-active {
+  color: var(--accent, #7c9cff);
+}
+
+.viewer__percent {
+  min-width: 52px;
+  text-align: center;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  color: var(--text, #e7eaf0);
+}
+
+.viewer__divider {
+  width: 1px;
+  height: 18px;
+  margin: 0 4px;
+  background: var(--border-strong, #354055);
+}
+
+.viewer__hint {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 14px;
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-faint, #697489);
+  pointer-events: none;
+}
+
+/* En pantallas estrechas el panel ocupa todo: no queda hueco para el visor. */
+@media (max-width: 900px) {
+  .viewer {
+    display: none;
+  }
+}

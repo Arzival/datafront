@@ -164,3 +164,16 @@
 .detail__foot { padding: 16px 22px; background: var(--surface); }
 .detail__text { overflow-wrap: anywhere; }
 @media (max-width: 520px) { .detail__head { flex-wrap: wrap; gap: 8px; padding: 16px; } .detail__title { flex-basis: 70%; } .detail__body { padding: 16px; } .detail__foot { padding: 12px; } .detail__foot .btn { font-size: 11px; padding: 7px 9px; } }
+
+/* En una columna flex con scroll, overflow: hidden deja que el contenedor se
+   encoja hasta casi cero: por eso la imagen salía como una línea. */
+.detail__image {
+  flex-shrink: 0;
+}
+
+/* Con ventana ancha la imagen ya se ve grande en el visor de la izquierda. */
+@media (min-width: 901px) {
+  .detail__image {
+    display: none;
+  }
+}
