@@ -6,7 +6,7 @@
   inset: 0 min(590px, 100vw) 0 0;
   display: flex;
   flex-direction: column;
-  background: #05081299;
+  background: #0a0a0acc;
 }
 
 .viewer__frame {
@@ -33,6 +33,7 @@
   left: 0;
   max-width: none;
   transform-origin: 0 0;
+  border-radius: 4px;
   box-shadow: 0 0 0 1px #ffffff14, 0 24px 80px #000c;
   will-change: transform;
 }
@@ -52,9 +53,9 @@
   align-items: center;
   gap: 2px;
   padding: 4px;
-  border: 1px solid var(--border-strong, #354055);
-  border-radius: 10px;
-  background: #0b1020ee;
+  border: 0;
+  border-radius: var(--pill);
+  background: #1c1c1cf0;
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 30px #0009;
 }
@@ -64,12 +65,12 @@
   display: grid;
   place-items: center;
   min-width: 32px;
-  height: 30px;
+  height: 34px;
   padding: 0 9px;
   border: 0;
-  border-radius: 7px;
+  border-radius: var(--pill);
   background: transparent;
-  color: var(--text-dim, #99a3b5);
+  color: var(--text-dim);
   font: inherit;
   font-size: 13px;
   cursor: pointer;
@@ -79,11 +80,13 @@
 .viewer__toolbar button:hover,
 .viewer__toolbar a:hover {
   background: #ffffff10;
-  color: var(--text, #e7eaf0);
+  color: var(--text);
 }
 
-.viewer__toolbar .is-active {
-  color: var(--accent, #7c9cff);
+.viewer__toolbar .is-active,
+.viewer__toolbar .is-active:hover {
+  background: var(--accent);
+  color: var(--accent-ink);
 }
 
 .viewer__percent {
@@ -91,14 +94,14 @@
   text-align: center;
   font-size: 12px;
   font-variant-numeric: tabular-nums;
-  color: var(--text, #e7eaf0);
+  color: var(--text);
 }
 
 .viewer__divider {
   width: 1px;
   height: 18px;
   margin: 0 4px;
-  background: var(--border-strong, #354055);
+  background: var(--border-strong);
 }
 
 .viewer__hint {
@@ -108,7 +111,7 @@
   bottom: 14px;
   text-align: center;
   font-size: 11px;
-  color: var(--text-faint, #697489);
+  color: var(--text-faint);
   pointer-events: none;
 }
 

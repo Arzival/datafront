@@ -154,16 +154,25 @@
   font-weight: 600;
   color: var(--accent);
 }
-.detail { position: static; width: 100%; height: 100%; border: 0; box-shadow: none; }
-.detail__head { padding: 22px; align-items: center; }
-.detail__title { font-size: 17px; letter-spacing: -.3px; line-height: 1.5; }
-.detail__body { padding: 22px; gap: 24px; min-height: 120px; }
-.detail__image { background: #131c30; }
-.detail__processing { padding: 16px 22px; border-top: 1px solid var(--border); max-height: 30dvh; overflow-y: auto; }
+.detail { position: static; width: 100%; height: 100%; border: 0; background: transparent; box-shadow: none; }
+.detail__head { align-items: center; padding: 22px 22px 18px; border-bottom: 0; }
+.detail__title { font-size: 19px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.35; }
+.detail__body { gap: 22px; min-height: 120px; padding: 4px 22px 22px; }
+.detail__image { border: 0; border-radius: var(--radius); background: #121212; }
+.detail__section { padding: 16px 18px; border-radius: var(--radius); background: var(--surface-2); }
+.detail__section-label { font-size: 12px; font-weight: 700; letter-spacing: 0; text-transform: none; color: var(--text); }
+.detail__text { color: var(--text-dim); overflow-wrap: anywhere; }
+.detail__tag-group-label { font-weight: 600; }
+.detail__section .chip { background: var(--surface-3); color: var(--text); }
+.detail__error { border: 0; border-radius: var(--radius-sm); background: #ff6b6b14; }
+.detail__path { padding: 10px 14px; border: 0; border-radius: var(--radius-sm); background: var(--bg); }
+.detail__path:hover { box-shadow: inset 0 0 0 1px var(--accent-line); }
+.detail__path code { font-family: var(--mono); }
+.detail__path span { padding: 3px 10px; border-radius: var(--pill); background: var(--accent); font-weight: 700; color: var(--accent-ink); }
+.detail__processing { max-height: 30dvh; padding: 16px 22px; border-top: 1px solid var(--border); overflow-y: auto; }
 .detail__processing .picker__desc { display: none; }
-.detail__foot { padding: 16px 22px; background: var(--surface); }
-.detail__text { overflow-wrap: anywhere; }
-@media (max-width: 520px) { .detail__head { flex-wrap: wrap; gap: 8px; padding: 16px; } .detail__title { flex-basis: 70%; } .detail__body { padding: 16px; } .detail__foot { padding: 12px; } .detail__foot .btn { font-size: 11px; padding: 7px 9px; } }
+.detail__foot { padding: 16px 22px; border-top: 1px solid var(--border); background: transparent; }
+@media (max-width: 520px) { .detail__head { flex-wrap: wrap; gap: 8px; padding: 16px; } .detail__title { flex-basis: 70%; } .detail__body { padding: 4px 16px 16px; } .detail__foot { padding: 12px; } .detail__foot .btn { padding: 7px 12px; font-size: 12px; } }
 
 /* En una columna flex con scroll, overflow: hidden deja que el contenedor se
    encoja hasta casi cero: por eso la imagen salía como una línea. */

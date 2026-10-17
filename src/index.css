@@ -1,35 +1,47 @@
 /* ── Tokens ─────────────────────────────────────────────────────────────── */
-/* Chrome oscuro a propósito: la app es un visor de capturas de interfaces y
-   un fondo neutro oscuro evita competir con los colores de las referencias. */
+/* Casi negro con tarjetas gris muy oscuro y un único acento lima: el chrome
+   se queda neutro para no competir con los colores de las capturas, y el lima
+   marca solo lo accionable (lo activo, lo seleccionado, el CTA). */
 :root {
-  --bg: #0b0e14;
-  --surface: #11151d;
-  --surface-2: #171c26;
-  --surface-3: #1e2534;
-  --border: #232a37;
-  --border-strong: #354055;
+  --bg: #0f0f0f;
+  --surface: #1c1c1c;
+  --surface-2: #242424;
+  --surface-3: #2e2e2e;
+  --border: #ffffff0f;
+  --border-strong: #ffffff24;
 
-  --text: #e7eaf0;
-  --text-dim: #a7b3c9;
-  --text-faint: #8592aa;
+  --text: #ffffff;
+  --text-dim: #b8b8b8;
+  --text-faint: #8c8c8c;
 
-  --accent: #7c9cff;
-  --accent-soft: #7c9cff18;
-  --accent-ink: #0a0d13;
+  --accent: #c6e64a;
+  --accent-hover: #d4ef6c;
+  --accent-soft: #c6e64a1a;
+  --accent-line: #c6e64a59;
+  --accent-ink: #0f0f0f;
 
-  --ok: #4ade80;
-  --warn: #fbbf24;
-  --danger: #fb7185;
+  /* Solo para los degradados de fondo de las piezas destacadas. */
+  --glow-green: #2f6b4a;
+  --glow-violet: #5b3fa0;
 
-  --radius-sm: 6px;
-  --radius: 10px;
-  --radius-lg: 16px;
+  --ok: #c6e64a;
+  --warn: #f5b54a;
+  --danger: #ff6b6b;
 
-  --shadow: 0 1px 2px rgb(0 0 0 / 0.4), 0 8px 24px -8px rgb(0 0 0 / 0.5);
-  --shadow-lg: 0 24px 64px -16px rgb(0 0 0 / 0.7);
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius: 20px;
+  --radius-lg: 28px;
+  --pill: 999px;
 
-  --header-h: 60px;
-  --sidebar-w: 246px;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.4), 0 10px 30px -10px rgb(0 0 0 / 0.6);
+  --shadow-lg: 0 30px 80px -20px rgb(0 0 0 / 0.8);
+
+  --font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --mono: ui-monospace, 'SF Mono', SFMono-Regular, Menlo, monospace;
+
+  --header-h: 76px;
+  --sidebar-w: 268px;
 
   color-scheme: dark;
 }
@@ -54,8 +66,7 @@ body,
 body {
   background: var(--bg);
   color: var(--text);
-  font-family:
-    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-family: var(--font);
   font-size: 14px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -75,9 +86,21 @@ textarea {
   color: inherit;
 }
 
+button,
+a,
+input,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
 }
 
 ::-webkit-scrollbar {
@@ -87,92 +110,99 @@ textarea {
 
 ::-webkit-scrollbar-thumb {
   background: var(--surface-3);
-  border: 2px solid var(--bg);
-  border-radius: 999px;
+  border: 3px solid var(--bg);
+  border-radius: var(--pill);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--border-strong);
+  background: #3a3a3a;
 }
 
 /* ── Primitivas ─────────────────────────────────────────────────────────── */
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  padding: 7px 13px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
+  justify-content: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-radius: var(--pill);
   background: var(--surface-2);
   color: var(--text);
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 120ms, border-color 120ms, opacity 120ms;
+  transition: background 140ms, border-color 140ms, color 140ms, opacity 140ms, transform 140ms;
   white-space: nowrap;
 }
 
 .btn:hover:not(:disabled) {
   background: var(--surface-3);
-  border-color: var(--border-strong);
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.97);
 }
 
 .btn:disabled {
-  opacity: 0.45;
+  opacity: 0.4;
   cursor: not-allowed;
 }
 
 .btn--primary {
   background: var(--accent);
-  border-color: var(--accent);
   color: var(--accent-ink);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .btn--primary:hover:not(:disabled) {
-  background: #a7bdff;
-  border-color: #a7bdff;
+  background: var(--accent-hover);
 }
 
 .btn--ghost {
   background: transparent;
-  border-color: transparent;
   color: var(--text-dim);
 }
 
 .btn--ghost:hover:not(:disabled) {
   background: var(--surface-2);
-  border-color: var(--border);
   color: var(--text);
 }
 
 .btn--danger:hover:not(:disabled) {
-  background: #fb718518;
-  border-color: var(--danger);
+  background: #ff6b6b1f;
   color: var(--danger);
+}
+
+/* Botón de icono circular, como los de la barra superior de la referencia. */
+.btn--icon {
+  width: 38px;
+  min-width: 38px;
+  padding: 0;
 }
 
 .field {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
 }
 
 .field__label {
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  letter-spacing: 0.04em;
   color: var(--text-faint);
 }
 
 .input,
 .select {
   width: 100%;
-  padding: 7px 10px;
+  min-height: 40px;
+  padding: 9px 16px;
   border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  background: var(--bg);
+  border-radius: var(--pill);
+  background: var(--surface-2);
   font-size: 13px;
 }
 
@@ -182,19 +212,23 @@ textarea {
 
 .input:focus,
 .select:focus {
-  border-color: var(--accent);
+  border-color: var(--accent-line);
   outline: none;
 }
 
 .select {
   appearance: none;
-  padding-right: 28px;
-  background-image: linear-gradient(45deg, transparent 50%, var(--text-faint) 50%),
-    linear-gradient(135deg, var(--text-faint) 50%, transparent 50%);
-  background-position: calc(100% - 15px) 50%, calc(100% - 10px) 50%;
+  padding-right: 34px;
+  background-image: linear-gradient(45deg, transparent 50%, var(--accent) 50%),
+    linear-gradient(135deg, var(--accent) 50%, transparent 50%);
+  background-position: calc(100% - 19px) 52%, calc(100% - 14px) 52%;
   background-size: 5px 5px, 5px 5px;
   background-repeat: no-repeat;
   cursor: pointer;
+}
+
+.select option {
+  background: var(--surface);
 }
 
 .hint {
@@ -207,15 +241,26 @@ textarea {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 16px;
+  margin-top: 12px;
   padding: 72px 24px;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(120% 90% at 0% 0%, #2f6b4a33, transparent 60%),
+    radial-gradient(90% 90% at 100% 100%, #5b3fa033, transparent 60%),
+    var(--surface);
   text-align: center;
   color: var(--text-dim);
 }
 
+.empty > svg {
+  color: var(--accent);
+}
+
+.empty h3,
 .empty__title {
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 17px;
+  font-weight: 700;
   color: var(--text);
 }
 
@@ -228,25 +273,12 @@ textarea {
   white-space: nowrap;
 }
 
-.btn--icon { padding: 8px; }
-button, a, input, select { -webkit-tap-highlight-color: transparent; }
-.btn { min-height: 36px; }
-.empty { gap: 16px; border: 1px dashed var(--border); border-radius: 10px; margin-top: 12px; }
-.empty > svg { color: var(--text-faint); }
-.empty h3 { font-size: 16px; font-weight: 500; }
-
-/* Interfaz de archivo: azul original, controles de terminal y cortes angulares. */
-:root {
-  --mono: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
-  --cyan: #68d9ff;
-  --radius-sm: 2px;
-  --radius: 3px;
-  --radius-lg: 4px;
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
 }
-body { background-image: linear-gradient(#7c9cff04 1px, transparent 1px), linear-gradient(90deg, #7c9cff04 1px, transparent 1px); background-size: 32px 32px; }
-.btn { border-radius: 2px; font-family: var(--mono); font-size: 11px; }
-.btn--primary { border: 1px solid #abc0ff; background: var(--accent); box-shadow: 0 0 18px #7c9cff20, inset 0 0 0 2px #0b0e1415; }
-.btn--primary:hover:not(:disabled) { box-shadow: 0 0 24px #7c9cff45; }
-.input, .select { border-radius: 2px; padding: 10px; }
-.field__label { font-family: var(--mono); font-size: 10px; }
-:focus-visible { outline-color: var(--cyan); }

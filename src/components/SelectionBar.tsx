@@ -26,7 +26,7 @@ export function SelectionBar({ picked, onRemove, onClear, onCopyMix, copied }: S
   return (
     <div className="selbar">
       <span className="selbar__count">
-        {picked.length} {picked.length === 1 ? 'referencia' : 'referencias'} en el mix
+        <strong>{picked.length}</strong> {picked.length === 1 ? 'referencia' : 'referencias'} en el mix
       </span>
 
       <div className="selbar__thumbs">

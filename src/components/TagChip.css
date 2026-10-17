@@ -3,30 +3,34 @@
   align-items: center;
   gap: 6px;
   max-width: 100%;
-  padding: 3px 8px;
-  border: 1px solid var(--border);
-  border-radius: 999px;
+  padding: 4px 10px;
+  border: 1px solid transparent;
+  border-radius: var(--pill);
   background: var(--surface-2);
   font-size: 12px;
+  font-weight: 500;
   color: var(--text-dim);
   cursor: default;
 }
 
 .chip--button {
   cursor: pointer;
-  transition: background 120ms, border-color 120ms, color 120ms;
+  transition: background 120ms, color 120ms;
 }
 
 .chip--button:hover {
   background: var(--surface-3);
-  border-color: var(--border-strong);
   color: var(--text);
 }
 
 .chip--active {
-  background: var(--accent-soft);
-  border-color: var(--accent);
-  color: var(--text);
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.chip--active.chip--button:hover {
+  background: var(--accent-hover);
+  color: var(--accent-ink);
 }
 
 .chip__value {
@@ -36,11 +40,11 @@
 }
 
 .chip__swatch {
-  width: 11px;
-  height: 11px;
   flex-shrink: 0;
-  border: 1px solid rgb(255 255 255 / 0.25);
-  border-radius: 3px;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #ffffff40;
+  border-radius: var(--pill);
 }
 
 .chip__count {

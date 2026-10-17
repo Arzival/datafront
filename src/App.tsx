@@ -162,6 +162,11 @@ export default function App() {
           <span className="app__brand-mark"><Icon name="layers" size={23} /></span>
           <span>datafront<span className="app__brand-dot">.</span></span>
         </a>
+        <div className="sidebar__summary" aria-label="Resumen de la bóveda">
+          <span className="sidebar__summary-label">Clasificadas</span>
+          <span className="sidebar__summary-value">{ready}<small>/ {references.length}</small></span>
+          <span className="sidebar__summary-bar"><span style={{ width: `${references.length > 0 ? (ready / references.length) * 100 : 0}%` }} /></span>
+        </div>
         <nav className="sidebar__nav" aria-label="Biblioteca">
           <button className={view === 'all' ? 'nav-item nav-item--active' : 'nav-item'} onClick={() => { setView('all'); setFiltersOpen(false) }}><Icon name="grid" />Todas las referencias<span>{references.length}</span></button>
           <button className={view === 'mix' ? 'nav-item nav-item--active' : 'nav-item'} onClick={() => { setView('mix'); setFiltersOpen(false) }}><Icon name="layers" />Mi mix<span>{picked.length}</span></button>
@@ -176,6 +181,7 @@ export default function App() {
       </aside>
       {filtersOpen && <button className="sidebar__scrim" aria-label="Cerrar filtros" onClick={() => setFiltersOpen(false)} />}
       <div className="app__workspace">
+        <div className="app__panel">
         <header className="app__header">
           <button className="btn btn--icon mobile-menu" aria-label="Abrir filtros" onClick={() => setFiltersOpen(!filtersOpen)}><Icon name="filter" /></button>
 
@@ -216,6 +222,7 @@ export default function App() {
           {copyError && <p className="app__error" role="alert">{copyError}</p>}
           <SelectionBar picked={picked} onRemove={togglePick} onClear={() => setPickedIds([])} onCopyMix={() => void copyMix()} copied={mixCopied} />
         </main>
+        </div>
       </div>
       <Modal open={uploadOpen} onClose={() => setUploadOpen(false)} label="Subir referencias" className="upload-modal">
         <div className="upload-modal__intro"><h2>Subir referencias</h2><button className="btn btn--icon" aria-label="Cerrar subida" onClick={() => setUploadOpen(false)}><Icon name="close" /></button></div>
