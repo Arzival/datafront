@@ -1,0 +1,126 @@
+.trash {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.trash__heading h1 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+.trash__heading h1 > span {
+  padding: 3px 11px;
+  border-radius: var(--pill);
+  background: var(--surface-3);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+  color: var(--text);
+}
+
+.trash__intro {
+  max-width: 640px;
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+.trash__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(268px, 1fr));
+  gap: 16px;
+  margin-top: 6px;
+}
+
+.trash-card {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.trash-card--busy {
+  opacity: 0.6;
+}
+
+.trash-card__thumb {
+  display: block;
+  aspect-ratio: 16 / 10;
+  border-radius: var(--radius-sm);
+  background: #121212;
+  overflow: hidden;
+}
+
+/* En gris: se ve qué es, pero queda claro que no está en el catálogo. */
+.trash-card__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: grayscale(0.85);
+  opacity: 0.75;
+  transition: filter 0.2s, opacity 0.2s;
+}
+
+.trash-card:hover .trash-card__thumb img {
+  filter: none;
+  opacity: 1;
+}
+
+.trash-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 8px 6px;
+}
+
+.trash-card__title {
+  display: -webkit-box;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.trash-card__meta {
+  font-size: 11px;
+  color: var(--text-faint);
+}
+
+.trash-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.trash-card__actions .btn {
+  min-height: 34px;
+  padding: 0 14px;
+  font-size: 12px;
+}
+
+.trash-card__confirm {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  background: #ff6b6b14;
+}
+
+.trash-card__confirm p {
+  font-size: 12px;
+  color: var(--danger);
+}
+
+.trash-card__confirm .trash-card__actions {
+  margin-top: 0;
+}

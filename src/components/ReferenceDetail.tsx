@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { formatBytes, formatRelative } from '../lib/format.ts'
 import { referenceToPrompt } from '../lib/prompt.ts'
 import {
@@ -11,6 +11,7 @@ import {
 import { StatusBadge } from './StatusBadge.tsx'
 import { TagChip } from './TagChip.tsx'
 import { ProviderPicker } from './ProviderPicker.tsx'
+import { Icon } from './Icon.tsx'
 import './ReferenceDetail.css'
 
 interface ReferenceDetailProps {
@@ -35,6 +36,17 @@ export function ReferenceDetail({
   const [busy, setBusy] = useState<'reclassify' | 'delete' | null>(null)
   const [actionError, setActionError] = useState('')
   const [copied, setCopied] = useState<'prompt' | 'path' | null>(null)
+  /** Borrar pide confirmación: entre una referencia y la papelera hay dos clics. */
+  const [confirmingDelete, setConfirmingDelete] = useState(false)
+  const cancelDeleteRef = useRef<HTMLButtonElement>(null)
+
+  // El foco va a «Cancelar». autoFocus no basta: al desaparecer el botón
+  // pulsado, el <dialog> devuelve el foco a «Cerrar» después del render.
+  useEffect(() => {
+    if (!confirmingDelete) return
+    const frame = requestAnimationFrame(() => cancelDeleteRef.current?.focus())
+    return () => cancelAnimationFrame(frame)
+  }, [confirmingDelete])
 
   const processedBy = providers.find((item) => item.id === reference.providerId)
   const targetProvider = providers.find((item) => item.id === choice?.providerId)
@@ -176,38 +188,67 @@ export function ReferenceDetail({
       </div>
 
       <div className="detail__processing"><ProviderPicker providers={providers} value={choice} onChange={onChoiceChange} loading={false} />{actionError && <p className="detail__error" role="alert">{actionError}</p>}</div>
-      <footer className="detail__foot">
-        <button
-          type="button"
-          className="btn btn--primary"
-          onClick={() => void copy(referenceToPrompt(reference), 'prompt')}
-          disabled={reference.status !== 'ready'}
-        >
-          {copied === 'prompt' ? 'Copiado' : 'Copiar como prompt'}
-        </button>
-        <button
-          type="button"
-          className="btn"
-          onClick={() => void run('reclassify')}
-          disabled={!canReclassify || busy !== null}
-          title={
-            canReclassify
-              ? `Volver a clasificar con ${targetProvider?.label}`
-              : 'Elige un proveedor disponible arriba'
-          }
-        >
-          {busy === 'reclassify' ? 'Reencolando…' : 'Reclasificar'}
-        </button>
-        <span className="detail__spacer" />
-        <button
-          type="button"
-          className="btn btn--danger"
-          onClick={() => void run('delete')}
-          disabled={busy !== null}
-        >
-          {busy === 'delete' ? 'Borrando…' : 'Borrar'}
-        </button>
-      </footer>
+      {confirmingDelete ? (
+        // «Cancelar» queda justo donde estaba «Borrar»: un doble clic sin
+        // querer cancela en vez de confirmar.
+        <footer className="detail__foot detail__foot--confirm" role="group" aria-label="Confirmar borrado">
+          <button
+            type="button"
+            className="btn btn--danger-solid"
+            onClick={() => void run('delete')}
+            disabled={busy !== null}
+          >
+            <Icon name="trash" size={16} />
+            {busy === 'delete' ? 'Moviendo…' : 'Sí, mover a la papelera'}
+          </button>
+          <span className="detail__confirm-text">Podrás restaurarla desde la papelera.</span>
+          <span className="detail__spacer" />
+          <button
+            type="button"
+            className="btn"
+            ref={cancelDeleteRef}
+            onClick={() => setConfirmingDelete(false)}
+            disabled={busy !== null}
+          >
+            Cancelar
+          </button>
+        </footer>
+      ) : (
+        <footer className="detail__foot">
+          <button
+            type="button"
+            className="btn btn--primary"
+            onClick={() => void copy(referenceToPrompt(reference), 'prompt')}
+            disabled={reference.status !== 'ready'}
+          >
+            {copied === 'prompt' ? 'Copiado' : 'Copiar como prompt'}
+          </button>
+          <button
+            type="button"
+            className="btn"
+            onClick={() => void run('reclassify')}
+            disabled={!canReclassify || busy !== null}
+            title={
+              canReclassify
+                ? `Volver a clasificar con ${targetProvider?.label}`
+                : 'Elige un proveedor disponible arriba'
+            }
+          >
+            {busy === 'reclassify' ? 'Reencolando…' : 'Reclasificar'}
+          </button>
+          <span className="detail__spacer" />
+          <button
+            type="button"
+            className="btn btn--danger"
+            onClick={() => setConfirmingDelete(true)}
+            disabled={busy !== null}
+            title="Mover a la papelera"
+          >
+            <Icon name="trash" size={16} />
+            Borrar
+          </button>
+        </footer>
+      )}
     </aside>
   )
 }

@@ -356,6 +356,7 @@ let inboxItems: InboxItem[] = [
 ]
 
 let references: Reference[] = seed.map((item) => ({ ...item }))
+let trash: Reference[] = []
 let counter = references.length
 
 function delay(ms: number): Promise<void> {
@@ -474,8 +475,32 @@ export const mockVault: VaultApi = {
 
   async remove(id) {
     await delay(120)
-    find(id)
+    const target = find(id)
     references = references.filter((item) => item.id !== id)
+    trash = [{ ...target, deletedAt: new Date().toISOString() }, ...trash]
+  },
+
+  async listTrash() {
+    await delay(120)
+    return trash.map((item) => ({ ...item }))
+  },
+
+  async restore(id) {
+    await delay(120)
+    const target = trash.find((item) => item.id === id)
+    if (!target) throw new VaultApiError('Esa referencia ya no está en la papelera', 404)
+    trash = trash.filter((item) => item.id !== id)
+    const restored = { ...target, deletedAt: null }
+    references = [restored, ...references]
+    return { ...restored }
+  },
+
+  async purge(id) {
+    await delay(120)
+    if (!trash.some((item) => item.id === id)) {
+      throw new VaultApiError('Solo se puede borrar para siempre lo que está en la papelera.', 409)
+    }
+    trash = trash.filter((item) => item.id !== id)
   },
 
   async inbox(): Promise<InboxStatus> {

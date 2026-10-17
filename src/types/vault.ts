@@ -72,6 +72,8 @@ export interface Reference {
   notes: string | null
   tags: Tag[]
   createdAt: string
+  /** Cuándo se mandó a la papelera. null (o ausente) si está en el catálogo. */
+  deletedAt?: string | null
 }
 
 /** Un motor de IA capaz de clasificar imágenes. */

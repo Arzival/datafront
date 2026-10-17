@@ -340,6 +340,59 @@
   color: var(--danger);
 }
 
+/* Aviso tras borrar, con «Deshacer». Va abajo, por encima de la barra del mix. */
+.app__toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: min(560px, calc(100vw - 32px));
+  padding: 8px 8px 8px 18px;
+  border-radius: var(--pill);
+  background: var(--surface-3);
+  box-shadow: var(--shadow-lg);
+  font-size: 13px;
+  transform: translateX(-50%);
+  animation: toast-in 180ms ease-out;
+}
+
+.app__toast > svg {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
+.app__toast > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.app__toast button {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 6px;
+  min-height: 34px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: var(--pill);
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 8px);
+  }
+}
+
 /* ── Colección ──────────────────────────────────────────────────────────── */
 .collection__heading {
   display: flex;

@@ -116,6 +116,18 @@ export const httpVault: VaultApi = {
     return request<void>(`/references/${id}`, { method: 'DELETE' })
   },
 
+  listTrash() {
+    return request<Reference[]>('/references/trash')
+  },
+
+  restore(id: string) {
+    return request<Reference>(`/references/${id}/restore`, { method: 'POST' })
+  },
+
+  purge(id: string) {
+    return request<void>(`/references/${id}/forever`, { method: 'DELETE' })
+  },
+
   inbox() {
     return request<InboxStatus>('/inbox')
   },

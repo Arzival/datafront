@@ -175,6 +175,17 @@ select {
   color: var(--danger);
 }
 
+/* Acción destructiva ya confirmada. */
+.btn--danger-solid {
+  background: var(--danger);
+  color: #1a0505;
+  font-weight: 700;
+}
+
+.btn--danger-solid:hover:not(:disabled) {
+  background: #ff8585;
+}
+
 /* Botón de icono circular, como los de la barra superior de la referencia. */
 .btn--icon {
   width: 38px;

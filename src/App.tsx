@@ -1,8 +1,9 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { useVaultApi } from './hooks/useVaultApi.ts'
 import { useProviders } from './hooks/useProviders.ts'
 import { useReferences } from './hooks/useReferences.ts'
 import { useInbox } from './hooks/useInbox.ts'
+import { useTrash } from './hooks/useTrash.ts'
 import { useStoredState } from './hooks/useStoredState.ts'
 import { buildFacets, filterReferences } from './lib/facets.ts'
 import { referencesToMixPrompt } from './lib/prompt.ts'
@@ -14,6 +15,7 @@ import { ImageViewer } from './components/ImageViewer.tsx'
 import { ReferenceDetail } from './components/ReferenceDetail.tsx'
 import { ReferenceGrid } from './components/ReferenceGrid.tsx'
 import { SelectionBar } from './components/SelectionBar.tsx'
+import { TrashPanel } from './components/TrashPanel.tsx'
 import { UploadPanel } from './components/UploadPanel.tsx'
 import type { InboxItem, ProcessingChoice, Reference } from './types/vault.ts'
 import './App.css'
@@ -24,7 +26,11 @@ export default function App() {
   const { api, status, ready: apiReady, recheck } = useVaultApi()
   const { providers, loading: providersLoading } = useProviders(api, apiReady)
   const { references, loading, error, refresh, upsert, removeLocal } = useReferences(api, apiReady)
-  const [view, setView] = useState<'all' | 'mix' | 'inbox'>('all')
+  const [view, setView] = useState<'all' | 'mix' | 'inbox' | 'trash'>('all')
+  const { trash, loading: trashLoading, error: trashError, refresh: refreshTrash } = useTrash(api, apiReady)
+  /** Lo último que se mandó a la papelera, para ofrecer «Deshacer» unos segundos. */
+  const [undoable, setUndoable] = useState<Reference | null>(null)
+  const undoTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const {
     inbox,
     loading: inboxLoading,
@@ -122,11 +128,36 @@ export default function App() {
     upsert(updated)
   }
 
+  /** Borrar manda a la papelera; durante unos segundos se puede deshacer. */
   async function handleDelete(reference: Reference): Promise<void> {
     await api.remove(reference.id)
     removeLocal(reference.id)
     setPickedIds((current) => current.filter((id) => id !== reference.id))
     setSelectedId(null)
+    void refreshTrash()
+
+    if (undoTimer.current) clearTimeout(undoTimer.current)
+    setUndoable(reference)
+    undoTimer.current = setTimeout(() => setUndoable(null), 8000)
+  }
+
+  async function handleRestore(reference: Reference): Promise<void> {
+    const restored = await api.restore(reference.id)
+    upsert(restored)
+    await refreshTrash()
+  }
+
+  async function handleUndoDelete(): Promise<void> {
+    if (!undoable) return
+    if (undoTimer.current) clearTimeout(undoTimer.current)
+    const reference = undoable
+    setUndoable(null)
+    await handleRestore(reference)
+  }
+
+  async function handlePurge(reference: Reference): Promise<void> {
+    await api.purge(reference.id)
+    await refreshTrash()
   }
 
   const pending = references.filter(
@@ -171,6 +202,7 @@ export default function App() {
           <button className={view === 'all' ? 'nav-item nav-item--active' : 'nav-item'} onClick={() => { setView('all'); setFiltersOpen(false) }}><Icon name="grid" />Todas las referencias<span>{references.length}</span></button>
           <button className={view === 'mix' ? 'nav-item nav-item--active' : 'nav-item'} onClick={() => { setView('mix'); setFiltersOpen(false) }}><Icon name="layers" />Mi mix<span>{picked.length}</span></button>
           <button className={view === 'inbox' ? 'nav-item nav-item--active' : 'nav-item'} onClick={() => { setView('inbox'); setFiltersOpen(false) }}><Icon name="upload" />Bandeja del homelab<span>{inbox.items.length}</span></button>
+          <button className={view === 'trash' ? 'nav-item nav-item--active' : 'nav-item'} onClick={() => { setView('trash'); setFiltersOpen(false); void refreshTrash() }}><Icon name="trash" />Papelera<span>{trash.length}</span></button>
         </nav>
         <div className="sidebar__divider" />
         <FilterPanel facets={facets} activeTagKeys={activeTagKeys} onToggleTag={toggleTag} onClear={clearFilters} />
@@ -202,7 +234,10 @@ export default function App() {
               onReject={handleInboxReject}
             />
           )}
-          {view !== 'inbox' && (
+          {view === 'trash' && (
+            <TrashPanel trash={trash} loading={trashLoading} error={trashError} onRestore={handleRestore} onPurge={handlePurge} />
+          )}
+          {(view === 'all' || view === 'mix') && (
           <section className="collection" aria-label="Catálogo de referencias">
             <div className="collection__heading"><h1>{view === 'all' ? 'Referencias' : 'Mi mix'} <span>{visible.length}</span></h1><button className="btn btn--ghost" onClick={() => void refresh()} aria-label="Actualizar biblioteca"><Icon name="refresh" size={16} /></button></div>
             <div className="collection__toolbar">
@@ -220,6 +255,13 @@ export default function App() {
           )}
 
           {copyError && <p className="app__error" role="alert">{copyError}</p>}
+          {undoable && (
+            <div className="app__toast" role="status">
+              <Icon name="trash" size={16} />
+              <span>«{undoable.title ?? undoable.filename}» se movió a la papelera.</span>
+              <button type="button" onClick={() => void handleUndoDelete()}><Icon name="undo" size={15} />Deshacer</button>
+            </div>
+          )}
           <SelectionBar picked={picked} onRemove={togglePick} onClear={() => setPickedIds([])} onCopyMix={() => void copyMix()} copied={mixCopied} />
         </main>
         </div>

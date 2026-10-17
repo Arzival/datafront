@@ -23,7 +23,14 @@ export interface VaultApi {
   getReference(id: string): Promise<Reference>
   upload(input: UploadInput): Promise<Reference>
   reclassify(id: string, choice: ProcessingChoice): Promise<Reference>
+  /** Manda a la papelera: no borra archivos ni etiquetas. */
   remove(id: string): Promise<void>
+
+  /** Papelera: lo borrado, más reciente primero. */
+  listTrash(): Promise<Reference[]>
+  restore(id: string): Promise<Reference>
+  /** Borrado definitivo. Solo funciona con lo que ya está en la papelera. */
+  purge(id: string): Promise<void>
 
   /** Bandeja de entrada del homelab. */
   inbox(): Promise<InboxStatus>
