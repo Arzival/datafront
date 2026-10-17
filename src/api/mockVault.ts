@@ -68,7 +68,7 @@ function panel(bg: string, accent: string, layout: LayoutName): string {
  * el archivo no existe: solo sirve para ver la forma del prompt.
  */
 const MOCK_VAULT_DIR =
-  '/Users/armandoreyesrivera/Documents/Proyectos/Laravel/datafrontback/storage/app/vault/images'
+  '/ruta/a/datafrontback/storage/app/vault/images'
 
 function vaultPath(filename: string): string {
   return `${MOCK_VAULT_DIR}/${filename}`
