@@ -131,6 +131,16 @@ export interface InboxItem {
   sourceUrl: string | null
   /** Título de la página capturada, del mismo .txt. */
   sourceTitle: string | null
+  /**
+   * Líneas «clave: valor» del .txt: galeria, sitio, autor, dispositivo,
+   * busqueda, fuentes, seccion… Las claves pueden crecer sin tocar el tipo.
+   */
+  meta: Record<string, string>
+  /**
+   * Nota del filtro de gusto del homelab en su mes de prueba: está aquí
+   * aunque el filtro la habría saltado, para validar el criterio.
+   */
+  filterNote: string | null
 }
 
 export interface RejectReason {

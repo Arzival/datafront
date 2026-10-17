@@ -318,8 +318,10 @@ let inboxItems: InboxItem[] = [
     settling: false,
     alreadyInVault: false,
     previewUrl: panel('#0f172a', '#38bdf8', 'dashboard'),
-    sourceUrl: 'https://proyectorium.app/projects',
-    sourceTitle: 'Proyectorium — Proyectos',
+    sourceUrl: 'https://www.behance.net/gallery/256074845/Luma',
+    sourceTitle: 'AI-Powered Wellness – SaaS UX/UI Design / Luma',
+    meta: { sitio: 'behance', autor: 'Mikalai Haluza', dispositivo: 'desktop', busqueda: 'dashboard ui' },
+    filterNote: null,
   },
   {
     filename: '20260930-094210__b2c8d4f6__pendiente.png',
@@ -331,8 +333,10 @@ let inboxItems: InboxItem[] = [
     settling: true,
     alreadyInVault: false,
     previewUrl: panel('#fefce8', '#ca8a04', 'pricing'),
-    sourceUrl: 'https://stripe.com/pricing',
-    sourceTitle: 'Pricing — Stripe',
+    sourceUrl: 'https://dribbble.com/shots/ejemplo',
+    sourceTitle: 'Pricing page concept',
+    meta: { sitio: 'dribbble', dispositivo: 'desktop' },
+    filterNote: 'lo habría saltado — estilo rechazado sin aceptados (claro, ilustrado)',
   },
   {
     filename: '20260929-221040__a3f9c2e1__pendiente.png',
@@ -346,6 +350,8 @@ let inboxItems: InboxItem[] = [
     previewUrl: panel('#18181b', '#f472b6', 'mobile'),
     sourceUrl: null,
     sourceTitle: null,
+    meta: {},
+    filterNote: null,
   },
 ]
 

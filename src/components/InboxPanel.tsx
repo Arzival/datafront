@@ -4,6 +4,44 @@ import type { InboxItem, InboxStatus, ProcessingChoice } from '../types/vault.ts
 import { Icon } from './Icon.tsx'
 import './InboxPanel.css'
 
+/** Claves del .txt que se muestran como etiquetas, en este orden. */
+const META_LABELS: [key: string, label: string][] = [
+  ['sitio', 'Sitio'],
+  ['autor', 'Autor'],
+  ['dispositivo', 'Dispositivo'],
+  ['seccion', 'Sección'],
+  ['fuentes', 'Fuentes'],
+  ['busqueda', 'Búsqueda'],
+]
+
+function InboxMeta({ meta }: { meta: Record<string, string> }) {
+  const shown = META_LABELS.filter(([key]) => meta[key])
+  const gallery = meta.galeria
+
+  if (shown.length === 0 && !gallery) return null
+
+  return (
+    <dl className="inbox-card__tags">
+      {shown.map(([key, label]) => (
+        <div key={key}>
+          <dt>{label}</dt>
+          <dd>{meta[key]}</dd>
+        </div>
+      ))}
+      {gallery && (
+        <div>
+          <dt>Galería</dt>
+          <dd>
+            <a href={gallery} target="_blank" rel="noreferrer noopener" title={gallery}>
+              ver búsqueda
+            </a>
+          </dd>
+        </div>
+      )}
+    </dl>
+  )
+}
+
 interface InboxPanelProps {
   inbox: InboxStatus
   loading: boolean
@@ -137,6 +175,14 @@ export function InboxPanel({
                     {item.sourceUrl.replace(/^https?:\/\//, '')}
                   </a>
                 )}
+
+                {item.filterNote && (
+                  <p className="inbox-card__filter" title="Filtro de gusto del homelab, en modo prueba">
+                    <strong>Filtro:</strong> {item.filterNote}
+                  </p>
+                )}
+
+                <InboxMeta meta={item.meta} />
 
                 <span className="inbox-card__name">{item.filename}</span>
 
