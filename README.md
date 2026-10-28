@@ -4,7 +4,7 @@
 
 Subes una captura y una IA instalada en tu máquina (**Claude Code** o **Codex**) la mira y la etiqueta: tipo de pantalla, estilo, paleta, layout, componentes, densidad y sector. Después filtras el catálogo, eliges varias referencias y copias un prompt listo para pegárselo a otra IA para que genere el front de tu app. Ese prompt incluye la ruta de cada imagen en disco, así que el agente puede abrirlas él mismo.
 
-Este repo es el **frontend** (React + Vite). El backend está en **[Arzival/datafromback](https://github.com/Arzival/datafromback)**. **Necesitas los dos.** Sin backend, la app arranca en «Modo de ejemplo», con datos falsos que no se guardan.
+Este repo es el **frontend** (React + Vite). El backend está en **[Arzival/datafromback](https://github.com/Arzival/datafromback)**. **Para usarla de verdad necesitas los dos.** Sin backend, la app arranca en **modo demo**, con 27 referencias reales ya clasificadas, para que puedas verla sin instalar nada más (ver [Demo](#demo)).
 
 > **Todo corre en tu máquina.** No hay servidor central ni cuentas. La IA que clasifica es tu propio CLI de Claude Code o Codex, con tu sesión. No hace falta ninguna API key.
 
@@ -13,6 +13,7 @@ Este repo es el **frontend** (React + Vite). El backend está en **[Arzival/data
 ## Índice
 
 - [Qué puedes hacer](#qué-puedes-hacer)
+- [Demo](#demo)
 - [Requisitos](#requisitos)
 - [Instalación paso a paso](#instalación-paso-a-paso)
 - [Instrucciones para agentes de IA](#instrucciones-para-agentes-de-ia)
@@ -33,6 +34,31 @@ Este repo es el **frontend** (React + Vite). El backend está en **[Arzival/data
 - **Armar un mix:** marca varias referencias y copia un solo prompt que las combina.
 - **Bandeja** (opcional): revisar capturas que te llegan desde otra máquina y decidir una por una si entran o no.
 - **Papelera:** borrar pide confirmación, se puede deshacer durante unos segundos y lo borrado se puede restaurar.
+
+## Demo
+
+Para verla sin backend:
+
+```bash
+git clone https://github.com/Arzival/datafront.git
+cd datafront
+npm install
+npm run dev
+```
+
+Abre http://localhost:5174. Sin `.env`, o si la API no responde, la app entra en **modo demo**. Verás el aviso amarillo «Modo de ejemplo» y la mitad de una bóveda real: **27 capturas clasificadas por IA**, cada una con su descripción, etiquetas, paleta y notas de implementación. Puedes filtrar, abrir el visor, armar un mix y copiar los prompts. Lo que subas en este modo se clasifica de mentira y no se guarda.
+
+Los datos de la demo están en `src/api/demoData.json` y las imágenes en `public/demo/`. Se generan desde una bóveda propia con:
+
+```bash
+python3 scripts/generar-demo.py http://127.0.0.1:8000/api
+```
+
+El script toma solo referencias ya clasificadas que tienen origen, hasta la mitad del total.
+
+### Créditos de las imágenes de la demo
+
+Las capturas de `public/demo/` son diseños de sus autores, publicados en Dribbble, Layers, Behance y Figma Community. **No son de este proyecto.** Se incluyen reducidas, solo como ejemplo de referencias clasificadas, y cada ficha enlaza a la publicación original (campo `sourceUrl` en `demoData.json`). Si eres autor de alguna y quieres que la retire, abre un issue y la quito.
 
 ## Requisitos
 
@@ -110,7 +136,8 @@ Si eres un agente (Claude Code, Codex, Cursor…) y te pidieron «clona y deja l
 Reglas para agentes:
 
 - **No cambies el puerto 5174** sin añadir el nuevo origen a `CORS_ALLOWED_ORIGINS` en el backend.
-- **No actives `VITE_USE_MOCK`** salvo que el usuario quiera una demo: con él activo no se guarda nada.
+- **No actives `VITE_USE_MOCK`** salvo que el usuario quiera la demo: con él activo no se guarda nada.
+- **El modo demo no cuenta como instalación terminada.** Si la app muestra «Modo de ejemplo», no está hablando con el backend.
 - **No subas `.env` a Git.** Ya está en el `.gitignore`.
 
 ## Uso diario
@@ -138,7 +165,7 @@ Variables del `.env` (las lee Vite al arrancar; si las cambias, reinicia `npm ru
 | Variable | Ejemplo | Qué es |
 |----------|---------|--------|
 | `VITE_API_URL` | `http://127.0.0.1:8000/api` | URL de la API del backend, terminada en `/api` |
-| `VITE_USE_MOCK` | `true` | *Opcional.* Fuerza datos de ejemplo aunque la API responda |
+| `VITE_USE_MOCK` | `true` | *Opcional.* Fuerza el modo demo aunque la API responda |
 
 ## Estructura del código
 
@@ -148,7 +175,8 @@ src/
 ├── api/
 │   ├── VaultApi.ts      # contrato de operaciones
 │   ├── httpVault.ts     # implementación contra el backend
-│   └── mockVault.ts     # datos de ejemplo en memoria («Modo de ejemplo»)
+│   ├── mockVault.ts     # modo demo: bóveda en memoria («Modo de ejemplo»)
+│   └── demoData.json    # las 27 referencias de la demo (scripts/generar-demo.py)
 ├── hooks/               # useReferences, useInbox, useTrash, useProviders… (con sondeo)
 ├── components/          # tarjetas, ficha, visor con zoom, subida, bandeja, papelera…
 ├── lib/

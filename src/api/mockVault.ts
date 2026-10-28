@@ -7,10 +7,12 @@ import type {
   Tag,
 } from '../types/vault.ts'
 import { VaultApiError, type UploadInput, type VaultApi } from './VaultApi.ts'
+import demoData from './demoData.json'
 
 /**
- * Bóveda de ejemplo en memoria. Sirve para trabajar la UI sin backend y para
- * ver el flujo completo de clasificación (en cola → clasificando → lista).
+ * Bóveda de ejemplo en memoria, con las referencias de la demo. Sirve para
+ * ver la app sin backend y para trabajar la UI: también simula el flujo de
+ * clasificación (en cola → clasificando → lista) de lo que se sube.
  * No persiste: al recargar vuelve al estado semilla.
  */
 
@@ -82,175 +84,12 @@ function daysAgo(days: number): string {
   return new Date(Date.now() - days * 86_400_000).toISOString()
 }
 
-const seed: Reference[] = [
-  {
-    id: 'ref-1',
-    title: 'Dashboard analítico oscuro con sidebar fijo',
-    filename: 'linear-analytics.png',
-    imageUrl: panel('#0b1120', '#6366f1', 'dashboard'),
-    thumbUrl: panel('#0b1120', '#6366f1', 'dashboard'),
-    filePath: vaultPath('linear-analytics.png'),
-    width: 2560,
-    height: 1600,
-    bytes: 842_113,
-    sourceUrl: 'https://linear.app',
-    status: 'ready',
-    error: null,
-    providerId: 'claude-cli',
-    model: 'claude-opus-5',
-    summary:
-      'Panel de métricas sobre fondo casi negro con una navegación lateral estrecha y persistente. La jerarquía se apoya en tres tarjetas de KPI alineadas arriba y una tabla densa que ocupa el resto del ancho.',
-    notes:
-      'Sidebar de 64px con solo iconos, expandible al hover. Las tarjetas usan borde de 1px en lugar de sombra. El acento índigo aparece únicamente en datos y estados activos, nunca en superficies.',
-    tags: [
-      tag('screen_type', 'dashboard', 0.97),
-      tag('style', 'dark minimal', 0.93),
-      tag('layout', 'sidebar fijo', 0.95),
-      tag('components', 'stat cards', 0.91),
-      tag('components', 'data table', 0.89),
-      tag('palette', '#0b1120', 0.99),
-      tag('palette', '#6366f1', 0.94),
-      tag('density', 'alta', 0.86),
-      tag('industry', 'saas', 0.8),
-    ],
-    createdAt: daysAgo(1),
-  },
-  {
-    id: 'ref-2',
-    title: 'Landing editorial con tipografía grande',
-    filename: 'landing-serif.png',
-    imageUrl: panel('#fdfcf8', '#1c1917', 'landing'),
-    thumbUrl: panel('#fdfcf8', '#1c1917', 'landing'),
-    filePath: vaultPath('landing-serif.png'),
-    width: 1920,
-    height: 1280,
-    bytes: 512_400,
-    sourceUrl: null,
-    status: 'ready',
-    error: null,
-    providerId: 'codex-cli',
-    model: 'gpt-6.1-sol',
-    summary:
-      'Portada de producto con aire editorial: fondo hueso, titular en serif de gran tamaño y una sola imagen de apoyo a la derecha. El contraste lo hace la tipografía, no el color.',
-    notes:
-      'Titular alrededor de 72px con line-height 1.05 y tracking negativo. Un único botón sólido negro como CTA. Mucho espacio en blanco vertical entre bloques (~120px).',
-    tags: [
-      tag('screen_type', 'landing', 0.96),
-      tag('style', 'editorial', 0.92),
-      tag('style', 'serif tipográfico', 0.88),
-      tag('layout', 'dos columnas asimétricas', 0.84),
-      tag('components', 'hero', 0.94),
-      tag('palette', '#fdfcf8', 0.98),
-      tag('palette', '#1c1917', 0.97),
-      tag('density', 'baja', 0.9),
-    ],
-    createdAt: daysAgo(3),
-  },
-  {
-    id: 'ref-3',
-    title: 'Checkout en dos columnas con resumen fijo',
-    filename: 'checkout-stripe.png',
-    imageUrl: panel('#ffffff', '#0ea5e9', 'checkout'),
-    thumbUrl: panel('#ffffff', '#0ea5e9', 'checkout'),
-    filePath: vaultPath('checkout-stripe.png'),
-    width: 1600,
-    height: 1000,
-    bytes: 388_921,
-    sourceUrl: 'https://stripe.com',
-    status: 'ready',
-    error: null,
-    providerId: 'claude-cli',
-    model: 'claude-opus-5',
-    summary:
-      'Formulario de pago a la izquierda y resumen del pedido anclado a la derecha. Los campos están agrupados en secciones con títulos pequeños en mayúsculas.',
-    notes:
-      'La columna del resumen queda sticky al hacer scroll. Inputs de 44px de alto con borde gris claro y foco en azul. El botón de pago ocupa el 100% del ancho de su columna.',
-    tags: [
-      tag('screen_type', 'checkout', 0.98),
-      tag('style', 'clean corporativo', 0.85),
-      tag('layout', 'dos columnas con sticky', 0.93),
-      tag('components', 'form', 0.97),
-      tag('components', 'order summary', 0.9),
-      tag('palette', '#ffffff', 0.99),
-      tag('palette', '#0ea5e9', 0.92),
-      tag('density', 'media', 0.88),
-      tag('industry', 'fintech', 0.86),
-    ],
-    createdAt: daysAgo(6),
-  },
-  {
-    id: 'ref-4',
-    title: 'App móvil de hábitos con tarjetas apiladas',
-    filename: 'habit-mobile.png',
-    imageUrl: panel('#f5f3ff', '#7c3aed', 'mobile'),
-    thumbUrl: panel('#f5f3ff', '#7c3aed', 'mobile'),
-    filePath: vaultPath('habit-mobile.png'),
-    width: 1170,
-    height: 2532,
-    bytes: 724_010,
-    sourceUrl: null,
-    status: 'ready',
-    error: null,
-    providerId: 'claude-cli',
-    model: 'claude-sonnet-5',
-    summary:
-      'Pantalla principal de una app de seguimiento de hábitos. Tarjetas redondeadas apiladas verticalmente, cada una con un anillo de progreso y acento violeta.',
-    notes:
-      'Radios muy generosos (20–24px). Fondo lila tenue que separa las tarjetas blancas sin necesidad de bordes. Barra inferior de navegación con cuatro iconos.',
-    tags: [
-      tag('screen_type', 'app móvil', 0.95),
-      tag('style', 'soft playful', 0.9),
-      tag('layout', 'lista vertical de tarjetas', 0.92),
-      tag('components', 'progress ring', 0.87),
-      tag('components', 'bottom nav', 0.91),
-      tag('palette', '#f5f3ff', 0.97),
-      tag('palette', '#7c3aed', 0.95),
-      tag('density', 'baja', 0.85),
-      tag('industry', 'productividad', 0.82),
-    ],
-    createdAt: daysAgo(9),
-  },
-  {
-    id: 'ref-5',
-    title: 'Tabla de precios con plan destacado',
-    filename: 'pricing-3col.png',
-    imageUrl: panel('#0f172a', '#22d3ee', 'pricing'),
-    thumbUrl: panel('#0f172a', '#22d3ee', 'pricing'),
-    filePath: vaultPath('pricing-3col.png'),
-    width: 1800,
-    height: 1100,
-    bytes: 455_332,
-    sourceUrl: null,
-    status: 'failed',
-    error: 'El proveedor devolvió un JSON inválido en el segundo intento.',
-    providerId: 'codex-cli',
-    model: 'gpt-6.1-sol',
-    summary: null,
-    notes: null,
-    tags: [],
-    createdAt: daysAgo(0.2),
-  },
-  {
-    id: 'ref-6',
-    title: null,
-    filename: 'settings-panel.png',
-    imageUrl: panel('#18181b', '#a3e635', 'settings'),
-    thumbUrl: panel('#18181b', '#a3e635', 'settings'),
-    filePath: vaultPath('settings-panel.png'),
-    width: 2048,
-    height: 1280,
-    bytes: 601_882,
-    sourceUrl: null,
-    status: 'pending',
-    error: null,
-    providerId: null,
-    model: null,
-    summary: null,
-    notes: null,
-    tags: [],
-    createdAt: daysAgo(0.05),
-  },
-]
+/**
+ * Semilla de la demo: referencias reales de la bóveda del autor, ya
+ * clasificadas, con su origen para dar crédito. Las genera
+ * `scripts/generar-demo.py`; las imágenes viven en public/demo/.
+ */
+const seed: Reference[] = demoData as Reference[]
 
 const mockProviders: Provider[] = [
   {

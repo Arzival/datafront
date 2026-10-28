@@ -1,0 +1,3146 @@
+[
+  {
+    "id": "demo-1",
+    "title": "Asistente IA móvil Aora: inicio, chat y detalle de email",
+    "filename": "demo-1.webp",
+    "imageUrl": "/demo/1.webp",
+    "thumbUrl": "/demo/thumbs/1.webp",
+    "filePath": "public/demo/1.webp",
+    "width": 3200,
+    "height": 2400,
+    "bytes": 1305557,
+    "sourceUrl": "https://layers.to/layers/cmv9a5oe50002l00gkr1gdg7p-aora-voice-agent",
+    "status": "ready",
+    "error": null,
+    "providerId": "claude-cli",
+    "model": "opus",
+    "summary": "Tres pantallas móviles en modo oscuro de un asistente de IA llamado Aora. La primera muestra una esfera degradada verde-amarilla con el saludo «How Can I Help You Today?», atajos en tarjetas y un campo de entrada. La segunda es un chat con barras de progreso segmentadas para analizar los emails, y la tercera muestra el detalle de un email con un resumen de la IA, una etiqueta de prioridad y adjuntos.",
+    "notes": "Fondo casi negro (#0b0b0b) con superficies grises (#1c1c1c–#2a2a2a) y como acento un verde lima (#d4f04a) en el CTA principal, el botón de enviar y el progreso. Las tarjetas tienen un radio de unos 20–24px con una textura de puntos sutil. Los botones de icono son circulares, de unos 48px, sobre gris oscuro. Header con logo a la izquierda, selector de modelo centrado con chevron y un grupo de iconos dentro de una píldora a la derecha. Las barras de progreso son segmentadas, con ticks verticales y el porcentaje alineado a la derecha, dentro de un contenedor con borde fino y radio de unos 14px. El input inferior es un panel que ocupa todo el ancho, con radio superior de unos 28px, placeholder gris, botones + y enlace a la izquierda y botón de enviar lima circular a la derecha. Los atajos van en un carrusel horizontal de tarjetas con icono, título y comando en gris (/create audio). En el detalle, la tarjeta de la IA lleva los botones Reply (lima, texto negro) y Mark as Read (contorno gris), los separadores son discontinuos, la etiqueta de prioridad «High» es roja y pequeña, y los adjuntos van en chips con borde, icono, nombre y tamaño en gris. Indicador de escritura con tres puntos animados. Padding lateral de unos 20px.",
+    "tags": [
+      {
+        "category": "style",
+        "value": "oscuro",
+        "confidence": 0.97
+      },
+      {
+        "category": "style",
+        "value": "minimalista",
+        "confidence": 0.7
+      },
+      {
+        "category": "components",
+        "value": "botón principal",
+        "confidence": 0.85
+      },
+      {
+        "category": "density",
+        "value": "media",
+        "confidence": 0.7
+      },
+      {
+        "category": "style",
+        "value": "degradados",
+        "confidence": 0.45
+      },
+      {
+        "category": "layout",
+        "value": "columna única",
+        "confidence": 0.85
+      },
+      {
+        "category": "layout",
+        "value": "secciones apiladas",
+        "confidence": 0.5
+      },
+      {
+        "category": "components",
+        "value": "badge",
+        "confidence": 0.75
+      },
+      {
+        "category": "components",
+        "value": "chat",
+        "confidence": 0.9
+      },
+      {
+        "category": "components",
+        "value": "barra de progreso",
+        "confidence": 0.85
+      },
+      {
+        "category": "components",
+        "value": "input",
+        "confidence": 0.85
+      },
+      {
+        "category": "components",
+        "value": "carrusel",
+        "confidence": 0.55
+      },
+      {
+        "category": "palette",
+        "value": "#0b0b0b",
+        "confidence": 0.85
+      },
+      {
+        "category": "industry",
+        "value": "ia",
+        "confidence": 0.93
+      },
+      {
+        "category": "screen_type",
+        "value": "chat",
+        "confidence": 0.85
+      },
+      {
+        "category": "palette",
+        "value": "#2a2a2a",
+        "confidence": 0.75
+      },
+      {
+        "category": "palette",
+        "value": "#d4f04a",
+        "confidence": 0.8
+      },
+      {
+        "category": "palette",
+        "value": "#454545",
+        "confidence": 0.7
+      },
+      {
+        "category": "palette",
+        "value": "#2f9e6a",
+        "confidence": 0.5
+      }
+    ],
+    "createdAt": "2026-10-17T21:08:07+00:00",
+    "deletedAt": null
+  },
+  {
+    "id": "demo-2",
+    "title": "Asistente IA móvil oscuro: bienvenida, chat de inicio y panel de actividad",
+    "filename": "demo-2.webp",
+    "imageUrl": "/demo/2.webp",
+    "thumbUrl": "/demo/thumbs/2.webp",
+    "filePath": "public/demo/2.webp",
+    "width": 3200,
+    "height": 2400,
+    "bytes": 2567915,
+    "sourceUrl": "https://layers.to/layers/cmvapicvb0002kx0g4pokbnr3-aora-voice-agent-homepage",
+    "status": "ready",
+    "error": null,
+    "providerId": "claude-cli",
+    "model": "opus",
+    "summary": "Tres pantallas móviles en tema oscuro de un asistente de IA llamado Aora. La primera es una bienvenida con un orbe degradado verde-lima, un titular grande y un CTA lima; la segunda es el inicio del chat, con chips de acciones rápidas, un saludo centrado, un buscador de chats y la lista de tareas del día con badges de prioridad. La tercera es un dashboard con un mapa de calor de actividad estilo contribuciones, cuatro tarjetas de métricas en grid 2x2 y un carrusel horizontal de temas populares, todo sobre una bottom nav con 4 pestañas.",
+    "notes": "Fondo #0b0b0b casi negro, con superficies de tarjeta #1c1c1c a #222 y borde de 1px #2e2e2e. Radio de las tarjetas ~16px y de los chips ~10px; el CTA mide ~295x70px a 1x con radio ~14px, fondo lima #d4ee52 y texto negro de peso medio. El header lleva un avatar circular de 52px a la izquierda, el selector de modelo centrado ('Aora 1.2' con chevron) y, a la derecha, un grupo en píldora con dos iconos (voz y grid). Los chips de acción rápida van con icono más texto, borde sutil y scroll horizontal que se corta en el borde. El saludo va en gris de 18px sobre un titular blanco de ~40px. El buscador mide 52px de alto, tiene radio 12px, icono de lupa y placeholder gris. Cada tarea de la lista ocupa unos 96px: avatar circular de 56px, título blanco de 18px, metadatos grises (mini avatar · nombre · hora) y un badge de prioridad a la derecha (High en rojo #d93a2b, Medium en ámbar #e0a91c, radio 6px). El mapa de calor es una matriz de 7 filas (días) por semanas, con celdas de ~16px, gap de 4px y cuatro niveles de verde oliva a lima más una leyenda 'Fewer–More'. Cada tarjeta de métrica lleva una etiqueta gris, un número grande y una variación porcentual con flecha (verde si sube y rojo si baja), con un padding de 16px y un gap de 16px entre tarjetas. El carrusel de temas tiene tarjetas de ~290px con patrón de puntos, icono en círculo, flecha diagonal arriba a la derecha y prompt sugerido con prefijo '/'. La bottom nav es una superficie #262626 con la esquina superior redondeada; la pestaña activa va en lima e icono relleno y las demás en gris. El márgen lateral es de 24px.",
+    "tags": [
+      {
+        "category": "style",
+        "value": "oscuro",
+        "confidence": 0.97
+      },
+      {
+        "category": "style",
+        "value": "minimalista",
+        "confidence": 0.7
+      },
+      {
+        "category": "components",
+        "value": "botón principal",
+        "confidence": 0.88
+      },
+      {
+        "category": "density",
+        "value": "media",
+        "confidence": 0.75
+      },
+      {
+        "category": "style",
+        "value": "degradados",
+        "confidence": 0.45
+      },
+      {
+        "category": "layout",
+        "value": "columna única",
+        "confidence": 0.85
+      },
+      {
+        "category": "layout",
+        "value": "secciones apiladas",
+        "confidence": 0.75
+      },
+      {
+        "category": "components",
+        "value": "badge",
+        "confidence": 0.9
+      },
+      {
+        "category": "screen_type",
+        "value": "dashboard",
+        "confidence": 0.6
+      },
+      {
+        "category": "components",
+        "value": "stat cards",
+        "confidence": 0.92
+      },
+      {
+        "category": "components",
+        "value": "buscador",
+        "confidence": 0.88
+      },
+      {
+        "category": "components",
+        "value": "carrusel",
+        "confidence": 0.7
+      },
+      {
+        "category": "components",
+        "value": "bottom nav",
+        "confidence": 0.97
+      },
+      {
+        "category": "palette",
+        "value": "#0b0b0b",
+        "confidence": 0.85
+      },
+      {
+        "category": "industry",
+        "value": "ia",
+        "confidence": 0.92
+      },
+      {
+        "category": "palette",
+        "value": "#1e1e1e",
+        "confidence": 0.75
+      },
+      {
+        "category": "palette",
+        "value": "#d4ee52",
+        "confidence": 0.85
+      },
+      {
+        "category": "palette",
+        "value": "#d93a2b",
+        "confidence": 0.6
+      },
+      {
+        "category": "palette",
+        "value": "#e0a91c",
+        "confidence": 0.6
+      }
+    ],
+    "createdAt": "2026-10-17T21:08:08+00:00",
+    "deletedAt": null
+  },
+  {
+    "id": "demo-3",
+    "title": "Panel de automatizaciones de email con KPIs y tabla de flujos",
+    "filename": "demo-3.webp",
+    "imageUrl": "/demo/3.webp",
+    "thumbUrl": "/demo/thumbs/3.webp",
+    "filePath": "public/demo/3.webp",
+    "width": 3200,
+    "height": 2400,
+    "bytes": 1134202,
+    "sourceUrl": "https://layers.to/layers/cmv7uo86k0002l20gb1qjtps3-lunexa-email-agent-dashboard-automations",
+    "status": "ready",
+    "error": null,
+    "providerId": "claude-cli",
+    "model": "opus",
+    "summary": "Dashboard SaaS de automatización de email con un sidebar fijo a la izquierda y el área principal sobre un fondo gris claro. Arriba van la cabecera «Automations» con el CTA verde «New Automation» y cuatro tarjetas de métricas, cada una con su variación porcentual y una barra de progreso de puntos. Debajo, una tabla «Emails Needs Your Attention» lista los flujos con disparador, acción, rendimiento y badge de estado.",
+    "notes": "Sidebar fijo de unos 300px con fondo blanco. El ítem activo lleva fondo gris #f3f3f3 y radio de unos 10px, y el darkmode toggle y la tarjeta de usuario van anclados abajo. El contenedor principal es gris muy claro (#f6f6f6) con radio de unos 16px y padding de 24px, y el buscador es un input blanco de unos 380px de ancho con radio de 8px. El botón principal es teal #2a9d8f, con radio de 6px, alto de unos 40px e icono «+». Hay 4 stat cards en grid de columnas iguales con gap de 20px, fondo blanco y radio de unos 12px. Cada una lleva un icono de 32px en una caja gris, la etiqueta, la cifra en fuente monoespaciada de unos 24px y la delta en verde o rojo con flecha diagonal. La barra de progreso está hecha de unos 25 puntos de 6px: los rellenos en teal y el resto en beige claro. La tabla tiene una cabecera gris con iconos y controles de ordenación, filas de unos 100px separadas por un borde discontinuo y una celda de remitente con icono en caja gris de 40px, título y descripción truncada con ellipsis. Las columnas de disparador y acción se unen con una flecha. Los badges de estado usan fondos tintados (verde para Active, ámbar para Paused, gris para Draft) con radio de 4px y un icono antes del texto. Cada fila acaba con un menú kebab. Los títulos de sección usan una tipografía monoespaciada.",
+    "tags": [
+      {
+        "category": "style",
+        "value": "minimalista",
+        "confidence": 0.8
+      },
+      {
+        "category": "components",
+        "value": "botón principal",
+        "confidence": 0.88
+      },
+      {
+        "category": "density",
+        "value": "media",
+        "confidence": 0.7
+      },
+      {
+        "category": "palette",
+        "value": "#ffffff",
+        "confidence": 0.85
+      },
+      {
+        "category": "layout",
+        "value": "secciones apiladas",
+        "confidence": 0.65
+      },
+      {
+        "category": "style",
+        "value": "técnico",
+        "confidence": 0.45
+      },
+      {
+        "category": "components",
+        "value": "badge",
+        "confidence": 0.9
+      },
+      {
+        "category": "screen_type",
+        "value": "dashboard",
+        "confidence": 0.92
+      },
+      {
+        "category": "style",
+        "value": "claro",
+        "confidence": 0.95
+      },
+      {
+        "category": "layout",
+        "value": "sidebar fijo",
+        "confidence": 0.9
+      },
+      {
+        "category": "components",
+        "value": "sidebar",
+        "confidence": 0.95
+      },
+      {
+        "category": "components",
+        "value": "stat cards",
+        "confidence": 0.95
+      },
+      {
+        "category": "components",
+        "value": "data table",
+        "confidence": 0.93
+      },
+      {
+        "category": "palette",
+        "value": "#e5484d",
+        "confidence": 0.5
+      },
+      {
+        "category": "components",
+        "value": "buscador",
+        "confidence": 0.85
+      },
+      {
+        "category": "industry",
+        "value": "saas",
+        "confidence": 0.82
+      },
+      {
+        "category": "palette",
+        "value": "#2a9d8f",
+        "confidence": 0.75
+      },
+      {
+        "category": "palette",
+        "value": "#f6f6f6",
+        "confidence": 0.7
+      },
+      {
+        "category": "palette",
+        "value": "#1f1f1f",
+        "confidence": 0.7
+      }
+    ],
+    "createdAt": "2026-10-17T21:08:09+00:00",
+    "deletedAt": null
+  },
+  {
+    "id": "demo-4",
+    "title": "Listado de proyectos de IA con métricas de uso y tabla",
+    "filename": "demo-4.webp",
+    "imageUrl": "/demo/4.webp",
+    "thumbUrl": "/demo/thumbs/4.webp",
+    "filePath": "public/demo/4.webp",
+    "width": 2400,
+    "height": 1800,
+    "bytes": 737448,
+    "sourceUrl": "https://layers.to/layers/cmvbqldz30002jq0gyhicswfl-lluvia-project-page",
+    "status": "ready",
+    "error": null,
+    "providerId": "claude-cli",
+    "model": "opus",
+    "summary": "Pantalla de proyectos de una plataforma de IA. Arriba hay migas de pan y un botón «Ask Lluvia». Debajo, cuatro tarjetas de métricas con sparklines y variaciones porcentuales. Les sigue una barra apilada con trama de rayas que reparte el uso por proyecto, con su leyenda, y por último una tabla ordenable de proyectos con buscador, filtros desplegables y paginación.",
+    "notes": "Lienzo blanco sobre un fondo beige texturizado (#f3f0ea), con un sidebar colapsado a la izquierda de ~120px y un borde derecho de 1px. El header mide ~88px de alto, tiene breadcrumbs (Home > Projects, el actual en gris) y un botón secundario a la derecha con borde de 1px, radio de ~8px e icono de destellos. El título H1 «Projects» está en semibold a ~28px. Las 4 stat cards van en una fila con gap de ~16px, borde de 1px #e5e5e5, radio de ~8px y padding de ~24px. Cada una tiene el valor grande en semibold (~36px) arriba a la izquierda, una sparkline arriba a la derecha (verde #16a34a si sube, rojo #e11d1d si baja), la etiqueta abajo a la izquierda y la variación con flecha abajo a la derecha. La barra de distribución mide ~48px de alto y la forman segmentos proporcionales con radio de ~6px, gap de ~6px y un patrón de rayas diagonales sobre color sólido. La leyenda va debajo con cuadrados de color de 12px. La toolbar lleva un input de búsqueda de ~320px con atajo ⌘F en una kbd y un grupo segmentado de 4 dropdowns unidos por bordes compartidos (All projects, Time range, Model, Environment). La tabla tiene borde de 1px y radio de ~8px, filas de ~88px separadas por divisores, un checkbox por fila, un avatar circular de 32px con degradado pastel, el nombre del proyecto en peso medio y el resto de columnas en gris regular. Las cabeceras tienen iconos de ordenación. Al pie va la paginación con el texto «Page [1] of 1» y botones cuadrados de ~40px para primera, anterior, siguiente y última página.",
+    "tags": [
+      {
+        "category": "style",
+        "value": "minimalista",
+        "confidence": 0.85
+      },
+      {
+        "category": "density",
+        "value": "media",
+        "confidence": 0.75
+      },
+      {
+        "category": "palette",
+        "value": "#ffffff",
+        "confidence": 0.95
+      },
+      {
+        "category": "layout",
+        "value": "secciones apiladas",
+        "confidence": 0.8
+      },
+      {
+        "category": "style",
+        "value": "técnico",
+        "confidence": 0.55
+      },
+      {
+        "category": "style",
+        "value": "claro",
+        "confidence": 0.95
+      },
+      {
+        "category": "components",
+        "value": "stat cards",
+        "confidence": 0.95
+      },
+      {
+        "category": "components",
+        "value": "data table",
+        "confidence": 0.95
+      },
+      {
+        "category": "components",
+        "value": "breadcrumbs",
+        "confidence": 0.9
+      },
+      {
+        "category": "components",
+        "value": "filtros",
+        "confidence": 0.85
+      },
+      {
+        "category": "components",
+        "value": "buscador",
+        "confidence": 0.9
+      },
+      {
+        "category": "industry",
+        "value": "ia",
+        "confidence": 0.85
+      },
+      {
+        "category": "screen_type",
+        "value": "listado",
+        "confidence": 0.85
+      },
+      {
+        "category": "layout",
+        "value": "sidebar colapsable",
+        "confidence": 0.5
+      },
+      {
+        "category": "components",
+        "value": "paginación",
+        "confidence": 0.9
+      },
+      {
+        "category": "palette",
+        "value": "#f3f0ea",
+        "confidence": 0.75
+      },
+      {
+        "category": "palette",
+        "value": "#3aa876",
+        "confidence": 0.8
+      },
+      {
+        "category": "palette",
+        "value": "#6b9cf5",
+        "confidence": 0.75
+      },
+      {
+        "category": "palette",
+        "value": "#ed7d3a",
+        "confidence": 0.7
+      }
+    ],
+    "createdAt": "2026-10-17T21:08:10+00:00",
+    "deletedAt": null
+  },
+  {
+    "id": "demo-5",
+    "title": "Dashboard móvil de ahorro con progreso mensual, metas y Autopilot",
+    "filename": "demo-5.webp",
+    "imageUrl": "/demo/5.webp",
+    "thumbUrl": "/demo/thumbs/5.webp",
+    "filePath": "public/demo/5.webp",
+    "width": 3200,
+    "height": 2400,
+    "bytes": 3761769,
+    "sourceUrl": "https://layers.to/layers/cmvc5gd170002l80g0oeb8vhw-nivo-ride-finance-dashboard-mobile-responsive",
+    "status": "ready",
+    "error": null,
+    "providerId": "claude-cli",
+    "model": "opus",
+    "summary": "La imagen muestra tres pantallas móviles de una app de ahorro con fondo violeta oscuro. La del centro es el dashboard: arriba, una píldora de 'Goal progress', notificaciones y avatar; debajo, una tarjeta con el ahorro del mes ($88.00, +41%) y un gráfico de puntos por días, y al final una tarjeta de metas con un velocímetro al 43%. Las pantallas de los lados enseñan dos modales superpuestos al dashboard atenuado: uno con el anillo de progreso de una meta y otro con el constructor de reglas de Autopilot (WHEN / SAVE / TO).",
+    "notes": "Fondo de la app casi negro con un tinte violeta (#0f0a24) y tarjetas un poco más claras (#1a1233) con borde de 1px violeta tenue. Las tarjetas tienen un radio de unos 20-24px y un padding interno de unos 24px, con unos 28-32px de separación vertical entre ellas. En la cabecera hay una píldora con borde violeta y radio completo (~48px de alto), dos botones circulares de icono (~48px) con fondo #1e1638 y un avatar circular con anillo. La cifra principal es grande y de peso ligero (~64px), con el '$' y los decimales más pequeños, y a su lado un badge verde con borde (+41%). El gráfico de puntos es una matriz de cuadrados de ~6px en dos tonos de violeta para comparar este mes con el mes pasado, con un toggle que cambia entre la vista de cuadrícula y la de línea. El velocímetro es un arco de 180° segmentado con degradado violeta, una aguja con brillo, las etiquetas 0 y 100 y el porcentaje encima. Los modales llevan glassmorphism (fondo violeta translúcido, blur y borde claro), un botón de cierre circular arriba a la derecha y el contenido de detrás oscurecido. El anillo de progreso tiene ~140px, trazo de ~8px y el resto del recorrido en gris. El constructor de reglas usa tarjetas apiladas con etiquetas en mayúsculas de color violeta (WHEN/SAVE/TO), unidas por un conector vertical de puntos, más un dropdown, un toggle y un stepper con -/+. Los toggles activos son violeta #8b3dff. El CTA secundario es de ancho completo, con fondo violeta oscuro, borde más claro, icono y radio de ~12px.",
+    "tags": [
+      {
+        "category": "style",
+        "value": "oscuro",
+        "confidence": 0.97
+      },
+      {
+        "category": "components",
+        "value": "tarjetas",
+        "confidence": 0.8
+      },
+      {
+        "category": "components",
+        "value": "avatar",
+        "confidence": 0.85
+      },
+      {
+        "category": "density",
+        "value": "media",
+        "confidence": 0.75
+      },
+      {
+        "category": "style",
+        "value": "degradados",
+        "confidence": 0.65
+      },
+      {
+        "category": "layout",
+        "value": "columna única",
+        "confidence": 0.75
+      },
+      {
+        "category": "layout",
+        "value": "secciones apiladas",
+        "confidence": 0.85
+      },
+      {
+        "category": "screen_type",
+        "value": "dashboard",
+        "confidence": 0.9
+      },
+      {
+        "category": "components",
+        "value": "gráfica",
+        "confidence": 0.92
+      },
+      {
+        "category": "industry",
+        "value": "fintech",
+        "confidence": 0.88
+      },
+      {
+        "category": "style",
+        "value": "glassmorphism",
+        "confidence": 0.7
+      },
+      {
+        "category": "components",
+        "value": "progress ring",
+        "confidence": 0.85
+      },
+      {
+        "category": "components",
+        "value": "toggle",
+        "confidence": 0.9
+      },
+      {
+        "category": "components",
+        "value": "modal",
+        "confidence": 0.88
+      },
+      {
+        "category": "palette",
+        "value": "#0f0a24",
+        "confidence": 0.8
+      },
+      {
+        "category": "palette",
+        "value": "#1a1233",
+        "confidence": 0.7
+      },
+      {
+        "category": "palette",
+        "value": "#8b3dff",
+        "confidence": 0.8
+      },
+      {
+        "category": "palette",
+        "value": "#3a1f66",
+        "confidence": 0.65
+      },
+      {
+        "category": "palette",
+        "value": "#2ec4a0",
+        "confidence": 0.6
+      }
+    ],
+    "createdAt": "2026-10-17T21:08:11+00:00",
+    "deletedAt": null
+  },
+  {
+    "id": "demo-6",
+    "title": "Dashboard oscuro de analítica SaaS con sidebar y gráficas",
+    "filename": "demo-6.webp",
+    "imageUrl": "/demo/6.webp",
+    "thumbUrl": "/demo/thumbs/6.webp",
+    "filePath": "public/demo/6.webp",
+    "width": 1670,
+    "height": 960,
+    "bytes": 495885,
+    "sourceUrl": "https://www.figma.com/community/file/1325597018063319916/free-dark-admin-dashboards",
+    "status": "ready",
+    "error": null,
+    "providerId": "claude-cli",
+    "model": "opus",
+    "summary": "Imagen promocional de la plantilla Dashdark X: un panel oscuro de analítica con sidebar fijo a la izquierda y un saludo de bienvenida como cabecera. Debajo hay una fila de cuatro stat cards con KPIs y badges de variación. La parte inferior la ocupa una gráfica grande de ingresos en curva de área, junto a una columna derecha con gráficas de barras y de líneas más pequeñas.",
+    "notes": "Fondo casi negro azulado (#0b1023 aprox.) con tarjetas un poco más claras, borde de 1px sutil y radio de unos 8-12px. Sidebar de unos 270px con logo, buscador (input de unos 36px de alto), navegación con icono y chevron, submenú desplegable y elemento activo resaltado con fondo y barra vertical morada a la izquierda; al pie, avatar y cuenta del usuario. Cabecera con título de unos 22px, subtítulo gris y dos botones a la derecha: uno secundario con borde ('Export data') y otro principal relleno en magenta-violeta (#cb3cff aprox.) con radio de 4-6px. Cuatro stat cards en grid de 4 columnas con unos 24px de gap, cada una con icono, etiqueta pequeña, menú de tres puntos, valor grande en negrita y badge de variación (verde si sube, rojo si baja) con fondo translúcido. Gráfica principal con dos series curvas (violeta y cian), relleno en degradado bajo la curva, tooltip con valor y fecha sobre un punto, leyenda con puntos de color y selector de rango de fechas. La columna derecha usa barras finas alternando violeta y cian, y una línea de sesiones con el enlace 'View report' en morado. Tipografía sans geométrica y texto secundario en gris azulado.",
+    "tags": [
+      {
+        "category": "style",
+        "value": "oscuro",
+        "confidence": 0.97
+      },
+      {
+        "category": "components",
+        "value": "botón principal",
+        "confidence": 0.82
+      },
+      {
+        "category": "density",
+        "value": "media",
+        "confidence": 0.65
+      },
+      {
+        "category": "style",
+        "value": "degradados",
+        "confidence": 0.7
+      },
+      {
+        "category": "style",
+        "value": "técnico",
+        "confidence": 0.45
+      },
+      {
+        "category": "components",
+        "value": "badge",
+        "confidence": 0.88
+      },
+      {
+        "category": "screen_type",
+        "value": "dashboard",
+        "confidence": 0.97
+      },
+      {
+        "category": "layout",
+        "value": "sidebar fijo",
+        "confidence": 0.88
+      },
+      {
+        "category": "components",
+        "value": "sidebar",
+        "confidence": 0.97
+      },
+      {
+        "category": "components",
+        "value": "stat cards",
+        "confidence": 0.95
+      },
+      {
+        "category": "components",
+        "value": "gráfica",
+        "confidence": 0.97
+      },
+      {
+        "category": "layout",
+        "value": "bento grid",
+        "confidence": 0.5
+      },
+      {
+        "category": "components",
+        "value": "buscador",
+        "confidence": 0.85
+      },
+      {
+        "category": "industry",
+        "value": "saas",
+        "confidence": 0.6
+      },
+      {
+        "category": "palette",
+        "value": "#0b1023",
+        "confidence": 0.75
+      },
+      {
+        "category": "palette",
+        "value": "#cb3cff",
+        "confidence": 0.75
+      },
+      {
+        "category": "palette",
+        "value": "#00c2ff",
+        "confidence": 0.65
+      },
+      {
+        "category": "palette",
+        "value": "#14ca74",
+        "confidence": 0.55
+      },
+      {
+        "category": "palette",
+        "value": "#1a1f6b",
+        "confidence": 0.5
+      }
+    ],
+    "createdAt": "2026-10-17T21:08:14+00:00",
+    "deletedAt": null
+  },
+  {
+    "id": "demo-7",
+    "title": "Dashboard de analítica SaaS Nova con KPIs y gráficas",
+    "filename": "demo-7.webp",
+    "imageUrl": "/demo/7.webp",
+    "thumbUrl": "/demo/thumbs/7.webp",
+    "filePath": "public/demo/7.webp",
+    "width": 3840,
+    "height": 3100,
+    "bytes": 2280787,
+    "sourceUrl": "https://www.behance.net/gallery/255251539/Nova-Analytics-Saas-UX-UI-Design-Dashboard",
+    "status": "ready",
+    "error": null,
+    "providerId": "claude-cli",
+    "model": "opus",
+    "summary": "Dashboard de analítica de negocio en tema claro, mostrado dentro de un monitor sobre una presentación oscura de caso de estudio. A la izquierda hay un sidebar fijo con el logo, la navegación (el ítem activo va en morado) y una tarjeta para pasar a Pro. El área principal empieza con un saludo y una fila de cuatro KPIs con sparklines, y debajo reparte en un grid tipo bento la gráfica de ingresos, el donut de ventas por categoría, los pedidos recientes, la actividad del equipo y una columna derecha con el objetivo del día, la próxima reunión, el almacenamiento y las acciones rápidas.",
+    "notes": "Sidebar de unos 220px con fondo blanco. El ítem activo es una píldora morada (#4f2ff0 aprox.) con texto blanco, radio de unos 10px y altura de unos 40px. Los ítems inactivos llevan un icono de línea de 20px y texto gris oscuro, con unos 44px de separación vertical. Hay un badge circular morado de contador en Messages. Fondo del contenido gris muy claro (#f5f6fa) con tarjetas blancas de radio 12–16px, sombra muy suave y padding interno de unos 20px; los huecos entre tarjetas son de unos 16px. Cada tarjeta KPI lleva un icono en un cuadrado tintado de 40px con radio de 10px, una etiqueta pequeña gris, la cifra grande en negrita, la variación en verde con flecha hacia arriba más el texto 'vs last 30 days', y una sparkline de color distinto en la esquina inferior derecha (morado, verde, azul o naranja). La gráfica de área tiene un relleno degradado de morado a transparente, un tooltip blanco con el valor y la fecha, y un selector 'This Month' en dropdown. El donut tiene un total centrado y una leyenda con puntos de color y porcentajes alineados a la derecha. El objetivo del día es un progress ring morado con el porcentaje grande en el centro. El almacenamiento usa una barra de progreso morada de unos 6px con extremos redondeados. En la tabla de pedidos, el estado 'Completed' va en un badge verde claro. Topbar con un buscador ancho de radio 10px, un selector de rango 'Last 30 Days', campana con badge rojo, mensajes y avatar con nombre y rol. Tipografía sans geométrica tipo Inter.",
+    "tags": [
+      {
+        "category": "style",
+        "value": "minimalista",
+        "confidence": 0.6
+      },
+      {
+        "category": "palette",
+        "value": "#ffffff",
+        "confidence": 0.85
+      },
+      {
+        "category": "screen_type",
+        "value": "dashboard",
+        "confidence": 0.97
+      },
+      {
+        "category": "style",
+        "value": "claro",
+        "confidence": 0.9
+      },
+      {
+        "category": "style",
+        "value": "corporativo",
+        "confidence": 0.55
+      },
+      {
+        "category": "layout",
+        "value": "sidebar fijo",
+        "confidence": 0.9
+      },
+      {
+        "category": "components",
+        "value": "sidebar",
+        "confidence": 0.95
+      },
+      {
+        "category": "components",
+        "value": "stat cards",
+        "confidence": 0.95
+      },
+      {
+        "category": "components",
+        "value": "gráfica",
+        "confidence": 0.95
+      },
+      {
+        "category": "components",
+        "value": "data table",
+        "confidence": 0.75
+      },
+      {
+        "category": "layout",
+        "value": "bento grid",
+        "confidence": 0.7
+      },
+      {
+        "category": "components",
+        "value": "progress ring",
+        "confidence": 0.85
+      },
+      {
+        "category": "density",
+        "value": "alta",
+        "confidence": 0.85
+      },
+      {
+        "category": "components",
+        "value": "buscador",
+        "confidence": 0.8
+      },
+      {
+        "category": "industry",
+        "value": "saas",
+        "confidence": 0.9
+      },
+      {
+        "category": "palette",
+        "value": "#1c1c1c",
+        "confidence": 0.7
+      },
+      {
+        "category": "palette",
+        "value": "#22c55e",
+        "confidence": 0.6
+      },
+      {
+        "category": "palette",
+        "value": "#4f2ff0",
+        "confidence": 0.75
+      },
+      {
+        "category": "palette",
+        "value": "#f5f6fa",
+        "confidence": 0.6
+      }
+    ],
+    "createdAt": "2026-10-17T21:08:21+00:00",
+    "deletedAt": null
+  },
+  {
+    "id": "demo-8",
+    "title": "App educativa LearnUp: onboarding, inicio y calendario en violeta",
+    "filename": "demo-8.webp",
+    "imageUrl": "/demo/8.webp",
+    "thumbUrl": "/demo/thumbs/8.webp",
+    "filePath": "public/demo/8.webp",
+    "width": 2400,
+    "height": 1800,
+    "bytes": 2910324,
+    "sourceUrl": "https://dribbble.com/shots/26984963-EdTech-Mobile-App-UI",
+    "status": "ready",
+    "error": null,
+    "providerId": "claude-cli",
+    "model": "opus",
+    "summary": "Tres pantallas móviles de una app de aprendizaje sobre un fondo lila suave. A la izquierda, un onboarding con un objeto 3D iridiscente en el centro, un titular grande y un CTA oscuro a todo el ancho. En el centro, el inicio con saludo, un banner de IA, dos tarjetas de métricas y la lección activa. A la derecha, un calendario con selector de días horizontal y una agenda por franjas horarias, y en ambas pantallas una barra inferior con un botón central flotante.",
+    "notes": "Pantallas de unos 390pt de ancho con radio exterior de unos 40px. El fondo de la página es un lila plano (#e9e0f8), y en la cabecera del onboarding hay un degradado violeta que se funde con el blanco hacia abajo. El CTA 'Get Started' es una píldora de 56–60px de alto en azul marino muy oscuro (#1e0b45), con un círculo blanco de 48px a la izquierda que lleva el icono ». Los botones de icono son circulares, de 48px, con fondo gris muy claro, y la campana lleva un punto de notificación violeta o rojo. El avatar es circular y del mismo tamaño. El banner de IA usa un degradado lila-blanco con radio de unos 20px, un objeto 3D iridiscente recortado a la derecha y un botón píldora oscuro pequeño ('Start with AI'). Las dos stat cards van en grid de 2 columnas con unos 12px de separación y radio de unos 20px. Cada una lleva un icono circular de color (coral #f27b7b o violeta #8f6ff2), un número grande con su unidad en texto pequeño gris y, abajo a la derecha, un botón circular con flecha ↗. La tarjeta de lección tiene fondo lila (#e3d9fb), radio de unos 24px, avatares superpuestos, un badge de valoración en píldora, un título de 28px seminegrita y metadatos en 14px. El selector de días es un carrusel horizontal de píldoras verticales de unos 56x88px con borde suave. El día activo es una píldora violeta rellena (#8f6ff2) con el número dentro de un círculo blanco, y debajo hay un chevron para desplegar. La agenda es una línea de tiempo con horas a la izquierda y separadores discontinuos, y las tarjetas de evento son blancas con sombra suave y un borde izquierdo de color de 3px (amarillo, violeta, cian o rojo). Una línea roja marca la hora actual con el texto 'You've no Courses…'. La barra inferior es blanca, con 4 pestañas de icono y texto y un FAB central violeta de unos 72px con sombra difusa violeta. La pestaña activa va en azul marino con un indicador superior corto. Tipografía sans geométrica (tipo Outfit o Urbanist): titulares en azul marino y texto secundario en gris (#7a7a8c).",
+    "tags": [
+      {
+        "category": "layout",
+        "value": "lista vertical",
+        "confidence": 0.6
+      },
+      {
+        "category": "components",
+        "value": "tarjetas",
+        "confidence": 0.85
+      },
+      {
+        "category": "components",
+        "value": "botón principal",
+        "confidence": 0.9
+      },
+      {
+        "category": "components",
+        "value": "avatar",
+        "confidence": 0.85
+      },
+      {
+        "category": "density",
+        "value": "media",
+        "confidence": 0.8
+      },
+      {
+        "category": "palette",
+        "value": "#ffffff",
+        "confidence": 0.9
+      },
+      {
+        "category": "style",
+        "value": "degradados",
+        "confidence": 0.8
+      },
+      {
+        "category": "layout",
+        "value": "columna única",
+        "confidence": 0.85
+      },
+      {
+        "category": "screen_type",
+        "value": "dashboard",
+        "confidence": 0.6
+      },
+      {
+        "category": "style",
+        "value": "claro",
+        "confidence": 0.95
+      },
+      {
+        "category": "components",
+        "value": "stat cards",
+        "confidence": 0.85
+      },
+      {
+        "category": "style",
+        "value": "3d",
+        "confidence": 0.7
+      },
+      {
+        "category": "components",
+        "value": "bottom nav",
+        "confidence": 0.95
+      },
+      {
+        "category": "components",
+        "value": "calendario",
+        "confidence": 0.85
+      },
+      {
+        "category": "industry",
+        "value": "educación",
+        "confidence": 0.95
+      },
+      {
+        "category": "palette",
+        "value": "#e9e0f8",
+        "confidence": 0.75
+      },
+      {
+        "category": "palette",
+        "value": "#1e0b45",
+        "confidence": 0.7
+      },
+      {
+        "category": "palette",
+        "value": "#8f6ff2",
+        "confidence": 0.7
+      },
+      {
+        "category": "palette",
+        "value": "#f27b7b",
+        "confidence": 0.55
+      }
+    ],
+    "createdAt": "2026-10-17T21:08:44+00:00",
+    "deletedAt": null
+  },
+  {
+    "id": "demo-9",
+    "title": "Dashboard SaaS oscuro con sidebar doble, KPIs y tabla de usuarios",
+    "filename": "demo-9.webp",
+    "imageUrl": "/demo/9.webp",
+    "thumbUrl": "/demo/thumbs/9.webp",
+    "filePath": "public/demo/9.webp",
+    "width": 3200,
+    "height": 2400,
+    "bytes": 726025,
+    "sourceUrl": "https://dribbble.com/shots/27093088-Dark-Dashboard-Lookscout-Design-System",
+    "status": "ready",
+    "error": null,
+    "providerId": "claude-cli",
+    "model": "opus",
+    "summary": "Dashboard en modo oscuro con un rail de iconos y un sidebar de navegación a la izquierda; también se muestra el sidebar en sus variantes plegada y desplegada. El contenido principal arranca con breadcrumbs, un saludo y botones de acción. Debajo hay una fila de cuatro KPIs con badges de tendencia, tarjetas de acciones rápidas junto a una gráfica de líneas y una tabla de usuarios paginada.",
+    "notes": "Fondo #111111 y paneles #1c1c1c/#222222 con borde sutil de 1px #2a2a2a y radios de 8-12px. Rail de iconos de ~72px y sidebar de ~280px. El item activo lleva fondo más claro y una barra azul de 2-3px a la izquierda. El badge de Messages es un círculo azul #0a6cff con número. Al pie del sidebar va una tarjeta de 'Subscription Plan' con un anillo de progreso al 86%, una X para cerrar y el enlace 'Upgrade' en azul. Cabecera: breadcrumbs con el último nivel en azul, un H1 de ~26px semibold y un subtítulo gris. A la derecha, un botón secundario oscuro, un botón principal azul y un botón cuadrado de opciones (···), todos de ~36px de alto. Los KPIs van en un contenedor dividido en 4 columnas con separadores verticales, valor en ~22px bold y badges en forma de píldora: rojo Loss, verde Growth, azul Neutral. Las tarjetas de acción tienen icono en un cuadrado de 48px, título, subtítulo y un chevron a la derecha, con unos 16px de separación. La gráfica es de área con dos series azules, un degradado bajo la línea, el eje Y en % y una leyenda arriba a la derecha. La tabla lleva checkbox, logo y nombre, barra de progreso azul con %, badge de estado en píldora de color con punto, avatares solapados con contador +N, rol en dos líneas y acciones de editar y borrar. Las filas miden ~58px de alto y la paginación es Prev / 'Page 1 to 8' / Next.",
+    "tags": [
+      {
+        "category": "style",
+        "value": "oscuro",
+        "confidence": 0.98
+      },
+      {
+        "category": "style",
+        "value": "minimalista",
+        "confidence": 0.6
+      },
+      {
+        "category": "components",
+        "value": "badge",
+        "confidence": 0.9
+      },
+      {
+        "category": "screen_type",
+        "value": "dashboard",
+        "confidence": 0.97
+      },
+      {
+        "category": "style",
+        "value": "corporativo",
+        "confidence": 0.55
+      },
+      {
+        "category": "layout",
+        "value": "sidebar fijo",
+        "confidence": 0.85
+      },
+      {
+        "category": "components",
+        "value": "sidebar",
+        "confidence": 0.97
+      },
+      {
+        "category": "components",
+        "value": "stat cards",
+        "confidence": 0.93
+      },
+      {
+        "category": "components",
+        "value": "gráfica",
+        "confidence": 0.93
+      },
+      {
+        "category": "components",
+        "value": "data table",
+        "confidence": 0.95
+      },
+      {
+        "category": "components",
+        "value": "breadcrumbs",
+        "confidence": 0.9
+      },
+      {
+        "category": "palette",
+        "value": "#111111",
+        "confidence": 0.8
+      },
+      {
+        "category": "layout",
+        "value": "bento grid",
+        "confidence": 0.45
+      },
+      {
+        "category": "density",
+        "value": "alta",
+        "confidence": 0.75
+      },
+      {
+        "category": "industry",
+        "value": "saas",
+        "confidence": 0.7
+      },
+      {
+        "category": "palette",
+        "value": "#0a6cff",
+        "confidence": 0.75
+      },
+      {
+        "category": "palette",
+        "value": "#1c1c1c",
+        "confidence": 0.7
+      },
+      {
+        "category": "palette",
+        "value": "#22a35a",
+        "confidence": 0.55
+      },
+      {
+        "category": "palette",
+        "value": "#e5383b",
+        "confidence": 0.55
+      }
+    ],
+    "createdAt": "2026-10-17T21:08:47+00:00",
+    "deletedAt": null
+  },
+  {
+    "id": "demo-10",
+    "title": "Dashboard oscuro de resúmenes de contenido con IA",
+    "filename": "demo-10.webp",
+    "imageUrl": "/demo/10.webp",
+    "thumbUrl": "/demo/thumbs/10.webp",
+    "filePath": "public/demo/10.webp",
+    "width": 2400,
+    "height": 1800,
+    "bytes": 538680,
+    "sourceUrl": "https://dribbble.com/shots/26836487-AI-Summarization-Dashboard-Dark-UI",
+    "status": "ready",
+    "error": null,
+    "providerId": "claude-cli",
+    "model": "opus",
+    "summary": "Dashboard en modo oscuro de una herramienta de IA que resume artículos, vídeos y documentos. A la izquierda hay un sidebar fijo con el botón principal azul «New Summarize». En la columna central aparecen un saludo, tres tarjetas de estadísticas, un banner para pasar a PRO y una tabla con los últimos resúmenes. La columna derecha muestra métricas destacadas, un medidor semicircular de uso al 68% y las fuentes principales.",
+    "notes": "La interfaz va en un contenedor negro (#0a0a0a) con radio de unos 24px sobre un fondo gris oscuro (#3a3a3c). El sidebar mide unos 310px de ancho y separa grupos de navegación con etiquetas en mayúsculas pequeñas (DIGESTO, PRODUCTS, OTHER). El item activo lleva fondo #1f1f1f y radio pill. El CTA principal es un botón pill azul #3b4cf5 de unos 64px de alto con icono de destellos. El buscador superior también es pill, con borde de 1px #2a2a2a, y le acompañan botones circulares de unos 56px (toggle luna/sol, notificaciones, ajustes) y el avatar. Las tarjetas tienen radio de unos 20px, borde sutil #222 y un degradado vertical de #1a1a1a a negro. Cada stat card lleva un botón circular negro con flecha diagonal arriba a la derecha y un número grande de unos 40px. El banner PRO usa una textura de puntos, un badge pill «S PRO» y un botón cuadrado con flecha. La tabla tiene tabs pill (el activo en azul), una miniatura circular de unos 88px, un badge pill rojo-naranja con el % de reducción y un mini anillo de progreso, además de columnas Before/After con número grande y la unidad debajo. La tarjeta azul de «1543+ Summaries» está girada unos -3º y se superpone a la tarjeta de «16 hours Saved». El medidor de uso es un arco de 180º hecho de segmentos radiales que van de rojo #ff3b30 a naranja y terminan en gris #3a3a3a en la parte sin usar, con el porcentaje en tipografía grande en el centro. El botón «Upgrade» es outline pill blanco. Top sources usa una barra segmentada azul/verde/gris y una lista con icono circular, punto de color y porcentaje en un badge outline. Los espaciados internos de las tarjetas rondan los 24px y el gap entre tarjetas unos 12-24px.",
+    "tags": [
+      {
+        "category": "style",
+        "value": "oscuro",
+        "confidence": 0.98
+      },
+      {
+        "category": "style",
+        "value": "minimalista",
+        "confidence": 0.6
+      },
+      {
+        "category": "components",
+        "value": "botón principal",
+        "confidence": 0.9
+      },
+      {
+        "category": "density",
+        "value": "media",
+        "confidence": 0.7
+      },
+      {
+        "category": "style",
+        "value": "degradados",
+        "confidence": 0.45
+      },
+      {
+        "category": "screen_type",
+        "value": "dashboard",
+        "confidence": 0.97
+      },
+      {
+        "category": "layout",
+        "value": "sidebar fijo",
+        "confidence": 0.92
+      },
+      {
+        "category": "components",
+        "value": "sidebar",
+        "confidence": 0.97
+      },
+      {
+        "category": "components",
+        "value": "stat cards",
+        "confidence": 0.93
+      },
+      {
+        "category": "components",
+        "value": "data table",
+        "confidence": 0.82
+      },
+      {
+        "category": "components",
+        "value": "progress ring",
+        "confidence": 0.75
+      },
+      {
+        "category": "components",
+        "value": "buscador",
+        "confidence": 0.92
+      },
+      {
+        "category": "layout",
+        "value": "tres columnas",
+        "confidence": 0.7
+      },
+      {
+        "category": "palette",
+        "value": "#0a0a0a",
+        "confidence": 0.9
+      },
+      {
+        "category": "palette",
+        "value": "#22c55e",
+        "confidence": 0.55
+      },
+      {
+        "category": "industry",
+        "value": "ia",
+        "confidence": 0.82
+      },
+      {
+        "category": "palette",
+        "value": "#1f1f1f",
+        "confidence": 0.7
+      },
+      {
+        "category": "palette",
+        "value": "#3b4cf5",
+        "confidence": 0.82
+      },
+      {
+        "category": "palette",
+        "value": "#ff3b30",
+        "confidence": 0.72
+      }
+    ],
+    "createdAt": "2026-10-17T21:08:51+00:00",
+    "deletedAt": null
+  },
+  {
+    "id": "demo-11",
+    "title": "PromoVault: app móvil de catálogos de ofertas con onboarding, inicio y búsqueda",
+    "filename": "demo-11.webp",
+    "imageUrl": "/demo/11.webp",
+    "thumbUrl": "/demo/thumbs/11.webp",
+    "filePath": "public/demo/11.webp",
+    "width": 4800,
+    "height": 3600,
+    "bytes": 3739345,
+    "sourceUrl": "https://dribbble.com/shots/26206449-Bonus-Plan-Mobile-App-UI-UX-Design",
+    "status": "ready",
+    "error": null,
+    "providerId": "claude-cli",
+    "model": "opus",
+    "summary": "Tres pantallas móviles de una app de cupones y catálogos sobre un fondo verde lima. La pantalla central de inicio pone arriba un buscador con botón de filtros y un banner con un 50% OFF. Debajo hay una fila de tiendas favoritas en avatares circulares, un grid de catálogos y una barra de navegación inferior negra. A los lados aparecen un onboarding con una ilustración 3D y una tarjeta blanca con CTA negro, y una pantalla de búsqueda con chips de búsquedas recientes y un grid de búsquedas populares.",
+    "notes": "Ancho de referencia 375 pt. Márgenes laterales de unos 16 pt. El buscador mide unos 48 pt de alto, con radio de 12 pt y fondo #ececec. El botón de filtros es un cuadrado de 48 pt con radio de 12 pt. El botón de menú y el de volver son cuadrados de 44 pt con radio de 12 pt. El banner promo tiene fondo #d4f0a0 y radio de unos 24 pt, con título de 20 pt en negrita y '50%' grande en rojo #f0383a. Su CTA 'I discover' es una píldora blanca de radio 12 pt. Bajo el banner hay paginación con puntos dentro de una cápsula blanca. Las tiendas favoritas son avatares circulares de unos 56 pt sobre fondo gris claro, con la etiqueta debajo en 12 pt; hay 5 por fila y un enlace 'See all' en gris a la derecha. Las tarjetas de catálogo van en 2 columnas, con radio de 16 pt, fondo pastel (verde y rosa) y la imagen del producto centrada. La navegación inferior es una cápsula negra flotante con radio de unos 24 pt y 5 iconos; el ítem activo es una píldora verde lima con icono y texto 'Home'. En el onboarding, la ilustración ocupa la mitad superior y debajo hay una hoja blanca con radio superior de 32 pt. Esa hoja lleva un indicador de pasos (barra activa alargada verde y puntos grises), un título de 28 pt en negrita, un subtítulo gris de 16 pt y un botón negro a todo el ancho de unos 56 pt de alto con radio de 12 pt. Los chips de búsqueda reciente van en filas que saltan de línea, con borde gris de 1 px, radio de 10 pt y padding de 8×12 pt. Las tarjetas de búsquedas populares van en grid de 2 columnas, son blancas con radio de 16 pt, llevan una miniatura circular de 40 pt, título en semibold y subtítulo en gris. Tipografía sans geométrica redondeada.",
+    "tags": [
+      {
+        "category": "style",
+        "value": "minimalista",
+        "confidence": 0.7
+      },
+      {
+        "category": "components",
+        "value": "tarjetas",
+        "confidence": 0.85
+      },
+      {
+        "category": "components",
+        "value": "botón principal",
+        "confidence": 0.85
+      },
+      {
+        "category": "components",
+        "value": "avatar",
+        "confidence": 0.8
+      },
+      {
+        "category": "density",
+        "value": "media",
+        "confidence": 0.8
+      },
+      {
+        "category": "palette",
+        "value": "#ffffff",
+        "confidence": 0.85
+      },
+      {
+        "category": "layout",
+        "value": "secciones apiladas",
+        "confidence": 0.85
+      },
+      {
+        "category": "screen_type",
+        "value": "dashboard",
+        "confidence": 0.45
+      },
+      {
+        "category": "style",
+        "value": "claro",
+        "confidence": 0.92
+      },
+      {
+        "category": "layout",
+        "value": "grid de tarjetas",
+        "confidence": 0.65
+      },
+      {
+        "category": "palette",
+        "value": "#f5f5f5",
+        "confidence": 0.8
+      },
+      {
+        "category": "components",
+        "value": "buscador",
+        "confidence": 0.95
+      },
+      {
+        "category": "palette",
+        "value": "#000000",
+        "confidence": 0.85
+      },
+      {
+        "category": "style",
+        "value": "ilustrado",
+        "confidence": 0.6
+      },
+      {
+        "category": "components",
+        "value": "carrusel",
+        "confidence": 0.7
+      },
+      {
+        "category": "components",
+        "value": "bottom nav",
+        "confidence": 0.95
+      },
+      {
+        "category": "industry",
+        "value": "ecommerce",
+        "confidence": 0.88
+      },
+      {
+        "category": "palette",
+        "value": "#d4f0a0",
+        "confidence": 0.9
+      },
+      {
+        "category": "palette",
+        "value": "#f0383a",
+        "confidence": 0.75
+      }
+    ],
+    "createdAt": "2026-10-17T22:09:37+00:00",
+    "deletedAt": null
+  },
+  {
+    "id": "demo-12",
+    "title": "Dashboard cripto oscuro con acentos verde menta (LumenTrade)",
+    "filename": "demo-12.webp",
+    "imageUrl": "/demo/12.webp",
+    "thumbUrl": "/demo/thumbs/12.webp",
+    "filePath": "public/demo/12.webp",
+    "width": 7416,
+    "height": 5571,
+    "bytes": 8349796,
+    "sourceUrl": "https://dribbble.com/shots/26108398-Crypto-Dashboard-Dark-Mode-Design",
+    "status": "ready",
+    "error": null,
+    "providerId": "claude-cli",
+    "model": "opus",
+    "summary": "Dashboard de criptomonedas en modo oscuro: a la izquierda hay un sidebar fijo con el logo, el menú agrupado por secciones y una tarjeta de Upgrade a Pro al pie. Arriba del contenido hay una cabecera con título, subtítulo, buscador y campana; debajo, tres tarjetas de recaudación con barra de progreso y cuenta atrás. Luego viene una fila con una gráfica de área del valor del portfolio y un donut de pagos, y al final una tabla de actividad reciente con buscador y filtros.",
+    "notes": "Fondo exterior casi negro (#16181a) con un leve halo verde; el contenedor de la app tiene un radio de unos 24px y un fondo #121316. Sidebar fijo de unos 300px de ancho, separado del contenido por un borde de 1px (#222). Encabezados de sección del menú en mayúsculas pequeñas y gris. El ítem activo lleva un relleno verde con degradado (#2bd49a a #1fa77a), radio de unos 10px y unos 48px de alto; el resto de ítems usa icono outline y texto gris claro, con una separación de unos 60px entre ítems. Tarjetas con fondo #18191c, borde de 1px a baja opacidad y radio de unos 16px, separadas entre sí unos 20px. Cada tarjeta de proyecto tiene un icono circular, un badge 'Active' tipo pill oscuro, una barra de progreso fina (unos 4px) con brillo verde, una cuenta atrás en formato hh:mm:ss y un botón 'Show >' verde y compacto (radio 6px). La gráfica de área usa una línea verde de 1.5px con un relleno en degradado hacia transparente, una cuadrícula horizontal punteada, un tooltip con el valor en verde y chips de filtro (Income, Expence, Saving) de fondo oscuro. El donut tiene un grosor de unos 50px en tres tonos de verde, un glow exterior y el total centrado en negrita; la leyenda lleva puntos de color y los porcentajes alineados a la derecha. La tabla tiene una cabecera con fondo ligeramente más claro, filas de unos 70px con divisores finos, checkboxes verdes, un menú de acciones (tres puntos) y un buscador de unos 48px de alto con radio de 10px. Tipografía sans geométrica (estilo Inter/SF), con un número KPI grande (unos 36px) en el portfolio.",
+    "tags": [
+      {
+        "category": "style",
+        "value": "oscuro",
+        "confidence": 0.97
+      },
+      {
+        "category": "components",
+        "value": "tarjetas",
+        "confidence": 0.9
+      },
+      {
+        "category": "palette",
+        "value": "#ffffff",
+        "confidence": 0.7
+      },
+      {
+        "category": "style",
+        "value": "degradados",
+        "confidence": 0.6
+      },
+      {
+        "category": "style",
+        "value": "técnico",
+        "confidence": 0.45
+      },
+      {
+        "category": "screen_type",
+        "value": "dashboard",
+        "confidence": 0.97
+      },
+      {
+        "category": "layout",
+        "value": "sidebar fijo",
+        "confidence": 0.92
+      },
+      {
+        "category": "components",
+        "value": "sidebar",
+        "confidence": 0.95
+      },
+      {
+        "category": "components",
+        "value": "gráfica",
+        "confidence": 0.95
+      },
+      {
+        "category": "components",
+        "value": "data table",
+        "confidence": 0.92
+      },
+      {
+        "category": "industry",
+        "value": "fintech",
+        "confidence": 0.9
+      },
+      {
+        "category": "layout",
+        "value": "bento grid",
+        "confidence": 0.55
+      },
+      {
+        "category": "density",
+        "value": "alta",
+        "confidence": 0.7
+      },
+      {
+        "category": "components",
+        "value": "buscador",
+        "confidence": 0.85
+      },
+      {
+        "category": "components",
+        "value": "barra de progreso",
+        "confidence": 0.88
+      },
+      {
+        "category": "palette",
+        "value": "#121316",
+        "confidence": 0.8
+      },
+      {
+        "category": "palette",
+        "value": "#1b1c1f",
+        "confidence": 0.7
+      },
+      {
+        "category": "palette",
+        "value": "#2ee6a6",
+        "confidence": 0.75
+      },
+      {
+        "category": "palette",
+        "value": "#1fa77a",
+        "confidence": 0.65
+      }
+    ],
+    "createdAt": "2026-10-17T22:09:39+00:00",
+    "deletedAt": null
+  },
+  {
+    "id": "demo-13",
+    "title": "Dashboard de cine CinemaCity con reserva de butacas y snacks",
+    "filename": "demo-13.webp",
+    "imageUrl": "/demo/13.webp",
+    "thumbUrl": "/demo/thumbs/13.webp",
+    "filePath": "public/demo/13.webp",
+    "width": 3200,
+    "height": 2400,
+    "bytes": 6721473,
+    "sourceUrl": "https://dribbble.com/shots/21179974-Cinema-Dashboard-Design",
+    "status": "ready",
+    "error": null,
+    "providerId": "claude-cli",
+    "model": "opus",
+    "summary": "Dashboard oscuro de una app de cine. A la izquierda hay un sidebar fijo con logo, tarjeta de perfil con saldo y navegación, en la que destaca el ítem activo en verde lima. En el centro manda un hero con el póster de la película y el botón 'Watch the trailer'; debajo van una fila de tarjetas de películas con valoración por estrellas y dos tarjetas de combos de comida. A la derecha hay un selector de butacas de la sala 'Lux Hall' y un resumen de la entrada con precio grande y el botón 'Buy tickets'.",
+    "notes": "Contenedor principal con radio grande (~40px) sobre un fondo degradado azul pizarra. El sidebar mide unas 300px de ancho y el ítem activo es una píldora lima de ~68px de alto con radio ~16px. Las tarjetas son negro/gris muy oscuro con radio ~24px y unos 24px de padding. Los botones principales son píldoras totalmente redondeadas en lima con texto oscuro. Barra superior con buscador en píldora translúcida, un campo de 'scan by phone' y botones circulares de ubicación y notificaciones con badge numérico. El hero tiene radio ~32px y el CTA superpuesto abajo a la izquierda. Las tarjetas de películas llevan imagen vertical con radio ~16px, título, género en gris y estrellas lima; hay una tarjeta rotada ~5° que sobresale del grid como acento visual, y otro póster flotante rotado en el borde derecho. El selector de butacas tiene una curva lima que representa la pantalla, un degradado verde de fondo e iconos de sofá en lima con distinta opacidad según la disponibilidad. El resumen de la entrada combina filas con puntos guía entre etiqueta y valor (Hall, Seats), el precio a ~56px en negrita y el borde derecho troquelado como un ticket. Tipografía sans geométrica, blanca para títulos y gris para la información secundaria. Los badges de contador son pequeñas píldoras lima.",
+    "tags": [
+      {
+        "category": "style",
+        "value": "oscuro",
+        "confidence": 0.97
+      },
+      {
+        "category": "components",
+        "value": "tarjetas",
+        "confidence": 0.92
+      },
+      {
+        "category": "components",
+        "value": "botón principal",
+        "confidence": 0.92
+      },
+      {
+        "category": "density",
+        "value": "media",
+        "confidence": 0.7
+      },
+      {
+        "category": "style",
+        "value": "degradados",
+        "confidence": 0.7
+      },
+      {
+        "category": "components",
+        "value": "badge",
+        "confidence": 0.8
+      },
+      {
+        "category": "screen_type",
+        "value": "dashboard",
+        "confidence": 0.9
+      },
+      {
+        "category": "layout",
+        "value": "sidebar fijo",
+        "confidence": 0.92
+      },
+      {
+        "category": "components",
+        "value": "sidebar",
+        "confidence": 0.95
+      },
+      {
+        "category": "layout",
+        "value": "bento grid",
+        "confidence": 0.65
+      },
+      {
+        "category": "components",
+        "value": "buscador",
+        "confidence": 0.9
+      },
+      {
+        "category": "components",
+        "value": "hero",
+        "confidence": 0.85
+      },
+      {
+        "category": "style",
+        "value": "alto contraste",
+        "confidence": 0.6
+      },
+      {
+        "category": "industry",
+        "value": "medios",
+        "confidence": 0.55
+      },
+      {
+        "category": "palette",
+        "value": "#b5d334",
+        "confidence": 0.85
+      },
+      {
+        "category": "palette",
+        "value": "#0f1013",
+        "confidence": 0.8
+      },
+      {
+        "category": "palette",
+        "value": "#1c1e22",
+        "confidence": 0.65
+      },
+      {
+        "category": "palette",
+        "value": "#2b3346",
+        "confidence": 0.6
+      },
+      {
+        "category": "palette",
+        "value": "#3e4a2c",
+        "confidence": 0.5
+      }
+    ],
+    "createdAt": "2026-10-17T22:28:15+00:00",
+    "deletedAt": null
+  },
+  {
+    "id": "demo-14",
+    "title": "App de Fórmula 1 con bienvenida, circuito y ficha de piloto",
+    "filename": "demo-14.webp",
+    "imageUrl": "/demo/14.webp",
+    "thumbUrl": "/demo/thumbs/14.webp",
+    "filePath": "public/demo/14.webp",
+    "width": 1600,
+    "height": 1200,
+    "bytes": 1164829,
+    "sourceUrl": "https://layers.to/layers/cmv5h45du0006l90dpr8bg94l-racing-mobile-app-concept",
+    "status": "ready",
+    "error": null,
+    "providerId": "claude-cli",
+    "model": "opus",
+    "summary": "Tres pantallas móviles de una app de Fórmula 1 sobre degradados de rojo granate a gris oscuro. La primera es una portada con la foto de un piloto, un titular grande y un CTA rojo. Las otras dos son de detalle: un mapa del circuito con avatares de pilotos y sus datos técnicos, y la ficha de un piloto con su puntuación en tipografía XL y su foto recortada.",
+    "notes": "Cabecera con dos botones circulares translúcidos de unos 56px (volver con chevron y menú) y el texto de navegación al lado en 16px regular blanco. Titulares centrados en 40-44px bold, con la segunda palabra en blanco al 70% para dar contraste tonal. Fondo en degradado vertical de #8b3a3e/#e2603f arriba a #2c2b2e abajo; el contenido inferior va sobre gris oscuro. CTA en píldora de ancho completo (unos 64px de alto, radio total) en #d63a45, con el texto a la izquierda y un botón circular interior con una flecha diagonal a la derecha. El trazado del circuito es una línea naranja clara de 4px con avatares circulares de 28px con borde y un marcador de bandera roja de 40px en el centro. Las métricas van en tres columnas separadas por divisores verticales de 1px: etiqueta en 14px gris claro y valor en 16px semibold. La velocidad destacada va en unos 48px bold con la unidad pequeña al lado, más una etiqueta píldora gris. Ficha del piloto: kicker en 14px, puntos en 48px bold, nombre del piloto con bandera en 14px, avatares solapados unos 12px más una burbuja roja «All», y el nombre final en unos 64px bold con interlineado ajustado. Márgenes laterales de unos 16px y radio del marco del dispositivo de unos 48px.",
+    "tags": [
+      {
+        "category": "style",
+        "value": "oscuro",
+        "confidence": 0.85
+      },
+      {
+        "category": "components",
+        "value": "botón principal",
+        "confidence": 0.9
+      },
+      {
+        "category": "components",
+        "value": "avatar",
+        "confidence": 0.9
+      },
+      {
+        "category": "style",
+        "value": "degradados",
+        "confidence": 0.9
+      },
+      {
+        "category": "layout",
+        "value": "columna única",
+        "confidence": 0.85
+      },
+      {
+        "category": "components",
+        "value": "botón secundario",
+        "confidence": 0.65
+      },
+      {
+        "category": "components",
+        "value": "navbar",
+        "confidence": 0.7
+      },
+      {
+        "category": "components",
+        "value": "badge",
+        "confidence": 0.45
+      },
+      {
+        "category": "layout",
+        "value": "pantalla completa",
+        "confidence": 0.6
+      },
+      {
+        "category": "components",
+        "value": "mapa",
+        "confidence": 0.6
+      },
+      {
+        "category": "density",
+        "value": "baja",
+        "confidence": 0.75
+      },
+      {
+        "category": "industry",
+        "value": "sin sector",
+        "confidence": 0.4
+      },
+      {
+        "category": "style",
+        "value": "alto contraste",
+        "confidence": 0.5
+      },
+      {
+        "category": "screen_type",
+        "value": "detalle",
+        "confidence": 0.55
+      },
+      {
+        "category": "palette",
+        "value": "#d63a45",
+        "confidence": 0.85
+      },
+      {
+        "category": "palette",
+        "value": "#e2603f",
+        "confidence": 0.75
+      },
+      {
+        "category": "palette",
+        "value": "#8b3a3e",
+        "confidence": 0.7
+      },
+      {
+        "category": "palette",
+        "value": "#2c2b2e",
+        "confidence": 0.8
+      },
+      {
+        "category": "palette",
+        "value": "#3f3e42",
+        "confidence": 0.8
+      }
+    ],
+    "createdAt": "2026-10-19T19:44:19+00:00",
+    "deletedAt": null
+  },
+  {
+    "id": "demo-15",
+    "title": "Dashboard de hogar inteligente oscuro con render 3D de la casa",
+    "filename": "demo-15.webp",
+    "imageUrl": "/demo/15.webp",
+    "thumbUrl": "/demo/thumbs/15.webp",
+    "filePath": "public/demo/15.webp",
+    "width": 4800,
+    "height": 3600,
+    "bytes": 3156061,
+    "sourceUrl": "https://dribbble.com/shots/27476345-Smart-Home-Management-Dashboard",
+    "status": "ready",
+    "error": null,
+    "providerId": "claude-cli",
+    "model": "opus",
+    "summary": "Panel de control domótico en modo oscuro con acentos naranja. A la izquierda hay un saludo y una columna de tarjetas de métricas: un dial semicircular de climatización, consumo de energía, dispositivos conectados y una gráfica de barras de potencia. A la derecha domina un render isométrico nocturno de la casa con el título «Home Operations Center», chips de estado y debajo una tabla de dispositivos con interruptores on/off.",
+    "notes": "Contenedor principal con radio grande (~40px) y borde naranja fino de 1px sobre un fondo con degradado radial de marrón a naranja. Navbar superior con pastillas redondeadas totalmente (radio 999px) y icono más texto; la activa lleva un fondo algo más claro. A la derecha, botones circulares de unos 56px con borde punteado y avatar circular. Columna izquierda de unos 510px: tarjetas con radio de ~20px, fondo #1a1a1a semitransparente, padding de ~20px y separación de ~8px; la de clima ocupa todo el ancho y debajo van dos tarjetas en rejilla de 2 columnas. Cifras en tipografía de puntos (dot-matrix) y saludo en serif. Dial de clima con arco naranja brillante y puntos de control. En la gráfica de barras, la columna activa se resalta con un fondo naranja degradado y un badge naranja (+2.4%). Chips de estado en pastilla con borde fino y un icono de encendido. La tabla no tiene bordes verticales, solo separadores horizontales finos, y filas de ~90px. El toggle de control es una pastilla naranja con un knob circular cuando está activo y gris oscuro cuando está apagado.",
+    "tags": [
+      {
+        "category": "style",
+        "value": "oscuro",
+        "confidence": 0.97
+      },
+      {
+        "category": "components",
+        "value": "avatar",
+        "confidence": 0.85
+      },
+      {
+        "category": "density",
+        "value": "media",
+        "confidence": 0.75
+      },
+      {
+        "category": "style",
+        "value": "degradados",
+        "confidence": 0.55
+      },
+      {
+        "category": "components",
+        "value": "navbar",
+        "confidence": 0.95
+      },
+      {
+        "category": "screen_type",
+        "value": "dashboard",
+        "confidence": 0.97
+      },
+      {
+        "category": "components",
+        "value": "stat cards",
+        "confidence": 0.9
+      },
+      {
+        "category": "components",
+        "value": "gráfica",
+        "confidence": 0.85
+      },
+      {
+        "category": "components",
+        "value": "data table",
+        "confidence": 0.85
+      },
+      {
+        "category": "components",
+        "value": "toggle",
+        "confidence": 0.9
+      },
+      {
+        "category": "layout",
+        "value": "asimétrico",
+        "confidence": 0.75
+      },
+      {
+        "category": "palette",
+        "value": "#f2f2f2",
+        "confidence": 0.8
+      },
+      {
+        "category": "layout",
+        "value": "dos columnas",
+        "confidence": 0.7
+      },
+      {
+        "category": "palette",
+        "value": "#0f0f0f",
+        "confidence": 0.85
+      },
+      {
+        "category": "style",
+        "value": "lujo",
+        "confidence": 0.6
+      },
+      {
+        "category": "industry",
+        "value": "energía",
+        "confidence": 0.5
+      },
+      {
+        "category": "palette",
+        "value": "#1c1b1a",
+        "confidence": 0.75
+      },
+      {
+        "category": "palette",
+        "value": "#ff6a1a",
+        "confidence": 0.85
+      },
+      {
+        "category": "palette",
+        "value": "#a8520f",
+        "confidence": 0.65
+      }
+    ],
+    "createdAt": "2026-10-26T15:53:09+00:00",
+    "deletedAt": null
+  },
+  {
+    "id": "demo-16",
+    "title": "Dashboard oscuro de salud y bienestar con tarjetas en tablet",
+    "filename": "demo-16.webp",
+    "imageUrl": "/demo/16.webp",
+    "thumbUrl": "/demo/thumbs/16.webp",
+    "filePath": "public/demo/16.webp",
+    "width": 3008,
+    "height": 2256,
+    "bytes": 1270195,
+    "sourceUrl": "https://dribbble.com/shots/25499906-Fitness-Tracker-Dashboard-Dark-Version",
+    "status": "ready",
+    "error": null,
+    "providerId": "claude-cli",
+    "model": "opus",
+    "summary": "Un dashboard de salud en modo oscuro, mostrado en una tablet, con una barra superior de iconos circulares y una píldora rosa activa que pone «Dashboard». Debajo hay un bento grid de cuatro columnas con tarjetas de comida, pasos, agua, tests mentales y ranking. Las tarjetas rellenas de rosa y de azul claro concentran la atención en las gráficas de minutos activos y de puntos frente a otros usuarios.",
+    "notes": "Fondo casi negro (#1c1c1e) con tarjetas un poco más claras (#28282b) de radio grande, unos 20-24px, y huecos de unos 16px. Hay dos colores de acento planos: rosa pastel (#e8b4dc) y azul lavanda (#b8c8e4), que se usan para rellenar tarjetas destacadas, la píldora de navegación activa, las barras de progreso y las cifras de puntos. La navegación superior va en botones circulares de unos 44px y la píldora activa lleva icono y texto en mayúsculas. Tipografía sans geométrica: números grandes en negrita (5,050, 1000) junto a una etiqueta pequeña, y textos secundarios en gris. Los componentes de datos son: un anillo de progreso de kcal, barras verticales redondeadas para los pasos, una gráfica de puntos apilados por día, una línea suave con un tooltip en forma de píldora negra con la hora, un indicador vertical de agua en cápsula al 60% con botones +/- circulares, barras horizontales comparativas en forma de píldora, chips circulares numerados para los días de check-in y una lista de ranking con avatar, nombre, badges, puntos en rosa e icono de medalla. Las barras de progreso finas (4px) tienen el extremo redondeado y el riel en gris oscuro.",
+    "tags": [
+      {
+        "category": "style",
+        "value": "oscuro",
+        "confidence": 0.97
+      },
+      {
+        "category": "components",
+        "value": "avatar",
+        "confidence": 0.85
+      },
+      {
+        "category": "palette",
+        "value": "#ffffff",
+        "confidence": 0.75
+      },
+      {
+        "category": "components",
+        "value": "navbar",
+        "confidence": 0.8
+      },
+      {
+        "category": "screen_type",
+        "value": "dashboard",
+        "confidence": 0.97
+      },
+      {
+        "category": "layout",
+        "value": "grid de tarjetas",
+        "confidence": 0.6
+      },
+      {
+        "category": "components",
+        "value": "stat cards",
+        "confidence": 0.9
+      },
+      {
+        "category": "components",
+        "value": "gráfica",
+        "confidence": 0.95
+      },
+      {
+        "category": "layout",
+        "value": "bento grid",
+        "confidence": 0.88
+      },
+      {
+        "category": "components",
+        "value": "progress ring",
+        "confidence": 0.9
+      },
+      {
+        "category": "density",
+        "value": "alta",
+        "confidence": 0.85
+      },
+      {
+        "category": "components",
+        "value": "barra de progreso",
+        "confidence": 0.92
+      },
+      {
+        "category": "palette",
+        "value": "#1c1c1e",
+        "confidence": 0.8
+      },
+      {
+        "category": "style",
+        "value": "denso",
+        "confidence": 0.6
+      },
+      {
+        "category": "style",
+        "value": "lúdico",
+        "confidence": 0.55
+      },
+      {
+        "category": "industry",
+        "value": "salud",
+        "confidence": 0.9
+      },
+      {
+        "category": "palette",
+        "value": "#2a2a2d",
+        "confidence": 0.7
+      },
+      {
+        "category": "palette",
+        "value": "#e8b4dc",
+        "confidence": 0.85
+      },
+      {
+        "category": "palette",
+        "value": "#b8c8e4",
+        "confidence": 0.85
+      }
+    ],
+    "createdAt": "2026-10-26T15:53:11+00:00",
+    "deletedAt": null
+  },
+  {
+    "id": "demo-17",
+    "title": "Dashboard oscuro de Taskk con tarjetas de métricas y gráfica de ingresos",
+    "filename": "demo-17.webp",
+    "imageUrl": "/demo/17.webp",
+    "thumbUrl": "/demo/thumbs/17.webp",
+    "filePath": "public/demo/17.webp",
+    "width": 2400,
+    "height": 1800,
+    "bytes": 278955,
+    "sourceUrl": "https://dribbble.com/shots/27383812-Task-Dashboard-Dark-mode",
+    "status": "ready",
+    "error": null,
+    "providerId": "claude-cli",
+    "model": "opus",
+    "summary": "Es el dashboard de una herramienta de productividad en modo oscuro. A la izquierda hay un sidebar fijo con el logo, un buscador y la navegación por iconos, y en la parte de arriba hay un breadcrumb. El contenido empieza con un saludo grande y sigue con tarjetas de métricas: la de 'Active Tasks' está activa y tiene un brillo violeta. Debajo hay una gráfica de barras de 'Revenue Forecast' donde el mes seleccionado se resalta y el resto queda difuminado.",
+    "notes": "Sidebar de unos 240px con un fondo un poco más claro que el lienzo y bordes redondeados de unos 24px en el contenedor exterior. El buscador tiene unos 36px de alto, radio de 10px y un atajo '/' en un chip a la derecha. Los items de navegación miden unos 40px, con icono de línea de 20px y texto gris (#8a8a93). El item activo lleva fondo #1c1c22, radio de 10px y texto blanco. Los grupos colapsables 'Apps' y 'File' tienen chevron, '+' y menú kebab. En el área principal hay un breadcrumb con icono de casa y un chevron, separado por un borde inferior de 1px. El saludo va a unos 28px en peso medio. Las tarjetas de métricas tienen radio de unos 16px, borde de 1px (#26262c), un icono dentro de un cuadrado de 36px con radio de 8px, el número a unos 32px y una etiqueta gris. En hover, la tarjeta muestra un degradado radial violeta (#7b5cff) desde abajo con una textura de puntos, y aparece un botón 'View details' con fondo violeta oscuro y borde violeta, de radio 8px. La tarjeta de la gráfica tiene una cabecera con icono, título y subtítulo, más un divisor. Las barras van agrupadas por mes (ingresos y gastos) con radio superior completo. El mes activo lleva degradados violeta y cian y los demás meses quedan en gris oscuro, con desenfoque como efecto de foco. Separación de unos 24px entre tarjetas.",
+    "tags": [
+      {
+        "category": "style",
+        "value": "oscuro",
+        "confidence": 0.97
+      },
+      {
+        "category": "style",
+        "value": "minimalista",
+        "confidence": 0.55
+      },
+      {
+        "category": "density",
+        "value": "media",
+        "confidence": 0.75
+      },
+      {
+        "category": "style",
+        "value": "degradados",
+        "confidence": 0.7
+      },
+      {
+        "category": "components",
+        "value": "botón secundario",
+        "confidence": 0.6
+      },
+      {
+        "category": "screen_type",
+        "value": "dashboard",
+        "confidence": 0.97
+      },
+      {
+        "category": "layout",
+        "value": "sidebar fijo",
+        "confidence": 0.9
+      },
+      {
+        "category": "components",
+        "value": "sidebar",
+        "confidence": 0.97
+      },
+      {
+        "category": "components",
+        "value": "stat cards",
+        "confidence": 0.93
+      },
+      {
+        "category": "components",
+        "value": "gráfica",
+        "confidence": 0.95
+      },
+      {
+        "category": "components",
+        "value": "breadcrumbs",
+        "confidence": 0.9
+      },
+      {
+        "category": "layout",
+        "value": "bento grid",
+        "confidence": 0.45
+      },
+      {
+        "category": "palette",
+        "value": "#1c1c22",
+        "confidence": 0.7
+      },
+      {
+        "category": "components",
+        "value": "buscador",
+        "confidence": 0.88
+      },
+      {
+        "category": "industry",
+        "value": "productividad",
+        "confidence": 0.8
+      },
+      {
+        "category": "palette",
+        "value": "#0d0d12",
+        "confidence": 0.85
+      },
+      {
+        "category": "palette",
+        "value": "#7b5cff",
+        "confidence": 0.8
+      },
+      {
+        "category": "palette",
+        "value": "#29b6f6",
+        "confidence": 0.75
+      },
+      {
+        "category": "palette",
+        "value": "#8a8a93",
+        "confidence": 0.6
+      }
+    ],
+    "createdAt": "2026-10-26T15:53:13+00:00",
+    "deletedAt": null
+  },
+  {
+    "id": "demo-18",
+    "title": "Dashboard CRM oscuro con copiloto de IA y métricas de ventas",
+    "filename": "demo-18.webp",
+    "imageUrl": "/demo/18.webp",
+    "thumbUrl": "/demo/thumbs/18.webp",
+    "filePath": "public/demo/18.webp",
+    "width": 2400,
+    "height": 1800,
+    "bytes": 525540,
+    "sourceUrl": "https://dribbble.com/shots/27558036-NexusAI-AI-Powered-Sales-CRM-Dashboard-Dark",
+    "status": "ready",
+    "error": null,
+    "providerId": "claude-cli",
+    "model": "opus",
+    "summary": "Un dashboard de ventas en modo oscuro con un sidebar fijo a la izquierda y un panel lateral de copiloto de IA a la derecha. En la columna central hay una fila de cuatro stat cards, una gráfica de áreas de crecimiento de ingresos, tres tarjetas de salud con barras segmentadas y una tabla de deals activos. A la derecha hay un saludo con resumen, cuatro acciones rápidas y un chat con la IA.",
+    "notes": "Contenedor con radio de unos 24px sobre fondo gris. Sidebar fijo de unos 320px con el ítem activo resaltado en #1c1c1c y radio de 8px; las secciones van con etiquetas en mayúsculas grises (OVERVIEW, WORKSPACES). Las tarjetas son negras con borde sutil de 1px (#1f1f1f), radio de unos 12px y padding de 20px, con 16px entre ellas. Las stat cards llevan icono, etiqueta, una cifra grande (unos 28px) y un badge verde pequeño con la variación. La gráfica usa áreas suavizadas con degradado violeta y naranja, leyenda Week/Month/Year y un tooltip oscuro flotante. Las tarjetas de salud muestran un porcentaje grande y una barra de progreso hecha de rayas verticales (verde, naranja, azul) con la parte restante en gris. La tabla lleva avatares circulares, columnas ordenables con flechas y badges de estado coloreados (azul en progreso, naranja pendiente, verde completado). El panel de IA tiene una burbuja del usuario alineada a la derecha, la respuesta en texto plano y un input inferior con botones de más, micrófono y enviar circular blanco. Indicadores en vivo con punto verde.",
+    "tags": [
+      {
+        "category": "style",
+        "value": "oscuro",
+        "confidence": 0.97
+      },
+      {
+        "category": "style",
+        "value": "técnico",
+        "confidence": 0.45
+      },
+      {
+        "category": "components",
+        "value": "badge",
+        "confidence": 0.85
+      },
+      {
+        "category": "screen_type",
+        "value": "dashboard",
+        "confidence": 0.97
+      },
+      {
+        "category": "layout",
+        "value": "sidebar fijo",
+        "confidence": 0.92
+      },
+      {
+        "category": "components",
+        "value": "sidebar",
+        "confidence": 0.95
+      },
+      {
+        "category": "components",
+        "value": "stat cards",
+        "confidence": 0.95
+      },
+      {
+        "category": "components",
+        "value": "gráfica",
+        "confidence": 0.95
+      },
+      {
+        "category": "components",
+        "value": "data table",
+        "confidence": 0.9
+      },
+      {
+        "category": "components",
+        "value": "chat",
+        "confidence": 0.88
+      },
+      {
+        "category": "density",
+        "value": "alta",
+        "confidence": 0.85
+      },
+      {
+        "category": "palette",
+        "value": "#141414",
+        "confidence": 0.7
+      },
+      {
+        "category": "industry",
+        "value": "saas",
+        "confidence": 0.75
+      },
+      {
+        "category": "palette",
+        "value": "#000000",
+        "confidence": 0.9
+      },
+      {
+        "category": "style",
+        "value": "denso",
+        "confidence": 0.7
+      },
+      {
+        "category": "layout",
+        "value": "tres columnas",
+        "confidence": 0.7
+      },
+      {
+        "category": "palette",
+        "value": "#22c55e",
+        "confidence": 0.6
+      },
+      {
+        "category": "palette",
+        "value": "#f07a2a",
+        "confidence": 0.7
+      },
+      {
+        "category": "palette",
+        "value": "#8b6cf0",
+        "confidence": 0.6
+      }
+    ],
+    "createdAt": "2026-10-26T15:53:14+00:00",
+    "deletedAt": null
+  },
+  {
+    "id": "demo-19",
+    "title": "Dashboard oscuro de ventas y revenue con sidebar y gráfica de área",
+    "filename": "demo-19.webp",
+    "imageUrl": "/demo/19.webp",
+    "thumbUrl": "/demo/thumbs/19.webp",
+    "filePath": "public/demo/19.webp",
+    "width": 6400,
+    "height": 4800,
+    "bytes": 1450242,
+    "sourceUrl": "https://dribbble.com/shots/25692637-Analytics-Dashboard-Dark",
+    "status": "ready",
+    "error": null,
+    "providerId": "claude-cli",
+    "model": "opus",
+    "summary": "Dashboard analítico en modo oscuro con un sidebar fijo a la izquierda que agrupa la navegación en secciones colapsables (Reports, AI Insights). Arriba, en el área principal, van el título, un selector de periodo segmentado y cuatro stat cards con KPIs. Debajo hay una tabla de detalle de ventas con barras de progreso, un panel de cashflow y un bloque Overview con una gráfica de área anual.",
+    "notes": "Lienzo casi negro (#0b0b0c) con bordes de 1px en gris muy oscuro (#2a2a2d) y radio de unos 12px en tarjetas y unos 16px en el contenedor exterior. El sidebar mide unos 300px de ancho y lo separa del contenido un borde vertical de 1px. El item activo tiene fondo #1f1f22 y radio de 8px. Los subitems van indentados unos 36px y separados unos 45px entre sí. El título H1 mide unos 34px en semibold. El control segmentado tiene fondo #1f1f22, padding de 4px y el segmento activo en negro con radio de 6px. Las cuatro stat cards van en un grid de 4 columnas con gap de unos 24px. Cada una lleva una etiqueta de 16px con un icono de línea a la derecha, un valor de unos 36px en bold y una variación en gris (#8a8a8f) de 15px. La tabla no tiene cebra, usa divisores de 1px y filas de unos 72px. Bajo la cifra de ventas hay una barra de progreso fina de 4px con relleno gris claro. El panel Cashflow es una lista de pares clave/valor alineados a la derecha, con separadores y el total en bold. Overview tiene una cabecera con tres métricas en pestañas: la seleccionada lleva fondo #1f1f22. La gráfica de área usa un trazo blanco fino y un relleno en degradado de gris a transparente, con líneas guía horizontales sutiles. El botón «Add Alert» es blanco con texto negro y radio de 6px. La tipografía es sans-serif tipo Inter.",
+    "tags": [
+      {
+        "category": "style",
+        "value": "oscuro",
+        "confidence": 0.97
+      },
+      {
+        "category": "style",
+        "value": "minimalista",
+        "confidence": 0.6
+      },
+      {
+        "category": "density",
+        "value": "media",
+        "confidence": 0.7
+      },
+      {
+        "category": "palette",
+        "value": "#ffffff",
+        "confidence": 0.9
+      },
+      {
+        "category": "screen_type",
+        "value": "dashboard",
+        "confidence": 0.97
+      },
+      {
+        "category": "layout",
+        "value": "sidebar fijo",
+        "confidence": 0.9
+      },
+      {
+        "category": "components",
+        "value": "sidebar",
+        "confidence": 0.97
+      },
+      {
+        "category": "components",
+        "value": "stat cards",
+        "confidence": 0.95
+      },
+      {
+        "category": "components",
+        "value": "gráfica",
+        "confidence": 0.95
+      },
+      {
+        "category": "components",
+        "value": "data table",
+        "confidence": 0.88
+      },
+      {
+        "category": "industry",
+        "value": "fintech",
+        "confidence": 0.6
+      },
+      {
+        "category": "layout",
+        "value": "bento grid",
+        "confidence": 0.45
+      },
+      {
+        "category": "style",
+        "value": "monocromo",
+        "confidence": 0.85
+      },
+      {
+        "category": "components",
+        "value": "tabs",
+        "confidence": 0.8
+      },
+      {
+        "category": "components",
+        "value": "barra de progreso",
+        "confidence": 0.75
+      },
+      {
+        "category": "palette",
+        "value": "#0b0b0c",
+        "confidence": 0.85
+      },
+      {
+        "category": "palette",
+        "value": "#3a3a3a",
+        "confidence": 0.8
+      },
+      {
+        "category": "palette",
+        "value": "#1f1f22",
+        "confidence": 0.7
+      },
+      {
+        "category": "palette",
+        "value": "#8a8a8f",
+        "confidence": 0.65
+      }
+    ],
+    "createdAt": "2026-10-26T15:53:15+00:00",
+    "deletedAt": null
+  },
+  {
+    "id": "demo-20",
+    "title": "App móvil de nutrición y fitness: calorías, estadísticas y agenda",
+    "filename": "demo-20.webp",
+    "imageUrl": "/demo/20.webp",
+    "thumbUrl": "/demo/thumbs/20.webp",
+    "filePath": "public/demo/20.webp",
+    "width": 6400,
+    "height": 4800,
+    "bytes": 1943523,
+    "sourceUrl": "https://dribbble.com/shots/25369964-Diet-App-Calories-Tracker-Mobile-App-UI-UX",
+    "status": "ready",
+    "error": null,
+    "providerId": "claude-cli",
+    "model": "opus",
+    "summary": "Tres pantallas móviles de una app de salud y fitness, en tonos claros con acentos azul índigo. La primera es un panel de inicio con una tarjeta destacada de calorías restantes, los macronutrientes en tarjetas pequeñas y la lista de comidas planificadas. La segunda muestra estadísticas semanales con una gráfica de barras redondeadas y tarjetas de métricas, y la tercera una agenda diaria con un selector de semana y una línea de tiempo de tareas que se pueden marcar como hechas.",
+    "notes": "Fondo de pantalla #f4f6fd con tarjetas blancas de unos 16-20px de radio y padding interno de unos 16px. Márgenes laterales de unos 28px. La tarjeta destacada lleva un degradado azul índigo (#5468f5 a #8f9cf8), un número grande de unos 64px en negrita y una barra de progreso tipo píldora con la parte que falta rayada en diagonal. Las tarjetas de macros van en una cuadrícula de 3 columnas, cada una con una barra de progreso fina de color propio (verde, naranja, lila). La gráfica tiene barras verticales en forma de píldora con un tirador circular blanco que marca el valor actual, y un selector segmentado D/W/M hecho con círculos. Los botones de cabecera son circulares, de unos 56px. La barra inferior es flotante, en forma de píldora blanca, con 5 iconos y un botón central verde (#6aa121) más grande. La agenda tiene un selector de días hecho con píldoras verticales, donde el día activo es un círculo azul relleno, y una línea de tiempo con la hora a la izquierda y una línea vertical azul. Cada tarea va en una tarjeta con un fondo tintado según su categoría, un icono circular y una casilla a la derecha. Las tareas completadas aparecen tachadas y con menos opacidad.",
+    "tags": [
+      {
+        "category": "style",
+        "value": "minimalista",
+        "confidence": 0.7
+      },
+      {
+        "category": "components",
+        "value": "tarjetas",
+        "confidence": 0.9
+      },
+      {
+        "category": "density",
+        "value": "media",
+        "confidence": 0.8
+      },
+      {
+        "category": "industry",
+        "value": "fitness",
+        "confidence": 0.85
+      },
+      {
+        "category": "palette",
+        "value": "#ffffff",
+        "confidence": 0.9
+      },
+      {
+        "category": "style",
+        "value": "degradados",
+        "confidence": 0.55
+      },
+      {
+        "category": "layout",
+        "value": "secciones apiladas",
+        "confidence": 0.8
+      },
+      {
+        "category": "screen_type",
+        "value": "dashboard",
+        "confidence": 0.8
+      },
+      {
+        "category": "style",
+        "value": "claro",
+        "confidence": 0.95
+      },
+      {
+        "category": "layout",
+        "value": "grid de tarjetas",
+        "confidence": 0.6
+      },
+      {
+        "category": "components",
+        "value": "gráfica",
+        "confidence": 0.95
+      },
+      {
+        "category": "components",
+        "value": "buscador",
+        "confidence": 0.75
+      },
+      {
+        "category": "components",
+        "value": "barra de progreso",
+        "confidence": 0.9
+      },
+      {
+        "category": "components",
+        "value": "bottom nav",
+        "confidence": 0.95
+      },
+      {
+        "category": "components",
+        "value": "calendario",
+        "confidence": 0.8
+      },
+      {
+        "category": "palette",
+        "value": "#f4f6fd",
+        "confidence": 0.8
+      },
+      {
+        "category": "palette",
+        "value": "#5468f5",
+        "confidence": 0.75
+      },
+      {
+        "category": "palette",
+        "value": "#2c44d0",
+        "confidence": 0.7
+      },
+      {
+        "category": "palette",
+        "value": "#6aa121",
+        "confidence": 0.7
+      }
+    ],
+    "createdAt": "2026-10-26T15:56:01+00:00",
+    "deletedAt": null
+  },
+  {
+    "id": "demo-21",
+    "title": "App móvil de viajes: inicio, búsqueda de trayectos, resultados y billete",
+    "filename": "demo-21.webp",
+    "imageUrl": "/demo/21.webp",
+    "thumbUrl": "/demo/thumbs/21.webp",
+    "filePath": "public/demo/21.webp",
+    "width": 1600,
+    "height": 1200,
+    "bytes": 614803,
+    "sourceUrl": "https://dribbble.com/shots/25879163-Travel-Mobile-App-UI-Exploration",
+    "status": "ready",
+    "error": null,
+    "providerId": "claude-cli",
+    "model": "opus",
+    "summary": "Composición de cuatro pantallas móviles de una app para reservar trenes, vuelos, barcos y autobuses. La pantalla central, inclinada, muestra un buscador de viajes con selector de solo ida o ida y vuelta, campos de origen, destino, fecha y pasajeros, y un botón negro de búsqueda. A los lados aparecen la pantalla de inicio con categorías ilustradas y próximos viajes, una lista de resultados con tarjetas de trayecto y precio, y un billete con puerta de embarque y código de barras.",
+    "notes": "Fondo gris lavanda muy claro (#eef0f6) con tarjetas blancas de radio grande (~20-24px) y pantallas de radio ~40px. Botones circulares blancos de 44px para volver, buscar, notificaciones y compartir. Los CTA son píldoras negras (#111) a todo el ancho en la búsqueda y compactas en los precios ('$ 81/pax'). El color de acento es lavanda/violeta (#8b7cf6) para enlaces 'View All', el botón de intercambiar origen y destino y las badges 'Ability to reschedule'. La cabecera de búsqueda usa menta/turquesa (#a8e0e0). El segmented control One Way/Round Trip tiene la opción activa en negro. Cada campo lleva un icono en círculo, una etiqueta gris pequeña (~11px) y el valor debajo (~15px). Las tarjetas de trayecto muestran el código IATA en negrita, la hora en gris, una línea discontinua con la duración y un icono de medio de transporte. La valoración va con una estrella naranja. El corazón de favorito tiene un estado activo rojo. En la parte inferior hay una tab bar de 4 iconos con indicador lavanda. Las categorías van en tarjetas pastel de ~80px con ilustración y una badge de descuento '20%'. El billete tiene bordes troquelados y código de barras. Tipografía sans geométrica con títulos de ~30px en peso regular.",
+    "tags": [
+      {
+        "category": "style",
+        "value": "minimalista",
+        "confidence": 0.6
+      },
+      {
+        "category": "layout",
+        "value": "lista vertical",
+        "confidence": 0.7
+      },
+      {
+        "category": "components",
+        "value": "tarjetas",
+        "confidence": 0.9
+      },
+      {
+        "category": "components",
+        "value": "botón principal",
+        "confidence": 0.95
+      },
+      {
+        "category": "density",
+        "value": "media",
+        "confidence": 0.8
+      },
+      {
+        "category": "layout",
+        "value": "secciones apiladas",
+        "confidence": 0.65
+      },
+      {
+        "category": "components",
+        "value": "badge",
+        "confidence": 0.85
+      },
+      {
+        "category": "style",
+        "value": "claro",
+        "confidence": 0.95
+      },
+      {
+        "category": "palette",
+        "value": "#111111",
+        "confidence": 0.85
+      },
+      {
+        "category": "components",
+        "value": "tabs",
+        "confidence": 0.6
+      },
+      {
+        "category": "industry",
+        "value": "viajes",
+        "confidence": 0.97
+      },
+      {
+        "category": "components",
+        "value": "formulario",
+        "confidence": 0.9
+      },
+      {
+        "category": "style",
+        "value": "ilustrado",
+        "confidence": 0.75
+      },
+      {
+        "category": "components",
+        "value": "bottom nav",
+        "confidence": 0.85
+      },
+      {
+        "category": "screen_type",
+        "value": "buscador",
+        "confidence": 0.7
+      },
+      {
+        "category": "palette",
+        "value": "#eef0f6",
+        "confidence": 0.8
+      },
+      {
+        "category": "palette",
+        "value": "#8b7cf6",
+        "confidence": 0.75
+      },
+      {
+        "category": "palette",
+        "value": "#a8e0e0",
+        "confidence": 0.7
+      },
+      {
+        "category": "palette",
+        "value": "#ff6b3d",
+        "confidence": 0.6
+      }
+    ],
+    "createdAt": "2026-10-26T15:56:01+00:00",
+    "deletedAt": null
+  },
+  {
+    "id": "demo-22",
+    "title": "App móvil de zapatillas: bienvenida y catálogo por marcas",
+    "filename": "demo-22.webp",
+    "imageUrl": "/demo/22.webp",
+    "thumbUrl": "/demo/thumbs/22.webp",
+    "filePath": "public/demo/22.webp",
+    "width": 1600,
+    "height": 1200,
+    "bytes": 479147,
+    "sourceUrl": "https://layers.to/layers/cmvjgd3fl000ele0gaps0i60a-shoes-shopping-mobile-app",
+    "status": "ready",
+    "error": null,
+    "providerId": "claude-cli",
+    "model": "opus",
+    "summary": "Dos pantallas móviles de una tienda de zapatillas sobre fondo beige cálido. A la izquierda, una bienvenida con una zapatilla roja enorme, tipografía gigante «WE FLY» detrás, el titular «Your Next Favorite Shoes» y un botón ancho «Get Stated». A la derecha, el catálogo: saludo con avatar, un titular grande, chips de marcas que se desplazan en horizontal, una tarjeta destacada amarilla y dos tarjetas compactas de producto, una naranja y otra gris oscura.",
+    "notes": "Fondo con degradado suave de #e2dcc8 arriba a #e6cdb5 abajo. Titulares en sans geométrica bold (tipo Outfit) de unos 44px con interlineado ajustado y color casi negro #2a2416. En la bienvenida, la imagen del producto se superpone a la tipografía gigante («WE» en negro macizo, «FLY» en amarillo con contorno), y la mano y los cordones rompen el encuadre. Botón principal a todo el ancho, de 56px de alto, radio de unos 20px, relleno crema #ebe4d0, borde de 1px más claro y texto en peso regular. Cabecera del catálogo: avatar de 56px con radio de 16px, subtítulo de 11px encima del nombre de 18px y dos botones de icono cuadrados de 56px con radio de 16px y borde fino. Chips de marca de unos 56px de alto, radio de 18px y 8px de separación; el último queda cortado para indicar scroll horizontal. Tarjeta destacada amarilla #f2ea36 con radio de unos 32px y 20px de padding; el precio va en una píldora translúcida, el favorito en un círculo de 56px con corazón rojo y «Buy Now» en un botón interno a todo el ancho con un tono amarillo más oscuro. Las tarjetas compactas miden unos 124px de alto con radio de 28px: imagen a la izquierda que sangra hasta el borde, nombre y precio en píldora en el centro y botón circular de carrito a la derecha. Entre tarjetas hay unos 8px de separación.",
+    "tags": [
+      {
+        "category": "layout",
+        "value": "lista vertical",
+        "confidence": 0.75
+      },
+      {
+        "category": "components",
+        "value": "tarjetas",
+        "confidence": 0.9
+      },
+      {
+        "category": "components",
+        "value": "botón principal",
+        "confidence": 0.85
+      },
+      {
+        "category": "components",
+        "value": "avatar",
+        "confidence": 0.9
+      },
+      {
+        "category": "density",
+        "value": "media",
+        "confidence": 0.75
+      },
+      {
+        "category": "layout",
+        "value": "secciones apiladas",
+        "confidence": 0.5
+      },
+      {
+        "category": "components",
+        "value": "badge",
+        "confidence": 0.55
+      },
+      {
+        "category": "style",
+        "value": "claro",
+        "confidence": 0.85
+      },
+      {
+        "category": "components",
+        "value": "filtros",
+        "confidence": 0.8
+      },
+      {
+        "category": "components",
+        "value": "hero",
+        "confidence": 0.6
+      },
+      {
+        "category": "style",
+        "value": "lúdico",
+        "confidence": 0.6
+      },
+      {
+        "category": "screen_type",
+        "value": "listado",
+        "confidence": 0.6
+      },
+      {
+        "category": "industry",
+        "value": "ecommerce",
+        "confidence": 0.95
+      },
+      {
+        "category": "style",
+        "value": "editorial",
+        "confidence": 0.45
+      },
+      {
+        "category": "palette",
+        "value": "#e2dcc8",
+        "confidence": 0.8
+      },
+      {
+        "category": "palette",
+        "value": "#f2ea36",
+        "confidence": 0.85
+      },
+      {
+        "category": "palette",
+        "value": "#ff9a52",
+        "confidence": 0.75
+      },
+      {
+        "category": "palette",
+        "value": "#3d3b3b",
+        "confidence": 0.75
+      },
+      {
+        "category": "palette",
+        "value": "#2a2416",
+        "confidence": 0.7
+      }
+    ],
+    "createdAt": "2026-10-26T15:56:04+00:00",
+    "deletedAt": null
+  },
+  {
+    "id": "demo-23",
+    "title": "App móvil de envíos logísticos con asistente de IA",
+    "filename": "demo-23.webp",
+    "imageUrl": "/demo/23.webp",
+    "thumbUrl": "/demo/thumbs/23.webp",
+    "filePath": "public/demo/23.webp",
+    "width": 2400,
+    "height": 1800,
+    "bytes": 499843,
+    "sourceUrl": "https://dribbble.com/shots/27447322-AI-Powered-Logistics-Mobile-App-UI-UX-Design",
+    "status": "ready",
+    "error": null,
+    "providerId": "claude-cli",
+    "model": "opus",
+    "summary": "Cuatro pantallas móviles de una app para seguir envíos de camiones. La primera es el panel principal, con un saludo, accesos rápidos, una tarjeta azul destacada con el envío en curso y la lista de envíos activos. Le siguen una hoja inferior que presenta el asistente de IA, la pantalla de bienvenida del asistente con sugerencias y un chat con una tarjeta de detalle del envío.",
+    "notes": "Fondo #f5f6f8 con tarjetas blancas o gris claro con radios de unos 12-16px. El azul de acento #1f4fd8 se usa en CTAs, burbujas del usuario y la tarjeta hero. Los accesos rápidos van en una fila de 4 tiles de unos 88px con icono circular de 40px y etiqueta en dos líneas. La tarjeta hero es azul, mide unos 175px de alto con radio de 16px, lleva un badge translúcido de estado, el ID en 18px semibold y la imagen del camión sangrando por la derecha. Las cabeceras de sección llevan a la derecha el enlace «View All» en azul. Las tarjetas de envío tienen un badge verde «Active», filas de clave y valor alineadas a los extremos, un divisor y la fila del conductor con avatar y 3 botones circulares de 40px. La bottom nav es flotante, una píldora azul con la pestaña activa en blanco con su etiqueta y el resto solo con icono. La hoja inferior del asistente lleva un handle, un badge «New», 3 filas de función con icono y un botón ghost a todo el ancho. En el chat, las burbujas del usuario son azules con radio de 12px y alineadas a la derecha, y las respuestas de la IA son grises con un avatar de orbe degradado. Los chips de sugerencia tienen borde de 1px y forma de píldora. El input de chat está fijado abajo, con iconos de adjuntar, web y más, un micrófono y un botón de enviar cuadrado azul de 32px.",
+    "tags": [
+      {
+        "category": "style",
+        "value": "minimalista",
+        "confidence": 0.7
+      },
+      {
+        "category": "components",
+        "value": "tarjetas",
+        "confidence": 0.9
+      },
+      {
+        "category": "components",
+        "value": "avatar",
+        "confidence": 0.85
+      },
+      {
+        "category": "density",
+        "value": "media",
+        "confidence": 0.8
+      },
+      {
+        "category": "palette",
+        "value": "#ffffff",
+        "confidence": 0.9
+      },
+      {
+        "category": "layout",
+        "value": "columna única",
+        "confidence": 0.75
+      },
+      {
+        "category": "layout",
+        "value": "secciones apiladas",
+        "confidence": 0.8
+      },
+      {
+        "category": "components",
+        "value": "badge",
+        "confidence": 0.9
+      },
+      {
+        "category": "screen_type",
+        "value": "dashboard",
+        "confidence": 0.8
+      },
+      {
+        "category": "style",
+        "value": "claro",
+        "confidence": 0.95
+      },
+      {
+        "category": "components",
+        "value": "chat",
+        "confidence": 0.9
+      },
+      {
+        "category": "industry",
+        "value": "logística",
+        "confidence": 0.95
+      },
+      {
+        "category": "components",
+        "value": "bottom nav",
+        "confidence": 0.95
+      },
+      {
+        "category": "palette",
+        "value": "#1a1a1a",
+        "confidence": 0.75
+      },
+      {
+        "category": "palette",
+        "value": "#f5f6f8",
+        "confidence": 0.8
+      },
+      {
+        "category": "components",
+        "value": "drawer",
+        "confidence": 0.7
+      },
+      {
+        "category": "palette",
+        "value": "#1f4fd8",
+        "confidence": 0.85
+      },
+      {
+        "category": "palette",
+        "value": "#1e7a3c",
+        "confidence": 0.6
+      }
+    ],
+    "createdAt": "2026-10-26T15:56:05+00:00",
+    "deletedAt": null
+  },
+  {
+    "id": "demo-24",
+    "title": "BizLink: app móvil de tareas con onboarding, listado y estadísticas",
+    "filename": "demo-24.webp",
+    "imageUrl": "/demo/24.webp",
+    "thumbUrl": "/demo/thumbs/24.webp",
+    "filePath": "public/demo/24.webp",
+    "width": 3200,
+    "height": 2400,
+    "bytes": 2062248,
+    "sourceUrl": "https://dribbble.com/shots/25898757-CRM-Mobile-App-UI-Design",
+    "status": "ready",
+    "error": null,
+    "providerId": "claude-cli",
+    "model": "opus",
+    "summary": "Tres pantallas móviles de una app para gestionar tareas y clientes: un onboarding oscuro con ilustración de tarjetas, un listado de tareas con pestañas de estado y una pantalla de estadísticas con tarjetas de métricas. La jerarquía la marcan los números grandes y las tarjetas de esquinas redondeadas sobre fondo blanco o crema, con acentos en negro y una barra inferior flotante en forma de píldora.",
+    "notes": "Tarjetas con radio grande (unos 20-24px) y padding interno de unos 20px; las de métricas van en dos columnas con fondo crema #f3f3ea y rosa pálido #f7e6e6 para lo vencido. Pestañas en forma de píldora: la activa en negro #1f1f1f con texto blanco y las inactivas en gris claro. Bottom nav flotante en píldora negra con el icono activo dentro de un círculo blanco, separada del borde unos 16px. Las cifras grandes (5, 2, 2hr25min, 78%) van en tipografía de unos 40-48px con las unidades en subíndice más pequeño. Badges pequeños en píldora (60% in progress, +1 yesterday) arriba a la derecha de cada tarjeta. Barra de progreso fina de unos 4px y medidor de ticks verticales para la tasa de completado. Las tarjetas de tarea llevan título en negrita, descripción en dos líneas, deadline, badge de prioridad con punto de color y avatares superpuestos. El onboarding usa fondo #1f1f1f, botón Next blanco en píldora e indicador de página con un guion activo.",
+    "tags": [
+      {
+        "category": "style",
+        "value": "minimalista",
+        "confidence": 0.85
+      },
+      {
+        "category": "layout",
+        "value": "lista vertical",
+        "confidence": 0.6
+      },
+      {
+        "category": "density",
+        "value": "media",
+        "confidence": 0.75
+      },
+      {
+        "category": "palette",
+        "value": "#ffffff",
+        "confidence": 0.9
+      },
+      {
+        "category": "components",
+        "value": "badge",
+        "confidence": 0.85
+      },
+      {
+        "category": "screen_type",
+        "value": "dashboard",
+        "confidence": 0.6
+      },
+      {
+        "category": "style",
+        "value": "claro",
+        "confidence": 0.75
+      },
+      {
+        "category": "layout",
+        "value": "grid de tarjetas",
+        "confidence": 0.7
+      },
+      {
+        "category": "components",
+        "value": "stat cards",
+        "confidence": 0.9
+      },
+      {
+        "category": "components",
+        "value": "gráfica",
+        "confidence": 0.9
+      },
+      {
+        "category": "components",
+        "value": "tabs",
+        "confidence": 0.85
+      },
+      {
+        "category": "components",
+        "value": "barra de progreso",
+        "confidence": 0.8
+      },
+      {
+        "category": "industry",
+        "value": "productividad",
+        "confidence": 0.85
+      },
+      {
+        "category": "style",
+        "value": "alto contraste",
+        "confidence": 0.5
+      },
+      {
+        "category": "components",
+        "value": "bottom nav",
+        "confidence": 0.95
+      },
+      {
+        "category": "palette",
+        "value": "#1f1f1f",
+        "confidence": 0.9
+      },
+      {
+        "category": "palette",
+        "value": "#f3f3ea",
+        "confidence": 0.75
+      },
+      {
+        "category": "palette",
+        "value": "#f7e6e6",
+        "confidence": 0.65
+      },
+      {
+        "category": "palette",
+        "value": "#d9534f",
+        "confidence": 0.6
+      }
+    ],
+    "createdAt": "2026-10-26T15:56:06+00:00",
+    "deletedAt": null
+  },
+  {
+    "id": "demo-25",
+    "title": "Dashboard oscuro de ventas con gerentes, ingresos y países top",
+    "filename": "demo-25.webp",
+    "imageUrl": "/demo/25.webp",
+    "thumbUrl": "/demo/thumbs/25.webp",
+    "filePath": "public/demo/25.webp",
+    "width": 1600,
+    "height": 1200,
+    "bytes": 642677,
+    "sourceUrl": "https://dribbble.com/shots/15545195-Integrator-dashboard-dark",
+    "status": "ready",
+    "error": null,
+    "providerId": "claude-cli",
+    "model": "opus",
+    "summary": "Dashboard de ventas en modo oscuro con un sidebar fijo a la izquierda que contiene la navegación, accesos directos, el espacio usado y el perfil del usuario. En la parte superior están el saludo con la insignia premium y el buscador. Debajo, una fila de tres tarjetas de gerentes con sus ingresos, luego una gráfica de líneas junto a un ranking de países, y al final tres tarjetas: segmentación, satisfacción con medidor semicircular y un estado vacío con CTA.",
+    "notes": "Lienzo con fondo #1c1c1e y sidebar algo más claro (#232325), de unos 265px de ancho. Las tarjetas usan fondo #222224, radio de unos 12px y padding interior de 20-24px. La rejilla es de 3 columnas con gaps de unos 16px y la gráfica de líneas ocupa 2 columnas. El ítem activo del sidebar lleva un indicador vertical blanco de 3px en el borde derecho, y Chat lleva un badge rojo circular de 22px. Las barras de progreso de las tarjetas de gerente están segmentadas, con un degradado de cian a azul. Los importes van en verde (#2fd35a) si suben y en rojo (#e5322d) si bajan, con flecha de tendencia encima. La gráfica de líneas es cian con una serie comparativa punteada en gris, y el hover muestra un tooltip oscuro con el valor y una línea vertical guía. El medidor de satisfacción es un arco de unos 270° con trazo azul #3a4fd8 de 12px. El CTA 'Add component' es una píldora azul con radio de unos 14px y un contador anidado más claro. Tipografía sans (tipo Source Sans) con títulos de tarjeta de 14px en semibold y texto secundario en gris #8a8a8e.",
+    "tags": [
+      {
+        "category": "style",
+        "value": "oscuro",
+        "confidence": 0.97
+      },
+      {
+        "category": "screen_type",
+        "value": "dashboard",
+        "confidence": 0.97
+      },
+      {
+        "category": "style",
+        "value": "corporativo",
+        "confidence": 0.55
+      },
+      {
+        "category": "layout",
+        "value": "sidebar fijo",
+        "confidence": 0.9
+      },
+      {
+        "category": "layout",
+        "value": "grid de tarjetas",
+        "confidence": 0.85
+      },
+      {
+        "category": "components",
+        "value": "sidebar",
+        "confidence": 0.95
+      },
+      {
+        "category": "components",
+        "value": "stat cards",
+        "confidence": 0.85
+      },
+      {
+        "category": "components",
+        "value": "gráfica",
+        "confidence": 0.95
+      },
+      {
+        "category": "components",
+        "value": "progress ring",
+        "confidence": 0.6
+      },
+      {
+        "category": "density",
+        "value": "alta",
+        "confidence": 0.75
+      },
+      {
+        "category": "components",
+        "value": "buscador",
+        "confidence": 0.85
+      },
+      {
+        "category": "components",
+        "value": "barra de progreso",
+        "confidence": 0.85
+      },
+      {
+        "category": "industry",
+        "value": "saas",
+        "confidence": 0.6
+      },
+      {
+        "category": "palette",
+        "value": "#1c1c1e",
+        "confidence": 0.8
+      },
+      {
+        "category": "palette",
+        "value": "#222224",
+        "confidence": 0.7
+      },
+      {
+        "category": "palette",
+        "value": "#3a4fd8",
+        "confidence": 0.8
+      },
+      {
+        "category": "palette",
+        "value": "#4fc3e8",
+        "confidence": 0.65
+      },
+      {
+        "category": "palette",
+        "value": "#2fd35a",
+        "confidence": 0.65
+      }
+    ],
+    "createdAt": "2026-10-26T15:56:08+00:00",
+    "deletedAt": null
+  },
+  {
+    "id": "demo-26",
+    "title": "Dashboard de operaciones con ingresos semanales y mapa de actividad",
+    "filename": "demo-26.webp",
+    "imageUrl": "/demo/26.webp",
+    "thumbUrl": "/demo/thumbs/26.webp",
+    "filePath": "public/demo/26.webp",
+    "width": 3200,
+    "height": 2400,
+    "bytes": 1699804,
+    "sourceUrl": "https://layers.to/layers/cmvl2i0a0001fl60g4usitdnn-made-with-wunderui",
+    "status": "ready",
+    "error": null,
+    "providerId": "claude-cli",
+    "model": "opus",
+    "summary": "Panel de analítica de un SaaS claro con un sidebar fijo a la izquierda, con navegación por grupos, submenú desplegable y badges. La zona principal, titulada «Operations», muestra una cuadrícula de tarjetas. Destaca la tarjeta «Weekly revenue»: arriba tres KPI con badges de variación y debajo una gráfica de 14 barras. Debajo aparece un mapa de calor de «Release activity» y a la derecha asoman las tarjetas «Catalog health» y «Newsletter».",
+    "notes": "El sidebar mide unos 470px de ancho, es blanco y tiene un borde derecho sutil. El logo es un cuadrado oscuro de ~84px con radio de ~20px. Las etiquetas de grupo («General», «Support») son grises y pequeñas. Cada ítem lleva un icono de línea de 24px y el texto en 16-18px, con unos 84px de alto por fila. El ítem activo tiene fondo gris claro #f1f4f6 y radio de ~12px. Los subítems van sangrados unos 60px. Los badges son pastilla: «NEW» en verde menta con texto verde y el contador en lila. La cabecera superior mide ~120px y lleva el título en semibold. El área de contenido tiene fondo #f8fafb. Las tarjetas son blancas, con radio de ~20px, un borde muy sutil y un padding de ~36px. Cada tarjeta lleva un dropdown con borde gris, radio de ~10px y chevron. Los KPI están en ~34px semibold, con una pastilla verde para la variación (flecha y porcentaje) y una etiqueta gris debajo. Las barras tienen una pista gris clara #f1f4f6 de ~42px de ancho, radio de ~6px y un hueco de ~30px entre barras. El relleno es lavanda #9b9ef5 y la barra destacada es índigo #5558ee. El mapa de calor usa celdas de ~68x42px con radio de ~6px y 5 niveles de índigo, del #eeeffd al #5558ee. Las barras de «Catalog health» son de color salmón #f5a090.",
+    "tags": [
+      {
+        "category": "style",
+        "value": "minimalista",
+        "confidence": 0.75
+      },
+      {
+        "category": "components",
+        "value": "tarjetas",
+        "confidence": 0.8
+      },
+      {
+        "category": "density",
+        "value": "media",
+        "confidence": 0.75
+      },
+      {
+        "category": "components",
+        "value": "badge",
+        "confidence": 0.9
+      },
+      {
+        "category": "screen_type",
+        "value": "dashboard",
+        "confidence": 0.97
+      },
+      {
+        "category": "style",
+        "value": "claro",
+        "confidence": 0.95
+      },
+      {
+        "category": "style",
+        "value": "corporativo",
+        "confidence": 0.5
+      },
+      {
+        "category": "layout",
+        "value": "sidebar fijo",
+        "confidence": 0.85
+      },
+      {
+        "category": "layout",
+        "value": "grid de tarjetas",
+        "confidence": 0.75
+      },
+      {
+        "category": "components",
+        "value": "sidebar",
+        "confidence": 0.97
+      },
+      {
+        "category": "components",
+        "value": "stat cards",
+        "confidence": 0.8
+      },
+      {
+        "category": "components",
+        "value": "gráfica",
+        "confidence": 0.97
+      },
+      {
+        "category": "components",
+        "value": "dropdown",
+        "confidence": 0.9
+      },
+      {
+        "category": "industry",
+        "value": "saas",
+        "confidence": 0.7
+      },
+      {
+        "category": "palette",
+        "value": "#5558ee",
+        "confidence": 0.85
+      },
+      {
+        "category": "palette",
+        "value": "#9b9ef5",
+        "confidence": 0.85
+      },
+      {
+        "category": "palette",
+        "value": "#f8fafb",
+        "confidence": 0.7
+      },
+      {
+        "category": "palette",
+        "value": "#f5a090",
+        "confidence": 0.7
+      },
+      {
+        "category": "palette",
+        "value": "#1a1d2e",
+        "confidence": 0.65
+      }
+    ],
+    "createdAt": "2026-10-26T15:56:09+00:00",
+    "deletedAt": null
+  },
+  {
+    "id": "demo-27",
+    "title": "App móvil de transferencias: contactos, envío de dinero y confirmación",
+    "filename": "demo-27.webp",
+    "imageUrl": "/demo/27.webp",
+    "thumbUrl": "/demo/thumbs/27.webp",
+    "filePath": "public/demo/27.webp",
+    "width": 3200,
+    "height": 2400,
+    "bytes": 1772911,
+    "sourceUrl": "https://layers.to/layers/cmv0pftuj0002l50an981v40w-terrax-finance-mobile-send-money",
+    "status": "ready",
+    "error": null,
+    "providerId": "claude-cli",
+    "model": "opus",
+    "summary": "Tres pantallas móviles de una app bancaria que muestran el flujo para enviar dinero: una lista de contactos ordenada alfabéticamente con índice lateral A-Z, una pantalla «Send Money» con tarjetas apiladas para el origen, el importe con slider y el destinatario, y una hoja modal que confirma la transferencia con su desglose. La jerarquía la marca el importe grande en serif ($150.00) y el botón principal violeta a todo el ancho al pie de cada pantalla.",
+    "notes": "Fondo de la app gris muy claro (#f5f5f7) con tarjetas blancas de unos 16px de radio, unos 16px de padding interno y 12px de separación vertical. Header con flecha de volver, título de unos 18px en peso medio e icono a la derecha (buscar o regalo). Cada fila de contacto mide unos 76px de alto, con avatar circular de 40px, nombre de unos 16px y subtítulo gris de 13px («Bank Polski ***1234»). La fila seleccionada lleva un borde violeta de 1.5px y un check circular violeta a la derecha. Los contactos sin foto muestran un avatar de iniciales con fondo verde pastel. El índice alfabético A-Z va en una columna estrecha a la derecha, con letras grises de 12px. El importe va en serif de unos 44px con la moneda «USD» pequeña en superíndice gris y debajo una nota de comisión de 13px. El slider tiene un track de 6px, el relleno violeta, un thumb pequeño y las etiquetas de mínimo y máximo debajo. Las tarjetas de origen y destino incluyen una acción «Change ›» alineada a la derecha. Hay una fila con icono de calendario y un toggle para programar la transferencia. El CTA es una píldora violeta (#6c5ce7) de unos 56px de alto y radio completo, con un icono de flecha diagonal. En la confirmación, un overlay gris oscurece la pantalla y encima aparece una hoja blanca con radio de unos 20px, icono de cierre arriba a la derecha, avatar de 72px centrado, un importe grande y filas clave-valor separadas por un divisor punteado. El total va en negrita.",
+    "tags": [
+      {
+        "category": "style",
+        "value": "minimalista",
+        "confidence": 0.85
+      },
+      {
+        "category": "layout",
+        "value": "lista vertical",
+        "confidence": 0.75
+      },
+      {
+        "category": "components",
+        "value": "lista",
+        "confidence": 0.9
+      },
+      {
+        "category": "components",
+        "value": "botón principal",
+        "confidence": 0.95
+      },
+      {
+        "category": "components",
+        "value": "avatar",
+        "confidence": 0.95
+      },
+      {
+        "category": "density",
+        "value": "media",
+        "confidence": 0.8
+      },
+      {
+        "category": "palette",
+        "value": "#ffffff",
+        "confidence": 0.9
+      },
+      {
+        "category": "layout",
+        "value": "secciones apiladas",
+        "confidence": 0.75
+      },
+      {
+        "category": "style",
+        "value": "claro",
+        "confidence": 0.95
+      },
+      {
+        "category": "industry",
+        "value": "fintech",
+        "confidence": 0.95
+      },
+      {
+        "category": "components",
+        "value": "slider",
+        "confidence": 0.85
+      },
+      {
+        "category": "components",
+        "value": "toggle",
+        "confidence": 0.85
+      },
+      {
+        "category": "components",
+        "value": "modal",
+        "confidence": 0.8
+      },
+      {
+        "category": "palette",
+        "value": "#1c1c1e",
+        "confidence": 0.75
+      },
+      {
+        "category": "screen_type",
+        "value": "checkout",
+        "confidence": 0.55
+      },
+      {
+        "category": "palette",
+        "value": "#6c5ce7",
+        "confidence": 0.85
+      },
+      {
+        "category": "palette",
+        "value": "#f5f5f7",
+        "confidence": 0.75
+      },
+      {
+        "category": "palette",
+        "value": "#8e8e93",
+        "confidence": 0.65
+      }
+    ],
+    "createdAt": "2026-10-26T15:56:10+00:00",
+    "deletedAt": null
+  }
+]
